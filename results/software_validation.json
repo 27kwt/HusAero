@@ -1,0 +1,233 @@
+{
+  "status": "CHECKS_PASSED",
+  "release": "v0.3.0-rc4",
+  "baseline_release": "v0.3.0-rc3",
+  "baseline_validation": {
+    "status": "CHECKS_PASSED",
+    "environment": "Fresh Python 3.11 virtual environment; CPU PyTorch 2.11.0, torchvision 0.26.0; requirements-analysis.txt installed from scratch.",
+    "checks": [
+      {
+        "check": "full_hash_verification",
+        "exit_code": 0
+      },
+      {
+        "check": "decoder_tracker_scorer_invariants",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_demo",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_evaluate_samples",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_finetune",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_export_onnx",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_create_calibration",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_compile_hailo",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_compare_trackers",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_hailo_follow_configured",
+        "exit_code": 0
+      },
+      {
+        "check": "cli_yolokw_hailo",
+        "exit_code": 0
+      },
+      {
+        "check": "both_renamed_models_sample_detection",
+        "exit_code": 0
+      },
+      {
+        "check": "public250_shared_scorer_YOLOKW8n",
+        "exit_code": 0
+      },
+      {
+        "check": "public250_shared_scorer_YOLOKW11n",
+        "exit_code": 0
+      },
+      {
+        "check": "ultralytics_sample_evaluation",
+        "exit_code": 0
+      },
+      {
+        "check": "one_epoch_training_plumbing_not_benchmark",
+        "exit_code": 0
+      },
+      {
+        "check": "pc_bytetrack_video_plumbing",
+        "exit_code": 0
+      },
+      {
+        "check": "sort_bytetrack_shared_detection_plumbing",
+        "exit_code": 0
+      },
+      {
+        "check": "all_shipped_pt_hef_bytes_unchanged",
+        "exit_code": 0
+      }
+    ],
+    "scope": "PC installation, CLIs, inference, scoring, training plumbing and optional tracking smoke checks. No new Pi/camera or accuracy-improvement claim.",
+    "synthetic_tracking_check": "20 repeated frames from a public sample, used only to verify code paths; excluded from measured benchmark results.",
+    "dependency_check": "No broken requirements found."
+  },
+  "current_validation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "check": "regressions_and_runtime_invariants",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "complete_hashes",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "source_download_guidance",
+        "exit_code": 1,
+        "expected": 1
+      },
+      {
+        "check": "both_models_demo",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "bytetrack_video_integration",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "png_text_list_evaluation",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "git_init",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "git_index",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "git_checkout",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "git_roundtrip_manifest",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "invalid_video_metadata_rejected",
+        "exit_code": 0,
+        "expected": 0
+      },
+      {
+        "check": "validation_does_not_request_optional_coco_install",
+        "exit_code": 0,
+        "expected": 0
+      }
+    ],
+    "models_unchanged": true,
+    "scope": "Windows CPU integration and Git/file portability. Saved predictions rescored separately. No new Hailo hardware inference."
+  },
+  "evidence_rescoring": {
+    "status": "PASS",
+    "scorer_version": {
+      "ap_matching": "iou-greedy-v1",
+      "fixed_confidence_matching": "threshold-first-v2"
+    },
+    "scorer_sha256": "0399355294828410595ee8caf1dc51f81848b7f2dbafc878937e0edbc9c747fa",
+    "models": {
+      "YOLOKW8n": {
+        "images": 250,
+        "input_image_and_label_hashes_verified": true,
+        "historical_ap_exact_equality": true,
+        "fixed_confidence_changes": [],
+        "public_image_metrics_exact_source_equality": true
+      },
+      "YOLOKW11n": {
+        "images": 250,
+        "input_image_and_label_hashes_verified": true,
+        "historical_ap_exact_equality": true,
+        "fixed_confidence_changes": [
+          {
+            "class": "drone",
+            "changes": {
+              "precision_at_025": {
+                "before": 0.7941176470588235,
+                "after": 0.8235294117647058
+              },
+              "recall_at_025": {
+                "before": 0.54,
+                "after": 0.56
+              },
+              "TP_at_025": {
+                "before": 27,
+                "after": 28
+              },
+              "FP_at_025": {
+                "before": 7,
+                "after": 6
+              },
+              "FN_at_025": {
+                "before": 23,
+                "after": 22
+              }
+            }
+          },
+          {
+            "class": "bird",
+            "changes": {
+              "precision_at_025": {
+                "before": 0.96,
+                "after": 0.98
+              },
+              "recall_at_025": {
+                "before": 0.96,
+                "after": 0.98
+              },
+              "TP_at_025": {
+                "before": 48,
+                "after": 49
+              },
+              "FP_at_025": {
+                "before": 2,
+                "after": 1
+              },
+              "FN_at_025": {
+                "before": 2,
+                "after": 1
+              }
+            }
+          }
+        ],
+        "public_image_metrics_exact_source_equality": true
+      }
+    }
+  },
+  "hardware_scope": "Existing tested PT/HEF bytes retained. No new Pi hardware run. Pi video change only rejects invalid FPS/frame-count metadata before reporting a run."
+}

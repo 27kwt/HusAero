@@ -1,0 +1,133 @@
+{
+  "status": "FROZEN_BEFORE_ADAPTED_MODEL_RESERVED_PREDICTIONS",
+  "records": [
+    {
+      "sequence": "20190925_193610_1_1",
+      "frames": 933,
+      "fps": 20.0,
+      "video_sha256": "881b6d9663b59d54bc8fe0061645d8075b535e05599766ceb224dc65041f32c5",
+      "annotation_sha256": "34a7103c429849cd8ba0a4a886374a1c8a86e889691cc8feab123c8ee3009aaf"
+    },
+    {
+      "sequence": "20190925_193610_1_2",
+      "frames": 932,
+      "fps": 20.0,
+      "video_sha256": "3a9eacf0edccea84331744deb1f4af25c658cb60759c2b9af26d8922bf3d79ba",
+      "annotation_sha256": "4526f02a35e90b44e2da52478779bb2bfaf0d643c3f7b94b582ba15ed81dde3f"
+    },
+    {
+      "sequence": "20190925_193610_1_3",
+      "frames": 950,
+      "fps": 20.0,
+      "video_sha256": "b2aab56c9e1f08a0fb8ccd003deb6b96f024da2fa5e57aa16585142dcdcc0a1d",
+      "annotation_sha256": "342e929ccb2aa7ff530746cbbb7da99fc61aa6d51f85fc43f0ec3ff6a0718b83"
+    },
+    {
+      "sequence": "20190925_193610_1_4",
+      "frames": 943,
+      "fps": 20.0,
+      "video_sha256": "33b014e42e9079cc4f5a41b2648f5d4849797cf88409f6926d1f794af54fdb72",
+      "annotation_sha256": "62123182ae6cd6342bbbc3461203affe188153a59eb91e2eef5e2a6c5ddc31a1"
+    },
+    {
+      "sequence": "20190925_193610_1_5",
+      "frames": 948,
+      "fps": 20.0,
+      "video_sha256": "498186bab98f68da9e17acbf5c7b2c609224daae65c67a22f92bd07b603d36a6",
+      "annotation_sha256": "9f828627438173cae6e09917eb8aa9cf67336b538fd9c7ef443b2c587cb30083"
+    },
+    {
+      "sequence": "20190925_193610_1_6",
+      "frames": 923,
+      "fps": 20.0,
+      "video_sha256": "68af2157ad61d9755e48d06912539a015397156e9470e62e47afd4d538b4f4ee",
+      "annotation_sha256": "60aa93a0969a48b36195bf8a5a3729b19e590bf509e96e32274b28e9bad9edb1"
+    },
+    {
+      "sequence": "20190925_193610_1_7",
+      "frames": 939,
+      "fps": 20.0,
+      "video_sha256": "618614f633acd87a8a4823620ca6810499249f74237c428cef9baa276932f7ef",
+      "annotation_sha256": "3bbb69460f51b98a10600a54749cf17f0d7824ad6276aaf4915575daaedd873d"
+    },
+    {
+      "sequence": "20190925_193610_1_8",
+      "frames": 921,
+      "fps": 20.0,
+      "video_sha256": "4943154c1b0dadb8c1e2aa35f582d45052c2d3994d3861220ccbd0036991a611",
+      "annotation_sha256": "855c52d0f3d67d25426cc9ef8b872454bd6b20e8dbb86b7d0ea5c1604184a3b9"
+    },
+    {
+      "sequence": "20190925_193610_1_9",
+      "frames": 889,
+      "fps": 20.0,
+      "video_sha256": "ac78fb8eccf606b127f781623806bcc36d520dcbc35b284a17e9889b92697850",
+      "annotation_sha256": "aadd44e7591384cd6336fd342ec70a993755dfca1178ee9f65affc48c5ec8203"
+    },
+    {
+      "sequence": "20190926_095902_1_1",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "b8da27e8657192659e3a50a2d71abad6fe014ef9748a44027dd0229af3bbc667",
+      "annotation_sha256": "3617db4236ea9ba37939bb2c102b10cf87342be2d8761ff2aa1172bf0b8e35b3"
+    },
+    {
+      "sequence": "20190926_095902_1_2",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "51e2f386d1069d14bd7bb50604428de2dfd10838736c48e3c7d3c8835f0b611e",
+      "annotation_sha256": "bb7ade9abb27b61734689af7e90784b813369f830c1e7562296012d779682747"
+    },
+    {
+      "sequence": "20190926_095902_1_3",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "0c5bc032152ea2c094ec459bf305208a6d6fe477256dff048894a441fd7613d7",
+      "annotation_sha256": "2821a4206d784c68842f36e840781b6fda3a88a7745c8adb1901a23af2689419"
+    },
+    {
+      "sequence": "20190926_095902_1_4",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "cbc4052c4d597eb2b058a248390888f74e0bd4dd6e092fb92fa999aaa6eecc9e",
+      "annotation_sha256": "81c8a1b4b80caef8cc8d6e12b116f2805503e701acfed9e8c5af906c1c2c03ee"
+    },
+    {
+      "sequence": "20190926_095902_1_5",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "80bd8cfe1a38bf62c3c113e27068a46362910743a518027bec8b8dae2c157e5c",
+      "annotation_sha256": "b6fefbb6b9e6d78f844afcbb84905fa23aaf50f9871c0e9e7e112d2ea13520b8"
+    },
+    {
+      "sequence": "20190926_095902_1_6",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "f91ae4571211551be0547b6a7043f8f232cb031b27470f60bd5f984c252de20f",
+      "annotation_sha256": "e7e2cc1958653e72d0216f728c95ade14ab24b9e773b9be1ed058f731d5ee05b"
+    },
+    {
+      "sequence": "20190926_095902_1_7",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "9483dad391bf4ad2c96c85067a28fbc5688c2066daed2e87cff476bc6ef04b4c",
+      "annotation_sha256": "9a707c0bfe8435f1d57eb9ce8d1be39390626bb47ca2eab6541cf70038cee1f9"
+    },
+    {
+      "sequence": "20190926_095902_1_8",
+      "frames": 1000,
+      "fps": 20.0,
+      "video_sha256": "45f3eaa1606df05382c83acca8b0adfc755be93f87577afc14fcf2ae3c0c4cf7",
+      "annotation_sha256": "93143b4e5022c5e878521b2391b381324b41242de6e9bb4a6508f88753179a15"
+    },
+    {
+      "sequence": "20190926_095902_1_9",
+      "frames": 764,
+      "fps": 20.0,
+      "video_sha256": "b7ef39ec3e9b7bdb162fbd800f7f9778c25a6f287a501d15a2e1d69fe8ecf72a",
+      "annotation_sha256": "12700b665d8cc48e913d5f095b35b11add3c78047af5cf27baa35cec54dd5dfd"
+    }
+  ],
+  "selection": "All 18 clips in two reserved timestamp groups. No clip excluded using outcomes. No videos/images from these groups entered the new adaptation training or validation.",
+  "history": "Earlier baseline candidates were evaluated on the first clip of each group before this new training branch. This history and unknown parent-training/session independence limit claims of fully independent generalization. No further tuning based on this adapted-model test is allowed without new evaluation data."
+}

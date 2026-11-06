@@ -1,0 +1,207 @@
+{
+  "device": "Fresh Windows Python 3.11 + CPU PyTorch 2.11.0",
+  "scope": "Separate PC evaluation; the PDF tables report the original Hailo hardware evaluation.",
+  "results": {
+    "YOLOKW8n": {
+      "images": 250,
+      "per_class": [
+        {
+          "class_id": 0,
+          "name": "drone",
+          "ground_truth": 50,
+          "predictions": 859,
+          "precision_at_025": 0.7804878048780488,
+          "recall_at_025": 0.64,
+          "TP_at_025": 32,
+          "FP_at_025": 9,
+          "FN_at_025": 18,
+          "AP50": 0.6888844335289364,
+          "AP50_95": 0.40512509039071193
+        },
+        {
+          "class_id": 1,
+          "name": "bird",
+          "ground_truth": 50,
+          "predictions": 327,
+          "precision_at_025": 0.8867924528301887,
+          "recall_at_025": 0.94,
+          "TP_at_025": 47,
+          "FP_at_025": 6,
+          "FN_at_025": 3,
+          "AP50": 0.9400305810397555,
+          "AP50_95": 0.7794568284306955
+        },
+        {
+          "class_id": 2,
+          "name": "airplane",
+          "ground_truth": 50,
+          "predictions": 204,
+          "precision_at_025": 0.9433962264150944,
+          "recall_at_025": 1.0,
+          "TP_at_025": 50,
+          "FP_at_025": 3,
+          "FN_at_025": 0,
+          "AP50": 0.9914207221350076,
+          "AP50_95": 0.894419865567011
+        },
+        {
+          "class_id": 3,
+          "name": "helicopter",
+          "ground_truth": 50,
+          "predictions": 179,
+          "precision_at_025": 0.96,
+          "recall_at_025": 0.96,
+          "TP_at_025": 48,
+          "FP_at_025": 2,
+          "FN_at_025": 2,
+          "AP50": 0.9733090438021212,
+          "AP50_95": 0.7782733209366818
+        },
+        {
+          "class_id": 4,
+          "name": "kite",
+          "ground_truth": 50,
+          "predictions": 221,
+          "precision_at_025": 0.9230769230769231,
+          "recall_at_025": 0.96,
+          "TP_at_025": 48,
+          "FP_at_025": 4,
+          "FN_at_025": 2,
+          "AP50": 0.9744223435793417,
+          "AP50_95": 0.8397201008483648
+        }
+      ],
+      "mAP50": 0.9136134248170323,
+      "mAP50_95": 0.739399041234693,
+      "implementation": "class-aware IoU matching + 101-point trapezoid AP; threshold-first P/R at 0.25",
+      "matching_iou_thresholds": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.8999999999999999,
+        0.95
+      ],
+      "wall_seconds": 6.831494699999894,
+      "input_size": 640,
+      "confidence_floor": 0.001,
+      "nms_iou": 0.45,
+      "max_detections": 300,
+      "rect": false,
+      "scope": "Shared NumPy metric for PC vs Hailo; official Ultralytics metrics reported separately",
+      "ap_matching_version": "iou-greedy-v1",
+      "fixed_confidence_matching_version": "threshold-first-v2",
+      "scorer_version": {
+        "ap_matching": "iou-greedy-v1",
+        "fixed_confidence_matching": "threshold-first-v2"
+      }
+    },
+    "YOLOKW11n": {
+      "images": 250,
+      "per_class": [
+        {
+          "class_id": 0,
+          "name": "drone",
+          "ground_truth": 50,
+          "predictions": 542,
+          "precision_at_025": 0.8235294117647058,
+          "recall_at_025": 0.56,
+          "TP_at_025": 28,
+          "FP_at_025": 6,
+          "FN_at_025": 22,
+          "AP50": 0.6336522227951771,
+          "AP50_95": 0.40519830654142713
+        },
+        {
+          "class_id": 1,
+          "name": "bird",
+          "ground_truth": 50,
+          "predictions": 140,
+          "precision_at_025": 0.98,
+          "recall_at_025": 0.98,
+          "TP_at_025": 49,
+          "FP_at_025": 1,
+          "FN_at_025": 1,
+          "AP50": 0.9666924242424242,
+          "AP50_95": 0.8388055610198475
+        },
+        {
+          "class_id": 2,
+          "name": "airplane",
+          "ground_truth": 50,
+          "predictions": 142,
+          "precision_at_025": 0.9259259259259259,
+          "recall_at_025": 1.0,
+          "TP_at_025": 50,
+          "FP_at_025": 4,
+          "FN_at_025": 0,
+          "AP50": 0.9922992970773216,
+          "AP50_95": 0.9007680248222627
+        },
+        {
+          "class_id": 3,
+          "name": "helicopter",
+          "ground_truth": 50,
+          "predictions": 150,
+          "precision_at_025": 0.9056603773584906,
+          "recall_at_025": 0.96,
+          "TP_at_025": 48,
+          "FP_at_025": 5,
+          "FN_at_025": 2,
+          "AP50": 0.9777181818181816,
+          "AP50_95": 0.7736002985953986
+        },
+        {
+          "class_id": 4,
+          "name": "kite",
+          "ground_truth": 50,
+          "predictions": 234,
+          "precision_at_025": 0.8571428571428571,
+          "recall_at_025": 0.96,
+          "TP_at_025": 48,
+          "FP_at_025": 8,
+          "FN_at_025": 2,
+          "AP50": 0.9617720793233339,
+          "AP50_95": 0.8334543659824074
+        }
+      ],
+      "mAP50": 0.9064268410512877,
+      "mAP50_95": 0.7503653113922686,
+      "implementation": "class-aware IoU matching + 101-point trapezoid AP; threshold-first P/R at 0.25",
+      "matching_iou_thresholds": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.8999999999999999,
+        0.95
+      ],
+      "wall_seconds": 6.371135299999878,
+      "input_size": 640,
+      "confidence_floor": 0.001,
+      "nms_iou": 0.45,
+      "max_detections": 300,
+      "rect": false,
+      "scope": "Shared NumPy metric for PC vs Hailo; official Ultralytics metrics reported separately",
+      "ap_matching_version": "iou-greedy-v1",
+      "fixed_confidence_matching_version": "threshold-first-v2",
+      "scorer_version": {
+        "ap_matching": "iou-greedy-v1",
+        "fixed_confidence_matching": "threshold-first-v2"
+      }
+    }
+  },
+  "scorer_version": {
+    "ap_matching": "iou-greedy-v1",
+    "fixed_confidence_matching": "threshold-first-v2"
+  },
+  "fixed_confidence_scoring": "Predictions are filtered at confidence 0.25 before each image/class matching step; historical AP matching and values are unchanged."
+}

@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "path": "pi_cpu_one_epoch/results.csv",
+      "sha256": "b8e52a47a863a6730717db18871f4a16535238a65e45b0f8c874b30872fbd799",
+      "epochs": 1
+    },
+    {
+      "path": "rejected_refinement5/results.csv",
+      "sha256": "51b0998d2e06c4def6c4e280b8b709eacae0e6cf26e1e4ffe3fe7943f757c8cc",
+      "epochs": 5
+    },
+    {
+      "path": "adaptation10/YOLOKW11n/results.csv",
+      "sha256": "0cdc6859cce23cdccf72818f1c7bdb3ce62c9660e8d29589e3276010e5cd778d",
+      "epochs": 10
+    },
+    {
+      "path": "adaptation10/YOLOKW8n/results.csv",
+      "sha256": "f3670478b86324da6460a1be95333a7f8c13869138405abdd5f40c0ee2986a7e",
+      "epochs": 10
+    },
+    {
+      "path": "fiveclass20/YOLOKW11n/results.csv",
+      "sha256": "33d8aa28daaa1303a1bbc16d350da7cad4e8f939ea5a6128cc061d5d274a3807",
+      "epochs": 20
+    },
+    {
+      "path": "fiveclass20/YOLOKW8n/results.csv",
+      "sha256": "2f15aed695dabcfd44901a9475f12a72a0a9fa877bb7929247234f04db1bcb99",
+      "epochs": 20
+    },
+    {
+      "path": "historical50/YOLOKW11n/results.csv",
+      "sha256": "f11aedb8e36479c1a053fc74a97840f30cda1318e1e877fe6239ef4e4f89b43f",
+      "epochs": 50
+    },
+    {
+      "path": "historical50/YOLOKW8n/results.csv",
+      "sha256": "fe54f279d1d271b77b12711e9831bc7ea1348cb3bc7fa10e2d0c83bc529faea8",
+      "epochs": 50
+    },
+    {
+      "path": "rehearsal10/YOLOKW11n/results.csv",
+      "sha256": "d736865b558fa617821511fd68d0895fcb92ae4fd005095bf3a85e19ee3246fc",
+      "epochs": 10
+    },
+    {
+      "path": "rehearsal10/YOLOKW8n/results.csv",
+      "sha256": "1e406ba8f64dccaa93ab493fcf809e337c44d6d295a2b63b1ac2aa71b0edfefd",
+      "epochs": 10
+    }
+  ],
+  "note": "Separate stages; epochs are not concatenated into one continuous optimizer run."
+}

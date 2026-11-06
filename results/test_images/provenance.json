@@ -1,0 +1,9 @@
+{
+  "source": "samples/provenance.json",
+  "device": "PC CPU",
+  "confidence": 0.25,
+  "images_per_model": 20,
+  "model_weights": "models/registry.json",
+  "ground_truth_overlay": false,
+  "scope": "Actual predictions on the public test samples; not separate test data and not the Hailo image outputs."
+}
