@@ -1,0 +1,9 @@
+train: images
+val: images
+test: images
+names:
+- drone
+- bird
+- airplane
+- helicopter
+- kite

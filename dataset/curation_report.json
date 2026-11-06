@@ -1,0 +1,54 @@
+{
+  "status": "CURATED_EXPLORATORY_STARTER",
+  "images": 1700,
+  "names": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter",
+    "kite"
+  ],
+  "split_class_counts": {
+    "train": {
+      "drone": 240,
+      "bird": 240,
+      "airplane": 240,
+      "helicopter": 240,
+      "kite": 240
+    },
+    "val": {
+      "drone": 50,
+      "bird": 50,
+      "airplane": 50,
+      "helicopter": 50,
+      "kite": 50
+    },
+    "test": {
+      "drone": 50,
+      "bird": 50,
+      "airplane": 50,
+      "helicopter": 50,
+      "kite": 50
+    }
+  },
+  "rejected": {
+    "excluded_parachute": 2734,
+    "not_single_box": 5124,
+    "box_scale": 505,
+    "perceptual_or_exact_duplicate": 174,
+    "low_crop_sharpness": 55,
+    "average_hash_and_color_duplicate": 111,
+    "visual_review_quarantine": 2
+  },
+  "selection": {
+    "seed": 42,
+    "phash_min_hamming": 9,
+    "average_hash_radius": 3,
+    "average_hash_rgb_rmse_max": 18,
+    "min_image_short_side": 256,
+    "min_object_scale640": 16,
+    "min_object_crop_laplacian_variance": 15,
+    "single_object_only": true
+  },
+  "limitations": "Measurable quality and duplicate screening are not exhaustive semantic review or verified session independence. Published model benchmark must name this new split."
+}

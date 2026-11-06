@@ -1,0 +1,182 @@
+[
+  {
+    "image": "drone_1.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Drone_0000818_jpg.rf.21b485dea97753e5d442d9d8ef8ca9e1.jpg",
+    "curated_test_path": "images/test/mbaod_fbc6ce6ffb6b1f3e1fff903a060aeb80916ca05c01721d870a454370f25a373c.jpg",
+    "sha256": "64a2f0bbecc1c6971e95ffc22d62a502f017ec2bd8dbf95efdc46a86853b45c3",
+    "label_sha256": "f1567926052a25e07a55c68680b34a514a7d524c8d353716f3c94932fdbc13e9"
+  },
+  {
+    "image": "drone_2.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Drone_0000138_jpg.rf.7b2052b49d96d0ca1186dcd6ad0a612d.jpg",
+    "curated_test_path": "images/test/mbaod_81bbf3ead8ef59be9cbcece24fd8d649497c1b7f12706e6c56ac5b5b8afd73a0.jpg",
+    "sha256": "ee4bffa351611f28abff4911fa3e35377fe592d571b5bf5d4d4e92e2fe05392e",
+    "label_sha256": "eeebf2b8c216058a3b900fc9425f752e5e4962e8b17612bef41d6cd96099bb3b"
+  },
+  {
+    "image": "drone_3.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Drone_0000911_jpg.rf.2c0dd3dd8e994a90ed6b1c7337bd2f97.jpg",
+    "curated_test_path": "images/test/mbaod_bb8919106294fa14501f8088dd52c1528a1713cc53d321b9597971366e2353bc.jpg",
+    "sha256": "75019c3e8cec93830bdfa56133bce34829b37ab0d52a6d137d57947bc6335b3a",
+    "label_sha256": "bbc38ff99d763e71680223bbddb386d978f0a53e8a02e0d01cd2fad124576ce9"
+  },
+  {
+    "image": "drone_4.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Drone_0000140_jpg.rf.dff3db41044cb9d7576be2c2dc2ac609.jpg",
+    "curated_test_path": "images/test/mbaod_b00cbf3fbfd2e7adb17e53df76533f827283ef892087ed666e0973ac304b141a.jpg",
+    "sha256": "10723cf72a13fe24225d4cce7b0d4fa761947ef2adb858e38c9cf5fbf42b4626",
+    "label_sha256": "9955642722f0c0762d0b1dbb9612585a10deeaef5a3126c2ee5d0c112547002c"
+  },
+  {
+    "image": "bird_1.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Bird_0000460_jpg.rf.4e447d248131b86443063a1ad71ebc44.jpg",
+    "curated_test_path": "images/test/mbaod_88e3d03c575db5d30365155a203080389768e91e5380b9b36877967f381a1e90.jpg",
+    "sha256": "ffdc6fe5410bcf1d6f1f680d1da6ed007ce35df2083a0bad9cc31a295cec0fd1",
+    "label_sha256": "6f044a120502adbc187f81a49d44ecc43174a2f364676ec19d07b3995e93ce1a"
+  },
+  {
+    "image": "bird_2.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Bird_0001126_jpg.rf.59ddc7e2463d6c411a854a2089491ffe.jpg",
+    "curated_test_path": "images/test/mbaod_bdf7bfbe6820e7e1a141957ee3c6cf8bc063a9180db2ce803c2321b6710c3ceb.jpg",
+    "sha256": "e7d539af5d3113b1a8d48524c847783c349988e76d4bc41051b222ba37d7009b",
+    "label_sha256": "da63df81473b5a936ae07322969109450f422312c9be24b1152194820de31ed8"
+  },
+  {
+    "image": "bird_3.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Bird_0000015_jpg.rf.66bce189ca1331733b5ee6968251ab04.jpg",
+    "curated_test_path": "images/test/mbaod_49bf7e0b8e3bcf66d881bb3ca29b7eaa067796159981ef5f89761bf9b4b126b9.jpg",
+    "sha256": "0fc08532274849eb45e91069b65e60d31122ff7a707ae3be414eb9ce1f28cb17",
+    "label_sha256": "1572387271e58fa21a18c780919fe0220d8fc2a054b2b00a7e624187903211ff"
+  },
+  {
+    "image": "bird_4.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Bird_0000722_jpg.rf.021c8f5d6666bec8e5c74b6550a07bad.jpg",
+    "curated_test_path": "images/test/mbaod_1fbbdd8159a5ea5ab14db473b4a03de63b8f5726ff702fc5799287e4c9fbfc90.jpg",
+    "sha256": "ca2530340f31a39eedd6510eeae57e8ab235258c687172febfdcf3575ad23582",
+    "label_sha256": "2fe63a64c190f0ff7984710c9bdbc5b45a2077031562f62e9aae09c9d27e38ec"
+  },
+  {
+    "image": "airplane_1.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Airplane_0005710_jpg.rf.fd1cb9fabc06a5a8555f5e5124c46ccb.jpg",
+    "curated_test_path": "images/test/mbaod_a45f6afd7b8accdfe380d2c9a5faa3c9bd6edb99f2b0af2a8f39205e00cd719a.jpg",
+    "sha256": "84d76c05e8a8154847c881fd0abf31b60d46304b35b2ba45c49d743c0b85137d",
+    "label_sha256": "f91b1d322accb6cecfde40be9ae13930a6e8a49cc781eb2a23f6f9bee6772832"
+  },
+  {
+    "image": "airplane_2.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Airplane_0002666_jpg.rf.1ab669078279ba7c31edebccb201aa0f.jpg",
+    "curated_test_path": "images/test/mbaod_04fb8a2bd9b838726c72a341ae7e336141f1b49d41367917ebc9d6d03171dbbb.jpg",
+    "sha256": "fdc042b181b312056f5f291e1e05e2ecfdbfb55bb5b4a93b79139d11a17e5039",
+    "label_sha256": "f481e3be072bec22ea36afa7027d8a80252264ceb7bd2e8013dc7ba49cc24177"
+  },
+  {
+    "image": "airplane_3.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Airplane_0000076_jpg.rf.0ee4a6387ff4215820da421acbafb16f.jpg",
+    "curated_test_path": "images/test/mbaod_8a05dc60fbf28a7e8f486f50d770c61ad0e8208ac3a219fce0811d661872a0de.jpg",
+    "sha256": "8f696db3e9107c15f3018951c180fa6479d6d45cca8b2a918203007ddd77a887",
+    "label_sha256": "bbfced7fb78044dcad590fdf9773f6616d455bc967e8f5b944dcb3c1b4a66f37"
+  },
+  {
+    "image": "airplane_4.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Airplane_0000587_jpg.rf.3e12f993edd00f3d56ddbc92b2e2e02b.jpg",
+    "curated_test_path": "images/test/mbaod_8ccfcced41b7e226852c9f5d5d9a75278366f40c8f5c0e755e2bd33e6e4eb950.jpg",
+    "sha256": "5c62ad93117aa3b620d00b834caf802fa2a98ae48672ae136695f05fb053a29a",
+    "label_sha256": "98165237f4c818f629572b5ad38f95b1e2803f2e82c3c3833e2d24ee95e7794a"
+  },
+  {
+    "image": "helicopter_1.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Helicopter_0003661_jpg.rf.bc1097584713404394b948f96e981e9e.jpg",
+    "curated_test_path": "images/test/mbaod_6c5a87580f8268e8a92a21bc86f240cf852094a1a7b2ded674077a61a72388a7.jpg",
+    "sha256": "11c8740b57abeccd121ee84b7bcecb5d1e2538aced002ef959fca5148c0a32e0",
+    "label_sha256": "d6e9393f66a0aa04ff53c1347e75cd67cd513c7b4d6c5a0ee25032a3f602880d"
+  },
+  {
+    "image": "helicopter_2.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Helicopter_0005453_jpg.rf.edb0e4570ddb5e7053afe9baa498590a.jpg",
+    "curated_test_path": "images/test/mbaod_e572b4b23aa1a42252fe04a415196548bbe172f29f882f8bb8e4e3beb25f2e5e.jpg",
+    "sha256": "3bd4f71fe6d8365ac6d3c5199506d35777618d12d409bdb68da06f050956abfd",
+    "label_sha256": "1caef8dba618753cb2addbd26fd9a23a54db52f5441519e578a2bc5eb715a6ad"
+  },
+  {
+    "image": "helicopter_3.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Helicopter_0005601_jpg.rf.2ca82b4dd2bc811f7d52649c659afc23.jpg",
+    "curated_test_path": "images/test/mbaod_4099d6083f92a4b8e9f62f3ec9c6eba9c8a8794eb3a8dd7a7edbf6c1762a3c91.jpg",
+    "sha256": "046c085e1746125c08922b8c344a74f1e2f46f6f49907f9253fcb016a7f2a0bd",
+    "label_sha256": "4d835ded1e07bd07605e6b4344acd784d6f0e1b57edc370073467ea8c20a714c"
+  },
+  {
+    "image": "helicopter_4.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Helicopter_0003797_jpg.rf.62d4301c7c775311358518dc9036352f.jpg",
+    "curated_test_path": "images/test/mbaod_191e3160b0f9f7f486c00725244b434515d1403a418300b875a6376ec2615bfb.jpg",
+    "sha256": "6a9f639e7dd3fe45966b578d807deda466785b501c5f5497e846e16035567c32",
+    "label_sha256": "71f27739b7da6cdccb994b1bbae325603e1ddac6a6091183088adbac7f873dbd"
+  },
+  {
+    "image": "kite_1.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Kite_0000608_jpg.rf.2f00dd839fb6ecb50cd6573a57e4c681.jpg",
+    "curated_test_path": "images/test/mbaod_97b937ddeecd944b8bd53598d260eadd7034b92d5ea9e841f6150580fb5d31ad.jpg",
+    "sha256": "b08b36cbaa99d39f34f7b7536218ab831890eb1ff72e6e0a3ba50568ab560ffd",
+    "label_sha256": "b99662fc380cfb07a69cd26d29a7b4d5f12f138ed28cb8a400797b98f538dc33"
+  },
+  {
+    "image": "kite_2.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Kite_0003459_jpg.rf.578aab7c0007f0ae603ca93ee850436d.jpg",
+    "curated_test_path": "images/test/mbaod_fbd32a0019d82e8546dc1b9884bb0b227895086caba692314179766e1290f08c.jpg",
+    "sha256": "d1b5a37f3b0cd2d232a866d912ba4a8d760b53daec930b6dce5963c9de5dce0c",
+    "label_sha256": "1b8c8a0e8214ff299b94f3a36e1e366591e0aef2ae02c2a12199126a4a47e95c"
+  },
+  {
+    "image": "kite_3.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Kite_0000663_jpg.rf.63c6c8d87077704c836b72284f02f514.jpg",
+    "curated_test_path": "images/test/mbaod_b36f6f9fa95be4e9359d8fc8421992609228f0b46ab396141a52da385e1d1863.jpg",
+    "sha256": "dc52d9321fa131f65e187898385bf7971bac5ebd75afa945d23630d3c96fb190",
+    "label_sha256": "64715a6dc57c339684dbdeef5a6cc8eec09e80986bc93af3c4c53272efeef2df"
+  },
+  {
+    "image": "kite_4.jpg",
+    "source": "MBAOD v1",
+    "source_doi": "10.17632/zfc8hndczp.1",
+    "original": "Kite_0002924_jpg.rf.19aebca1d7af6f3195ed3d726af21785.jpg",
+    "curated_test_path": "images/test/mbaod_ea29dd0ad350120942cb6f2af8c260c30c85437d93bf9270eaa56fd0420440e7.jpg",
+    "sha256": "5db12522aa77d8b5cedb0f60c1f9e903a9589d6a0715e300f251fcff95e84bd4",
+    "label_sha256": "b34893f33e21b58687df0183d5142fe8e7f565a17d40332ac289fbe9dbc33008"
+  }
+]

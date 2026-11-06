@@ -1,0 +1,9 @@
+{
+  "derived": "sort_core.py",
+  "original": "sort.py",
+  "changes": [
+    "Remove matplotlib/TkAgg and skimage imports used only by interactive demo.",
+    "Remove demo main block and global numpy random seed; retain tracking algorithms unchanged."
+  ],
+  "sha256": "5b60e04b007709b7798aa6db63398f3cac8d6464d322074723ee465b5c1113c7"
+}
