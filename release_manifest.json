@@ -1,5 +1,5 @@
 {
-  "release": "YOLOKW-v0.3.0-rc4-Source",
+  "release": "HusAero-v0.3.0-rc5-Source",
   "classes": [
     "drone",
     "bird",
@@ -35,8 +35,8 @@
     },
     {
       "path": "configs/adaptation_protocol.json",
-      "bytes": 1443,
-      "sha256": "9d6ca6cc5928f800d7bbc3538f18c9b394fce2f221ca0efbc80c6532bb76c797"
+      "bytes": 1397,
+      "sha256": "9238930f134c1003507eff8addc73491f4687a3e5ba62cdcedce4b4e720643df"
     },
     {
       "path": "configs/bytetrack.yaml",
@@ -44,19 +44,19 @@
       "sha256": "47f9260838c991d8053816cca42b9417fe54e86ac11bb4be374ee12ed8ae7c41"
     },
     {
-      "path": "configs/video_groups.json",
-      "bytes": 323,
-      "sha256": "54ec4f338da74b5e3a9e35501fd9df45fb015cb1b747dd8b1e059271ca9c7017"
-    },
-    {
-      "path": "configs/YOLOKW11n-follow.json",
+      "path": "configs/HusAero-11n-follow.json",
       "bytes": 80,
       "sha256": "c7c99aa05dba13694034649de4759dec32674a9b56d0cca62f4a82fa10b42768"
     },
     {
-      "path": "configs/YOLOKW8n-follow.json",
+      "path": "configs/HusAero-8n-follow.json",
       "bytes": 79,
       "sha256": "e6b155f76aece03b91f13cc4b74d07337161756adf21be5cb1a8a6d0c27e8503"
+    },
+    {
+      "path": "configs/video_groups.json",
+      "bytes": 323,
+      "sha256": "54ec4f338da74b5e3a9e35501fd9df45fb015cb1b747dd8b1e059271ca9c7017"
     },
     {
       "path": "create_calibration.py",
@@ -75,8 +75,8 @@
     },
     {
       "path": "demo.py",
-      "bytes": 3549,
-      "sha256": "95f4bfe9554bfb4c39a3685718fe2056d758327343d8b9db60fa7ca3a867874c"
+      "bytes": 3555,
+      "sha256": "b754a8ebb03254713bda284878073551f1db4c49a81e1e4d8226ddfee4e0af95"
     },
     {
       "path": "deployment/detection_scores.py",
@@ -90,23 +90,23 @@
     },
     {
       "path": "deployment/hailo_follow_configured.py",
-      "bytes": 7384,
-      "sha256": "6cb3868a54beee72b5bebfe1c8d9d5e091961b86dad5db32c2bede08588ec165"
+      "bytes": 7385,
+      "sha256": "d46ba6c3600f10bd72289b9a06c49aa1fd25a53429047cdad103d95a3a8fb4a1"
     },
     {
-      "path": "deployment/test_yolokw_decoder.py",
-      "bytes": 1169,
-      "sha256": "a16ecbee7488e1bc858d6224ce1702c88f81c13a987b7e0748321d12558d797a"
+      "path": "deployment/husaero_hailo.py",
+      "bytes": 4388,
+      "sha256": "f5f3d39c077c879db53c7a2d2432f1ebd1f223a16fa79814699130a35541cdf6"
     },
     {
-      "path": "deployment/yolokw_hailo.py",
-      "bytes": 4386,
-      "sha256": "818534cb75f911afee390811e63de76126766e8ba6420edf5651acc4da225ba3"
+      "path": "deployment/test_husaero_decoder.py",
+      "bytes": 1170,
+      "sha256": "6c5550810ea950cfe3e7b2dcc9cfc303654f6889b26617ad2a459f5959494532"
     },
     {
       "path": "evaluate_samples.py",
-      "bytes": 1841,
-      "sha256": "8546468027959c2e2018ab8f90936473fa36b8c9bbb2feaadd9b7baa6aa7d95b"
+      "bytes": 1847,
+      "sha256": "c9a1128c4ef5f5a2b832ef139e89eb26d16592e46c1c1d5cbb70129a7e8a2957"
     },
     {
       "path": "export_onnx.py",
@@ -115,8 +115,8 @@
     },
     {
       "path": "finetune.py",
-      "bytes": 2165,
-      "sha256": "713b7611b33c3fecf700b490f9f21cec704ee17c18dd7be2de5560a361d393e6"
+      "bytes": 2171,
+      "sha256": "387dab48b0f402efbe7a91838c62cefaddc50ae7424ab534ea9a3dac0211ae4c"
     },
     {
       "path": "flow_assisted_tracker.py",
@@ -130,23 +130,23 @@
     },
     {
       "path": "models/registry.json",
-      "bytes": 1307,
-      "sha256": "3d4ad00678d0477c58c98a50acee347e21bf96dda116e3a5c740119fad7f38d1"
+      "bytes": 1275,
+      "sha256": "f73df6ae22421dc773647c733fcd69f5b5e377757a97c8d7702bdc0ce3ce7a7f"
     },
     {
       "path": "NOTICE.md",
-      "bytes": 1838,
-      "sha256": "05259906b18229b515826be11e46f300386e3328cfa006d3980d5dbc6ee82300"
+      "bytes": 1842,
+      "sha256": "35ed9629b3b7c3b465d6912c641c31a3f5dcbef8265753d4c48a14639a74b4fc"
     },
     {
       "path": "pc_detection_eval.py",
-      "bytes": 2458,
-      "sha256": "aec2662a8b22ce3a2e8d1b36db4a3abc9d9450403eb74b46687df79b4828c58c"
+      "bytes": 2459,
+      "sha256": "4b73d94cbc65902bff4fc0897e24d5bf15d924ee19ac52242efece3c1862f13f"
     },
     {
       "path": "plot_training.py",
-      "bytes": 3631,
-      "sha256": "1cb7a1f07b928cbd222a110c0ce68ddb43bdf16c52fa92bf06f5ee573d87049f"
+      "bytes": 3635,
+      "sha256": "28e32f334e4d30e5ddc9d11e93a99ef67df6fb6100bf1383b7cd08f25a0fbed6"
     },
     {
       "path": "postprocess.py",
@@ -160,8 +160,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14029,
-      "sha256": "5d28a2fe9288d19f8143db7ff2b105687e64fee2ec6f2151c53775c3e56244ee"
+      "bytes": 14493,
+      "sha256": "11df58dcd278b004ad27e3e5593c437c36b7f80d5bae6fe0cbfa922a68788db7"
     },
     {
       "path": "requirements-analysis.txt",
@@ -175,38 +175,38 @@
     },
     {
       "path": "results/cpu_image_test.json",
-      "bytes": 6320,
-      "sha256": "d5dfec34e2c684e8c48547fa1b43a3dac9c1c59ba83e98fe41fcaf711a614522"
+      "bytes": 6117,
+      "sha256": "525372a68a83a57cb942779d815f3293e63d2566a752056bf7c23a0346a7a412"
     },
     {
       "path": "results/curves/historical50_losses.png",
-      "bytes": 271471,
-      "sha256": "fdac8d263b5939e0b89c0d755fea1a6d2db93d7e73527c9d65052e64f839eb3e"
+      "bytes": 269011,
+      "sha256": "9695ddb2bcffeb51450051bca8c669b3713db175af41a514d5abd5b0cffb53ea"
     },
     {
       "path": "results/curves/historical50_metrics.png",
-      "bytes": 178014,
-      "sha256": "271ff95a4c368de91b5d44cdc1669418398e3874e5908d63f31e7ec35f89f541"
+      "bytes": 174948,
+      "sha256": "9ea401a8b11baea22068a5ac3a1dac134b59de08a69bfe7abb488d655dfb204f"
     },
     {
-      "path": "results/curves/YOLOKW11n_losses.png",
-      "bytes": 210662,
-      "sha256": "867c55f89628115a014d8c9ab258c4e0807cfba0d5a25cfd1a27484fa8792dda"
+      "path": "results/curves/HusAero-11n_losses.png",
+      "bytes": 209791,
+      "sha256": "42622a04c0fb970e1e78901e91e87544c6d9a985e8218056fedf0676dfd5ccfd"
     },
     {
-      "path": "results/curves/YOLOKW11n_metrics.png",
-      "bytes": 105998,
-      "sha256": "dfa87cb0e9dc185670450b0ea0d082fb8af23c56bb19d831593caedb86cf4fec"
+      "path": "results/curves/HusAero-11n_metrics.png",
+      "bytes": 104930,
+      "sha256": "82f227090e3bed2b0883739aaea846f176ed52a0b782aac8de0e0f63e0c0e3e1"
     },
     {
-      "path": "results/curves/YOLOKW8n_losses.png",
-      "bytes": 209723,
-      "sha256": "7c7decbc542f1619864e3dcaffca9c52c4effaf3f692534c13e2a0ff1b263c2f"
+      "path": "results/curves/HusAero-8n_losses.png",
+      "bytes": 208744,
+      "sha256": "75fc0589bb2aafd0c69671f46e6887e191cca26868baa3d1e676bb61e7bab9d4"
     },
     {
-      "path": "results/curves/YOLOKW8n_metrics.png",
-      "bytes": 106854,
-      "sha256": "300c46cd690e7e76046f3cefda87f659d9a111a9377e59df07dd8b92189df3e7"
+      "path": "results/curves/HusAero-8n_metrics.png",
+      "bytes": 105938,
+      "sha256": "c6b6bddeade8c95ce494c5b2989b3a207ca631656dbeae6a6037d9341f5f446c"
     },
     {
       "path": "results/environment_cpu_lock.txt",
@@ -215,8 +215,8 @@
     },
     {
       "path": "results/evidence/duplicate_policy_validation.json",
-      "bytes": 9906,
-      "sha256": "5ed28f476fa40ddbff7c90fd558ab3b53273ca9416508cd8c8f3a8f1591dd552"
+      "bytes": 9553,
+      "sha256": "a01572236cbe1096e9559e4d21b32ba8d2a8a9a91a4562d0e4eac9fd1ad0e98b"
     },
     {
       "path": "results/evidence/reserved18_protocol.json",
@@ -224,14 +224,19 @@
       "sha256": "1035ab40219de50b73781d2abb137df3b0eecbdd9f9523763891bb6a3e8e85ae"
     },
     {
+      "path": "results/HusAero_Results.pdf",
+      "bytes": 4260785,
+      "sha256": "6c9381c5e98f98c231d16f32b3cf013683cb361e233d53d7bd94e4e5d2c7a2d5"
+    },
+    {
       "path": "results/metrics.json",
-      "bytes": 3013,
-      "sha256": "9d90eff06bfa7a882ba1c9b443aafc112559ac9352d3c73a2e2674a255b20751"
+      "bytes": 2937,
+      "sha256": "a29f2a704009fb6d26fa52e6bb07253c416f179ddfe9e5c726667ce7950b31ca"
     },
     {
       "path": "results/per_clip_video_results.csv",
-      "bytes": 2551,
-      "sha256": "983701b67575a9431f863ae2d7c7c4f5102e83218d54cde460732c15a839a4fb"
+      "bytes": 2586,
+      "sha256": "5a0ce96272b26868ecd37e5e853e98c7e0c59e855fa748e5470d037ab5a4c5a0"
     },
     {
       "path": "results/software_validation.json",
@@ -239,244 +244,244 @@
       "sha256": "bdabc1c8e761b2aeea7027ab35986fd4cc3940335cccfffb6c2fb804f4aaa123"
     },
     {
+      "path": "results/test_images/HusAero-11n/airplane_1.jpg",
+      "bytes": 203614,
+      "sha256": "e6ecad7d8befe8d2fe77624def6503ddd24d3f908ba6eb8d563cbc88a622dfff"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/airplane_2.jpg",
+      "bytes": 102044,
+      "sha256": "863e9022648f6dd8df234dab40eb20b628c0735809732db439b8e38cda2dd7b3"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/airplane_3.jpg",
+      "bytes": 162059,
+      "sha256": "0443132c55dcba75d787ef3b5d42b2ab6a5a080645c6411e03351f069ed6e67f"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/airplane_4.jpg",
+      "bytes": 83640,
+      "sha256": "b65e810e454e5a0be5695a2e8b5909b2fd3782b780f1f30c73f7bed7c0105988"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/bird_1.jpg",
+      "bytes": 260814,
+      "sha256": "22162d57242b41f0ac92d6359f10ea03889670b92a4534e57c5c8aa7072680d5"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/bird_2.jpg",
+      "bytes": 153802,
+      "sha256": "9e13f66d8929123ac27ac24c0642993f4f16d257cfaea8ec8203b04a62c28855"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/bird_3.jpg",
+      "bytes": 155706,
+      "sha256": "2bc2fa46586a495ea918156fa5c13d9c12f7bbcb0615529aa73e900f701863ba"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/bird_4.jpg",
+      "bytes": 133469,
+      "sha256": "581c9d711ab184a4d67405ff5a3e6a2e5b6e3392e6651692f59b43404fcc3eb9"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/drone_1.jpg",
+      "bytes": 191362,
+      "sha256": "c9be52f54b0c01fa84f837fe13262e4b52f24015807081129f7c7a6c76405f4a"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/drone_2.jpg",
+      "bytes": 118135,
+      "sha256": "c7da5f4d46199949498e8a9341640a15d4695d238bcf46ef41f8ecee6e808941"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/drone_3.jpg",
+      "bytes": 292240,
+      "sha256": "98d7e11946169d6f6e998cb028b3ed0bb552d724df8ab1445d193c6e7fc0825c"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/drone_4.jpg",
+      "bytes": 69827,
+      "sha256": "e30dffea739eefa72e58d3d1fc695863ffbaced1555f37a5f73249cb276eac38"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/helicopter_1.jpg",
+      "bytes": 198712,
+      "sha256": "281446ecfce15cfb42078c5eacce5002113d06d060608ef1cdb90dc28396c136"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/helicopter_2.jpg",
+      "bytes": 158332,
+      "sha256": "35013d6dd4f7bcea0f630043c0fb62d6486b03c1a7058a45ae96fd0ba6259234"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/helicopter_3.jpg",
+      "bytes": 140669,
+      "sha256": "d3423a2106f87cee53493ea51733ed0dde407f27d846a8256c8a4929a930ad99"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/helicopter_4.jpg",
+      "bytes": 196232,
+      "sha256": "1672aaf9d4821908cd995ebf97b13383c34d807e5d4fc079c70e3c6446152c02"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/kite_1.jpg",
+      "bytes": 139589,
+      "sha256": "2614ab2cd5e0218b128573675fc067cc2a109513ac1fc3a5ddb7369efc8aef0e"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/kite_2.jpg",
+      "bytes": 140098,
+      "sha256": "52cbe83f66bc99b51caee20cff61f9b7d77077082c5997d22a4c8d19cd9dceed"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/kite_3.jpg",
+      "bytes": 126894,
+      "sha256": "5f9c082e66e03025af0387492965d659704b67de7f9688e8f81842082f8f6550"
+    },
+    {
+      "path": "results/test_images/HusAero-11n/kite_4.jpg",
+      "bytes": 108307,
+      "sha256": "3da04b93cd901de3b5f8b41cf39c5551f3401646897618cb43bfa7e3993d6ece"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/airplane_1.jpg",
+      "bytes": 203107,
+      "sha256": "69ea865434d2f6fdd2e056f0b4cc22515051eddd0adca0de2d9c3149e0da10cb"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/airplane_2.jpg",
+      "bytes": 103234,
+      "sha256": "b4a34007835f1d33a14eaad47f19e2c2e9aa17e97cd9ef6bceef3853cd555fa6"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/airplane_3.jpg",
+      "bytes": 161855,
+      "sha256": "c28395475244a7ba197d9db48517e0cb18c0919e05151e953d76c48f7ecde82f"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/airplane_4.jpg",
+      "bytes": 81752,
+      "sha256": "9bfe78377389b29197d4b763f2f4783ab04722981adb5485893f864c6750430b"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/bird_1.jpg",
+      "bytes": 260037,
+      "sha256": "79c39c31daad54882a0016d90fef5f45470a9a4ec988350a1e9a5adcca79c8b2"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/bird_2.jpg",
+      "bytes": 154368,
+      "sha256": "ce277bd21c0a4862fa553414004fbd4a4128f010595b02818a73c79d8f5f42bf"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/bird_3.jpg",
+      "bytes": 152772,
+      "sha256": "af88848495ac63ff6d94ac2d4505f0043fe721de767ebd4defd77c722dc278d7"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/bird_4.jpg",
+      "bytes": 134910,
+      "sha256": "5f431e2f0f99f57093f2ed5406085dde45bc352a29b5ba1d455970a461b8501e"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/drone_1.jpg",
+      "bytes": 188842,
+      "sha256": "cb4f25a0f711b824c3a37dbe9113a968f61a6dfeec09193df9aa65f711ea7e31"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/drone_2.jpg",
+      "bytes": 118602,
+      "sha256": "4ba6a10aad00163be9aedf1299c1ed6b52c5cb0ed2976bb37d36014d27dc0ad0"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/drone_3.jpg",
+      "bytes": 294691,
+      "sha256": "fba08e4b2bcf4a92d011177ff1fae61b347fb2c3b31785129bf4b87f644347ce"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/drone_4.jpg",
+      "bytes": 70514,
+      "sha256": "37bf727bf667f0867c80b918acbe1c84b391f386f2a9d9aed378a62050c95e7b"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/helicopter_1.jpg",
+      "bytes": 196549,
+      "sha256": "eedf9bd63170a67f80fcca931a230295578600933ad077c1aad395bfe891ee68"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/helicopter_2.jpg",
+      "bytes": 158607,
+      "sha256": "ba84109a5a7758997f345555a81c96e472d8cfb77a9b61f2a7bc4cf4ef453284"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/helicopter_3.jpg",
+      "bytes": 141044,
+      "sha256": "41d65ee6c1894a031d5ef44a4ea977e82098b6706a8b8a31e745737b20fdbe34"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/helicopter_4.jpg",
+      "bytes": 197848,
+      "sha256": "e82d23b1a2b318252709c3cfe33ea261851f22181a8f066abcceab1c9b6ba5c4"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/kite_1.jpg",
+      "bytes": 139070,
+      "sha256": "285476cc266974c65c2b9a686ef45e6f0ee287b47eaba63b0b1350d7c1f06373"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/kite_2.jpg",
+      "bytes": 140098,
+      "sha256": "52cbe83f66bc99b51caee20cff61f9b7d77077082c5997d22a4c8d19cd9dceed"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/kite_3.jpg",
+      "bytes": 127120,
+      "sha256": "bf81d8a480682631cc7c8f3376d81688d2d10888efd39ff45fec331e5913f020"
+    },
+    {
+      "path": "results/test_images/HusAero-8n/kite_4.jpg",
+      "bytes": 107555,
+      "sha256": "a0a513901d45f55fdbf8631d7c87e9d5ad40eb906b395169bd6227ad23dc892a"
+    },
+    {
       "path": "results/test_images/provenance.json",
       "bytes": 314,
       "sha256": "1d32d56d268010b516de3b3aa2509415a70cd728c502245f1d143eb63b28560e"
     },
     {
-      "path": "results/test_images/YOLOKW11n/airplane_1.jpg",
-      "bytes": 203614,
-      "sha256": "e6ecad7d8befe8d2fe77624def6503ddd24d3f908ba6eb8d563cbc88a622dfff"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/airplane_2.jpg",
-      "bytes": 102044,
-      "sha256": "863e9022648f6dd8df234dab40eb20b628c0735809732db439b8e38cda2dd7b3"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/airplane_3.jpg",
-      "bytes": 162059,
-      "sha256": "0443132c55dcba75d787ef3b5d42b2ab6a5a080645c6411e03351f069ed6e67f"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/airplane_4.jpg",
-      "bytes": 83640,
-      "sha256": "b65e810e454e5a0be5695a2e8b5909b2fd3782b780f1f30c73f7bed7c0105988"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/bird_1.jpg",
-      "bytes": 260814,
-      "sha256": "22162d57242b41f0ac92d6359f10ea03889670b92a4534e57c5c8aa7072680d5"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/bird_2.jpg",
-      "bytes": 153802,
-      "sha256": "9e13f66d8929123ac27ac24c0642993f4f16d257cfaea8ec8203b04a62c28855"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/bird_3.jpg",
-      "bytes": 155706,
-      "sha256": "2bc2fa46586a495ea918156fa5c13d9c12f7bbcb0615529aa73e900f701863ba"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/bird_4.jpg",
-      "bytes": 133469,
-      "sha256": "581c9d711ab184a4d67405ff5a3e6a2e5b6e3392e6651692f59b43404fcc3eb9"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/drone_1.jpg",
-      "bytes": 191362,
-      "sha256": "c9be52f54b0c01fa84f837fe13262e4b52f24015807081129f7c7a6c76405f4a"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/drone_2.jpg",
-      "bytes": 118135,
-      "sha256": "c7da5f4d46199949498e8a9341640a15d4695d238bcf46ef41f8ecee6e808941"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/drone_3.jpg",
-      "bytes": 292240,
-      "sha256": "98d7e11946169d6f6e998cb028b3ed0bb552d724df8ab1445d193c6e7fc0825c"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/drone_4.jpg",
-      "bytes": 69827,
-      "sha256": "e30dffea739eefa72e58d3d1fc695863ffbaced1555f37a5f73249cb276eac38"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/helicopter_1.jpg",
-      "bytes": 198712,
-      "sha256": "281446ecfce15cfb42078c5eacce5002113d06d060608ef1cdb90dc28396c136"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/helicopter_2.jpg",
-      "bytes": 158332,
-      "sha256": "35013d6dd4f7bcea0f630043c0fb62d6486b03c1a7058a45ae96fd0ba6259234"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/helicopter_3.jpg",
-      "bytes": 140669,
-      "sha256": "d3423a2106f87cee53493ea51733ed0dde407f27d846a8256c8a4929a930ad99"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/helicopter_4.jpg",
-      "bytes": 196232,
-      "sha256": "1672aaf9d4821908cd995ebf97b13383c34d807e5d4fc079c70e3c6446152c02"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/kite_1.jpg",
-      "bytes": 139589,
-      "sha256": "2614ab2cd5e0218b128573675fc067cc2a109513ac1fc3a5ddb7369efc8aef0e"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/kite_2.jpg",
-      "bytes": 140098,
-      "sha256": "52cbe83f66bc99b51caee20cff61f9b7d77077082c5997d22a4c8d19cd9dceed"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/kite_3.jpg",
-      "bytes": 126894,
-      "sha256": "5f9c082e66e03025af0387492965d659704b67de7f9688e8f81842082f8f6550"
-    },
-    {
-      "path": "results/test_images/YOLOKW11n/kite_4.jpg",
-      "bytes": 108307,
-      "sha256": "3da04b93cd901de3b5f8b41cf39c5551f3401646897618cb43bfa7e3993d6ece"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/airplane_1.jpg",
-      "bytes": 203107,
-      "sha256": "69ea865434d2f6fdd2e056f0b4cc22515051eddd0adca0de2d9c3149e0da10cb"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/airplane_2.jpg",
-      "bytes": 103234,
-      "sha256": "b4a34007835f1d33a14eaad47f19e2c2e9aa17e97cd9ef6bceef3853cd555fa6"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/airplane_3.jpg",
-      "bytes": 161855,
-      "sha256": "c28395475244a7ba197d9db48517e0cb18c0919e05151e953d76c48f7ecde82f"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/airplane_4.jpg",
-      "bytes": 81752,
-      "sha256": "9bfe78377389b29197d4b763f2f4783ab04722981adb5485893f864c6750430b"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/bird_1.jpg",
-      "bytes": 260037,
-      "sha256": "79c39c31daad54882a0016d90fef5f45470a9a4ec988350a1e9a5adcca79c8b2"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/bird_2.jpg",
-      "bytes": 154368,
-      "sha256": "ce277bd21c0a4862fa553414004fbd4a4128f010595b02818a73c79d8f5f42bf"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/bird_3.jpg",
-      "bytes": 152772,
-      "sha256": "af88848495ac63ff6d94ac2d4505f0043fe721de767ebd4defd77c722dc278d7"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/bird_4.jpg",
-      "bytes": 134910,
-      "sha256": "5f431e2f0f99f57093f2ed5406085dde45bc352a29b5ba1d455970a461b8501e"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/drone_1.jpg",
-      "bytes": 188842,
-      "sha256": "cb4f25a0f711b824c3a37dbe9113a968f61a6dfeec09193df9aa65f711ea7e31"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/drone_2.jpg",
-      "bytes": 118602,
-      "sha256": "4ba6a10aad00163be9aedf1299c1ed6b52c5cb0ed2976bb37d36014d27dc0ad0"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/drone_3.jpg",
-      "bytes": 294691,
-      "sha256": "fba08e4b2bcf4a92d011177ff1fae61b347fb2c3b31785129bf4b87f644347ce"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/drone_4.jpg",
-      "bytes": 70514,
-      "sha256": "37bf727bf667f0867c80b918acbe1c84b391f386f2a9d9aed378a62050c95e7b"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/helicopter_1.jpg",
-      "bytes": 196549,
-      "sha256": "eedf9bd63170a67f80fcca931a230295578600933ad077c1aad395bfe891ee68"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/helicopter_2.jpg",
-      "bytes": 158607,
-      "sha256": "ba84109a5a7758997f345555a81c96e472d8cfb77a9b61f2a7bc4cf4ef453284"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/helicopter_3.jpg",
-      "bytes": 141044,
-      "sha256": "41d65ee6c1894a031d5ef44a4ea977e82098b6706a8b8a31e745737b20fdbe34"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/helicopter_4.jpg",
-      "bytes": 197848,
-      "sha256": "e82d23b1a2b318252709c3cfe33ea261851f22181a8f066abcceab1c9b6ba5c4"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/kite_1.jpg",
-      "bytes": 139070,
-      "sha256": "285476cc266974c65c2b9a686ef45e6f0ee287b47eaba63b0b1350d7c1f06373"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/kite_2.jpg",
-      "bytes": 140098,
-      "sha256": "52cbe83f66bc99b51caee20cff61f9b7d77077082c5997d22a4c8d19cd9dceed"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/kite_3.jpg",
-      "bytes": 127120,
-      "sha256": "bf81d8a480682631cc7c8f3376d81688d2d10888efd39ff45fec331e5913f020"
-    },
-    {
-      "path": "results/test_images/YOLOKW8n/kite_4.jpg",
-      "bytes": 107555,
-      "sha256": "a0a513901d45f55fdbf8631d7c87e9d5ad40eb906b395169bd6227ad23dc892a"
-    },
-    {
-      "path": "results/training/adaptation10/YOLOKW11n/results.csv",
+      "path": "results/training/adaptation10/HusAero-11n/results.csv",
       "bytes": 1368,
       "sha256": "0cdc6859cce23cdccf72818f1c7bdb3ce62c9660e8d29589e3276010e5cd778d"
     },
     {
-      "path": "results/training/adaptation10/YOLOKW8n/results.csv",
+      "path": "results/training/adaptation10/HusAero-8n/results.csv",
       "bytes": 1368,
       "sha256": "f3670478b86324da6460a1be95333a7f8c13869138405abdd5f40c0ee2986a7e"
     },
     {
-      "path": "results/training/fiveclass20/YOLOKW11n/results.csv",
+      "path": "results/training/fiveclass20/HusAero-11n/results.csv",
       "bytes": 2593,
       "sha256": "33d8aa28daaa1303a1bbc16d350da7cad4e8f939ea5a6128cc061d5d274a3807"
     },
     {
-      "path": "results/training/fiveclass20/YOLOKW8n/results.csv",
+      "path": "results/training/fiveclass20/HusAero-8n/results.csv",
       "bytes": 2588,
       "sha256": "2f15aed695dabcfd44901a9475f12a72a0a9fa877bb7929247234f04db1bcb99"
     },
     {
-      "path": "results/training/historical50/YOLOKW11n/results.csv",
+      "path": "results/training/historical50/HusAero-11n/results.csv",
       "bytes": 6053,
       "sha256": "f11aedb8e36479c1a053fc74a97840f30cda1318e1e877fe6239ef4e4f89b43f"
     },
     {
-      "path": "results/training/historical50/YOLOKW8n/results.csv",
+      "path": "results/training/historical50/HusAero-8n/results.csv",
       "bytes": 6078,
       "sha256": "fe54f279d1d271b77b12711e9831bc7ea1348cb3bc7fa10e2d0c83bc529faea8"
     },
     {
       "path": "results/training/history.json",
-      "bytes": 1830,
-      "sha256": "5d75465766879514602c9fcd88da46f847e7c7ec0af03283790eb541dd1d2b47"
+      "bytes": 1791,
+      "sha256": "c8c3d7e674ba74b49a2853757c08a09ed6f11521c937b27cd93869a4c8421f5d"
     },
     {
       "path": "results/training/pi_cpu_one_epoch/results.csv",
@@ -484,12 +489,12 @@
       "sha256": "b8e52a47a863a6730717db18871f4a16535238a65e45b0f8c874b30872fbd799"
     },
     {
-      "path": "results/training/rehearsal10/YOLOKW11n/results.csv",
+      "path": "results/training/rehearsal10/HusAero-11n/results.csv",
       "bytes": 1384,
       "sha256": "d736865b558fa617821511fd68d0895fcb92ae4fd005095bf3a85e19ee3246fc"
     },
     {
-      "path": "results/training/rehearsal10/YOLOKW8n/results.csv",
+      "path": "results/training/rehearsal10/HusAero-8n/results.csv",
       "bytes": 1384,
       "sha256": "1e406ba8f64dccaa93ab493fcf809e337c44d6d295a2b63b1ac2aa71b0edfefd"
     },
@@ -499,19 +504,14 @@
       "sha256": "51b0998d2e06c4def6c4e280b8b709eacae0e6cf26e1e4ffe3fe7943f757c8cc"
     },
     {
-      "path": "results/YOLOKW_Results.pdf",
-      "bytes": 4273439,
-      "sha256": "d558f770e6a6d9505585901f44bd798763f280de2fb5161d5ef6a86d1120a9e8"
-    },
-    {
       "path": "run_demo.cmd",
-      "bytes": 217,
-      "sha256": "7f0af68da88200220cd3c0d40a80858ae3dc19db769d1865fa09c9e4f227c39e"
+      "bytes": 219,
+      "sha256": "f24282717e6c50098e2551fa091d7a742546f61f7f00268bdce040ce0dc5d6c1"
     },
     {
       "path": "run_pi.sh",
-      "bytes": 511,
-      "sha256": "10eabc45286b741200d0c0b539749e4bce22ea99ee28fa65a873d6fc7b2ff97e"
+      "bytes": 522,
+      "sha256": "08ee597c05fe0ebc098ff5b5cd264d4a652b110c5c3cc786ba0f042b91cda33d"
     },
     {
       "path": "samples/data.yaml",
@@ -780,8 +780,8 @@
     },
     {
       "path": "verify_release.py",
-      "bytes": 1666,
-      "sha256": "19df1fdfda4cae5d0086a1f4cd4da9944691924706ca3b42890309282831206a"
+      "bytes": 1670,
+      "sha256": "0b49a0f7eb8543f857616c55822da02f9da8f541b2520262b919d660fe7eb331"
     }
   ]
 }

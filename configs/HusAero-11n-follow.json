@@ -1,0 +1,5 @@
+{
+  "activation": 0.25,
+  "keep_threshold": 0.1,
+  "max_gap_seconds": 0.15
+}

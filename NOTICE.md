@@ -1,6 +1,6 @@
 # Sources and attribution
 
-YOLOKW8n and YOLOKW11n are fine-tuned Ultralytics YOLOv8n and YOLO11n models.
+HusAero-8n and HusAero-11n are fine-tuned Ultralytics YOLOv8n and YOLO11n models.
 Upstream architecture/software: https://github.com/ultralytics/ultralytics .
 This release follows the included AGPL-3.0 license; retained component notices
 remain applicable. The project contributes dataset curation, fine-tuning,

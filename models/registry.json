@@ -1,6 +1,6 @@
 {
-  "release": "v0.3.0-rc4",
-  "default": "YOLOKW8n",
+  "release": "v0.3.0-rc5",
+  "default": "HusAero-8n",
   "classes": [
     "drone",
     "bird",
@@ -9,33 +9,33 @@
     "kite"
   ],
   "models": {
-    "YOLOKW8n": {
+    "HusAero-8n": {
       "architecture": "YOLOv8n",
       "best_adaptation_epoch": 8,
       "weights": {
         "pt": {
-          "path": "models/YOLOKW8n.pt",
+          "path": "models/HusAero-8n.pt",
           "sha256": "a50bd749f978d7e34e9ac4b3aea9bbf32ae6363cef138e3d9cc8a1921db9d00c",
           "bytes": 6516472
         },
         "hef": {
-          "path": "models/YOLOKW8n.hef",
+          "path": "models/HusAero-8n.hef",
           "sha256": "8dbe8b9d52d3d4407588cb483a849f13aa6439e032810b51c4313df475469cc5",
           "bytes": 4440115
         }
       }
     },
-    "YOLOKW11n": {
+    "HusAero-11n": {
       "architecture": "YOLO11n",
       "best_adaptation_epoch": 6,
       "weights": {
         "pt": {
-          "path": "models/YOLOKW11n.pt",
+          "path": "models/HusAero-11n.pt",
           "sha256": "c9c1617bdf68a691f133ef2ad8561a7eb4aa012267771dc9e43869fccc7d8568",
           "bytes": 5524933
         },
         "hef": {
-          "path": "models/YOLOKW11n.hef",
+          "path": "models/HusAero-11n.hef",
           "sha256": "cda1695906d8f35f70d7cf327f2154a0515f04337b79beff833e432f7426eebf",
           "bytes": 6524456
         }

@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from verify_release import ROOT,verify
 NAMES=['drone','bird','airplane','helicopter','kite']
-MODELS=['YOLOKW11n','YOLOKW8n']
+MODELS=['HusAero-11n','HusAero-8n']
 def tracking_config(activation,source):
     import yaml
     config=yaml.safe_load(Path(source).read_text())
@@ -13,7 +13,7 @@ def tracking_config(activation,source):
     return config
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--model',choices=MODELS+['both'],default='YOLOKW8n')
+    p=argparse.ArgumentParser();p.add_argument('--model',choices=MODELS+['both'],default='HusAero-8n')
     p.add_argument('--source',default=str(ROOT/'samples/images'));p.add_argument('--device',default='cpu')
     p.add_argument('--conf',type=float,default=.25,help='Detection confidence; with --track this sets high/new-track activation while lower scores are retained for association');p.add_argument('--track',action='store_true',help='Ultralytics ByteTrack on drone class only; video input required')
     p.add_argument('--out',type=Path);a=p.parse_args()

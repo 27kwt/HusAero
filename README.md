@@ -1,18 +1,18 @@
-# YOLOKW
+# HusAero
 
-RGB aerial-object detection and drone tracking with **YOLOKW8n** (based on
-Ultralytics YOLOv8n) and **YOLOKW11n** (based on Ultralytics YOLO11n).
+RGB aerial-object detection and drone tracking with **HusAero-8n** (based on
+Ultralytics YOLOv8n) and **HusAero-11n** (based on Ultralytics YOLO11n).
 
 The models detect `drone`, `bird`, `airplane`, `helicopter` and `kite`.
 Multirotor and fixed-wing UAVs share the `drone` class. The software does not
 classify civilian/military status or drone subtypes.
 
-**Results:** [evaluation report](results/YOLOKW_Results.pdf),
+**Results:** [evaluation report](results/HusAero_Results.pdf),
 [machine-readable metrics](results/metrics.json),
 [test-image predictions](results/test_images), and
 [per-epoch CSV records](results/training).
 
-| Recorded Pi 5 + Hailo-8 measurement | YOLOKW8n | YOLOKW11n |
+| Recorded Pi 5 + Hailo-8 measurement | HusAero-8n | HusAero-11n |
 |---|---:|---:|
 | Public 250-image mAP50-95 | 72.81% | 76.71% |
 | Drone AP50-95 on the same image test | 40.40% | 46.28% |
@@ -20,7 +20,7 @@ classify civilian/military status or drone subtypes.
 | Follow output on 856 source-target-absent frames | 121 | 55 |
 | Recorded-file decode + inference + follow + logs FPS | 56.56 | 44.07 |
 
-YOLOKW8n is the selected Pi/video default. YOLOKW11n remains available for its
+HusAero-8n is the selected Pi/video default. HusAero-11n remains available for its
 stronger image-box AP. Throughput excludes drawing and video encoding and is
 not a live-camera latency measurement. The models have different prior training
 histories; the final scores do not isolate architecture alone.
@@ -28,7 +28,7 @@ histories; the final scores do not isolate architecture alone.
 ## 1. Download the runnable package
 
 Open this repository's **Releases** and download
-`YOLOKW-v0.3.0-rc4-Complete.zip`. Extract it and enter the `YOLOKW` folder.
+`HusAero-v0.3.0-rc5-Complete.zip`. Extract it and enter the `HusAero` folder.
 It contains both `.pt` checkpoints, both tested Hailo-8 `.hef` files, all code,
 20 labeled samples, and the 1,700-image starter dataset.
 
@@ -56,8 +56,8 @@ and `source .venv/bin/activate`, then run the same `python` commands.
 Windows users can alternatively run `setup_cpu.cmd` and then `run_demo.cmd`.
 
 ```text
-python demo.py --model YOLOKW8n --source /path/to/images
-python demo.py --model YOLOKW11n --source /path/to/video.mp4
+python demo.py --model HusAero-8n --source /path/to/images
+python demo.py --model HusAero-11n --source /path/to/video.mp4
 ```
 
 Outputs go into a new timestamped `runs/demo_*` directory. Images/videos contain
@@ -69,8 +69,8 @@ not an additional independent benchmark.
 ## 3. Evaluate the labeled test split
 
 ```text
-python evaluate_samples.py --model YOLOKW8n --data dataset/data.yaml --device cpu
-python evaluate_samples.py --model YOLOKW11n --data dataset/data.yaml --device cpu
+python evaluate_samples.py --model HusAero-8n --data dataset/data.yaml --device cpu
+python evaluate_samples.py --model HusAero-11n --data dataset/data.yaml --device cpu
 ```
 
 This uses Ultralytics evaluation and saves metrics and diagnostic plots under
@@ -78,8 +78,8 @@ This uses Ultralytics evaluation and saves metrics and diagnostic plots under
 shared NumPy 101-point AP scorer. To use that scorer for PC weights:
 
 ```text
-python pc_detection_eval.py --weights models/YOLOKW8n.pt --data dataset --device cpu --out runs/pc_shared_8n
-python pc_detection_eval.py --weights models/YOLOKW11n.pt --data dataset --device cpu --out runs/pc_shared_11n
+python pc_detection_eval.py --weights models/HusAero-8n.pt --data dataset --device cpu --out runs/pc_shared_8n
+python pc_detection_eval.py --weights models/HusAero-11n.pt --data dataset --device cpu --out runs/pc_shared_11n
 ```
 
 Use a fresh output directory each time. Precision measures how many predicted
@@ -129,8 +129,8 @@ source-video frames, which are not redistributed.
 ## 5. Train or continue fine-tuning
 
 ```text
-python finetune.py --model YOLOKW8n --data dataset/data.yaml --epochs 10 --batch 4 --device cpu
-python finetune.py --model YOLOKW11n --data dataset/data.yaml --epochs 10 --batch 4 --device cpu
+python finetune.py --model HusAero-8n --data dataset/data.yaml --epochs 10 --batch 4 --device cpu
+python finetune.py --model HusAero-11n --data dataset/data.yaml --epochs 10 --batch 4 --device cpu
 ```
 
 For a configured CUDA environment, use `--device 0` and an appropriate batch
@@ -144,7 +144,7 @@ not an exact replay of the private adaptation experiment.
 The completed adaptation used 2,219 training and 721 validation images, 10
 epochs per model, 640px, batch 16, SGD, initial LR 0.0003, seed 42 and identical
 new augmentation settings. All settings are in `configs/adaptation_protocol.json`.
-The selected checkpoints are epoch 8 for YOLOKW8n and epoch 6 for YOLOKW11n.
+The selected checkpoints are epoch 8 for HusAero-8n and epoch 6 for HusAero-11n.
 The earlier matched six-class study completed 50 epochs per architecture;
 later five-class/rehearsal stages and the separate one-epoch Pi CPU experiment
 have their own CSV records. These are separate stages, not one uninterrupted run.
@@ -155,7 +155,7 @@ The PDF contains the current curves. To regenerate plots from a saved run:
 
 ```text
 python -m pip install -r requirements-analysis.txt
-python plot_training.py --run results/training/adaptation10 --out runs/new_curves --models YOLOKW8n YOLOKW11n
+python plot_training.py --run results/training/adaptation10 --out runs/new_curves --models HusAero-8n HusAero-11n
 ```
 
 Training/validation curves do not replace a held-out test. Additional epochs
@@ -172,7 +172,7 @@ guarantee no false boxes, missed targets or drift.
 The optional **PC** diagnostic uses Ultralytics **ByteTrack**:
 
 ```text
-python demo.py --model YOLOKW8n --source /path/to/video.mp4 --track
+python demo.py --model HusAero-8n --source /path/to/video.mp4 --track
 ```
 
 With `--track`, `--conf` sets the activation confidence for a new track.
@@ -189,11 +189,11 @@ before using its data. The external download is a dataset archive, not a
 small video bundled with this release.
 
 After downloading and extracting it, locate
-`test/20190925_111757_1_10/visible.mp4`. From the extracted YOLOKW Complete
+`test/20190925_111757_1_10/visible.mp4`. From the extracted HusAero Complete
 folder, run the following, replacing the example path with your local path:
 
 ```text
-python demo.py --model YOLOKW8n --source "C:/Anti-UAV/test/20190925_111757_1_10/visible.mp4" --track
+python demo.py --model HusAero-8n --source "C:/Anti-UAV/test/20190925_111757_1_10/visible.mp4" --track
 ```
 
 This RGB clip is approximately 17.4 seconds at 20 FPS. Use `visible.mp4`,
@@ -229,30 +229,30 @@ Copy the Complete package into a new Pi directory. From the PC, replace
 `user@raspberrypi.local` with your Pi login and hostname:
 
 ```text
-scp YOLOKW-v0.3.0-rc4-Complete.zip user@raspberrypi.local:~/
+scp HusAero-v0.3.0-rc5-Complete.zip user@raspberrypi.local:~/
 ssh user@raspberrypi.local
 ```
 
 On the Pi, extract into a new directory and enter the package:
 
 ```bash
-mkdir YOLOKW-rc4
-unzip YOLOKW-v0.3.0-rc4-Complete.zip -d YOLOKW-rc4
-cd YOLOKW-rc4/YOLOKW
+mkdir HusAero-rc5
+unzip HusAero-v0.3.0-rc5-Complete.zip -d HusAero-rc5
+cd HusAero-rc5/HusAero
 ```
 
 With the working Hailo interpreter activated:
 
 ```bash
 python3 verify_release.py --full
-python3 -m unittest deployment.test_yolokw_decoder test_flow_assisted_tracker test_detection_scores -v
-python3 deployment/yolokw_hailo.py --hef models/YOLOKW8n.hef --data dataset --split test --out runs/pi_images_8n
-python3 deployment/yolokw_hailo.py --hef models/YOLOKW11n.hef --data dataset --split test --out runs/pi_images_11n
-bash run_pi.sh /path/to/rgb_sequences /path/to/new_results YOLOKW8n
+python3 -m unittest deployment.test_husaero_decoder test_flow_assisted_tracker test_detection_scores -v
+python3 deployment/husaero_hailo.py --hef models/HusAero-8n.hef --data dataset --split test --out runs/pi_images_8n
+python3 deployment/husaero_hailo.py --hef models/HusAero-11n.hef --data dataset --split test --out runs/pi_images_11n
+bash run_pi.sh /path/to/rgb_sequences /path/to/new_results HusAero-8n
 ```
 
 The video root must contain `sequence-name/visible.mp4`. If `python3` is not the
-working Hailo interpreter, set `YOLOKW_PI_PYTHON` to its executable path.
+working Hailo interpreter, set `HusAero_PI_PYTHON` to its executable path.
 `detections.mp4` shows raw detections; `follow.mp4` shows one selected drone.
 Green means a fresh detection association; yellow means bounded flow/motion
 propagation; SEARCHING/LOST means no confirmed track. The source camera reticle
@@ -270,7 +270,7 @@ python create_calibration.py --data dataset/data.yaml --out runs/new_calibration
 On a separate Linux x86_64 Hailo DFC 3.34 environment:
 
 ```bash
-python compile_hailo.py --onnx /path/to/model.onnx --out /path/to/new_compile --name YOLOKW8n --calibration /path/to/calibration.npy --class-names drone bird airplane helicopter kite
+python compile_hailo.py --onnx /path/to/model.onnx --out /path/to/new_compile --name HusAero-8n --calibration /path/to/calibration.npy --class-names drone bird airplane helicopter kite
 ```
 
 Calibration must use training images only. Compilation is separate from Pi
@@ -280,6 +280,14 @@ new verification and hardware evaluation.
 Calibration manifests store paths relative to the dataset root. Copy the whole
 dataset when replaying a selection on another computer. External image paths
 must be materialized inside that dataset root first.
+
+## Release provenance
+
+HusAero is the new project name for the previously published YOLOKW package.
+Version v0.3.0-rc5 renames files and commands; the pretrained PT/HEF bytes,
+training histories and measured scores are unchanged. Embedded checkpoint
+metadata may retain historical names. This is not a new training run or
+new hardware benchmark. Earlier validation records refer to earlier releases.
 
 ## Reuse and limits
 

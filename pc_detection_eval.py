@@ -2,7 +2,7 @@
 import argparse,hashlib,json,time
 from pathlib import Path
 import numpy as np
-from deployment.yolokw_hailo import NAMES
+from deployment.husaero_hailo import NAMES
 from deployment.detection_scores import Scores,read_labels
 
 def main():

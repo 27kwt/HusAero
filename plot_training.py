@@ -6,7 +6,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--models',nargs='+',default=['YOLOKW8n','YOLOKW11n']);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--models',nargs='+',default=['HusAero-8n','HusAero-11n']);a=p.parse_args()
     a.out.mkdir(parents=True,exist_ok=False);series={};metadata=[]
     for model in a.models:
         file=a.run/model/'results.csv'

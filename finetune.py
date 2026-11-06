@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from verify_release import ROOT,verify
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--model',choices=['YOLOKW8n','YOLOKW11n'],default='YOLOKW11n')
+    p=argparse.ArgumentParser();p.add_argument('--model',choices=['HusAero-8n','HusAero-11n'],default='HusAero-11n')
     p.add_argument('--data',type=Path,default=ROOT/'dataset/data.yaml');p.add_argument('--epochs',type=int,default=10)
     p.add_argument('--device',default='cpu');p.add_argument('--batch',type=int,default=16);p.add_argument('--imgsz',type=int,default=640)
     p.add_argument('--smoke-test',action='store_true',help='One tiny plumbing test, not a valid training experiment')

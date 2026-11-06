@@ -12,7 +12,7 @@ def verify(root=ROOT,full=False,require_models=False):
     if not manifest.is_file():raise FileNotFoundError('Use the complete model release ZIP, including release_manifest.json')
     data=json.loads(manifest.read_text(encoding='utf-8'))
     if require_models:
-        missing=[name for name in ('YOLOKW8n.pt','YOLOKW11n.pt') if not (root/'models'/name).is_file()]
+        missing=[name for name in ('HusAero-8n.pt','HusAero-11n.pt') if not (root/'models'/name).is_file()]
         if missing:
             raise FileNotFoundError('Trained weights are missing: '+', '.join(missing)+'. Download the Complete ZIP from GitHub Releases and extract it. The source-code ZIP does not include weights.')
     for row in data['files']:

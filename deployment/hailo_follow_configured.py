@@ -8,7 +8,7 @@ from pathlib import Path
 import cv2,numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
 from deployment.hailo_adapter import prepare
-from deployment.yolokw_hailo import decode,NAMES
+from deployment.husaero_hailo import decode,NAMES
 from flow_assisted_tracker import FlowAssistedTracker
 from postprocess import suppress_nested_drone_boxes
 

@@ -3,7 +3,7 @@ import argparse,json
 from pathlib import Path
 from verify_release import ROOT,verify
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--model',choices=['YOLOKW11n','YOLOKW8n'],default='YOLOKW11n');p.add_argument('--device',default='cpu');p.add_argument('--data',type=Path,default=ROOT/'samples/data.yaml');a=p.parse_args();verify(require_models=True)
+    p=argparse.ArgumentParser();p.add_argument('--model',choices=['HusAero-11n','HusAero-8n'],default='HusAero-11n');p.add_argument('--device',default='cpu');p.add_argument('--data',type=Path,default=ROOT/'samples/data.yaml');a=p.parse_args();verify(require_models=True)
     from ultralytics import YOLO
     import yaml
     from datetime import datetime

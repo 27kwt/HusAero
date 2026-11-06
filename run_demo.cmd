@@ -6,5 +6,5 @@ if not exist .venv\Scripts\python.exe (
   pause
   exit /b 1
 )
-.venv\Scripts\python.exe demo.py --model YOLOKW8n
+.venv\Scripts\python.exe demo.py --model HusAero-8n
 pause
