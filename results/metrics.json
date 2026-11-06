@@ -12,7 +12,7 @@
     "images": 250,
     "per_class": 50,
     "results": {
-      "YOLOKW8n": {
+      "HusAero-8n": {
         "map50": 0.9218367648074401,
         "map50_95": 0.7280883496880232,
         "class_ap50_95": [
@@ -23,7 +23,7 @@
           0.8038211902526419
         ]
       },
-      "YOLOKW11n": {
+      "HusAero-11n": {
         "map50": 0.9326574289567177,
         "map50_95": 0.7671281858851116,
         "class_ap50_95": [
@@ -36,8 +36,8 @@
       }
     },
     "source_metric_sha256": {
-      "YOLOKW8n": "3a3d0e8a719558373c59700edd9fc1e4ff3320050ceb26d4a3d6f921a7acfb4d",
-      "YOLOKW11n": "68354b3f49e7b1cd45485bb6983a39393809d7c1f9320acc7c656352261378fe"
+      "HusAero-8n": "3a3d0e8a719558373c59700edd9fc1e4ff3320050ceb26d4a3d6f921a7acfb4d",
+      "HusAero-11n": "68354b3f49e7b1cd45485bb6983a39393809d7c1f9320acc7c656352261378fe"
     }
   },
   "reserved_video_test": {
@@ -46,7 +46,7 @@
     "raw_confidence": 0.25,
     "localization_iou": 0.5,
     "results": {
-      "YOLOKW8n": {
+      "HusAero-8n": {
         "localized": 12832,
         "present": 16286,
         "absent": 856,
@@ -61,7 +61,7 @@
         "precision": 0.9666666666666667,
         "recall": 0.7389782635392361
       },
-      "YOLOKW11n": {
+      "HusAero-11n": {
         "localized": 9983,
         "present": 16286,
         "absent": 856,
@@ -84,7 +84,7 @@
     "Different prior training histories; final comparison does not isolate architecture.",
     "Source-target-only video annotations may omit other objects. Localization is not general accuracy or MOT HOTA/IDF1.",
     "Reserved timestamp groups were not in adaptation train/validation, but earlier baseline clips were inspected; parent/session independence is unverified.",
-    "Previous matched YOLOKW8n control localized 9748/16286 frames with 19/856 absence outputs; adapted model improves recall but increases absence outputs.",
+    "Previous matched HusAero-8n control localized 9748/16286 frames with 19/856 absence outputs; adapted model improves recall but increases absence outputs.",
     "No live camera or pan-tilt hardware evaluation. Source footage is not redistributed."
   ]
 }

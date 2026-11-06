@@ -2,7 +2,7 @@
   "device": "Fresh Windows Python 3.11 + CPU PyTorch 2.11.0",
   "scope": "Separate PC evaluation; the PDF tables report the original Hailo hardware evaluation.",
   "results": {
-    "YOLOKW8n": {
+    "HusAero-8n": {
       "images": 250,
       "per_class": [
         {
@@ -100,7 +100,7 @@
         "fixed_confidence_matching": "threshold-first-v2"
       }
     },
-    "YOLOKW11n": {
+    "HusAero-11n": {
       "images": 250,
       "per_class": [
         {
