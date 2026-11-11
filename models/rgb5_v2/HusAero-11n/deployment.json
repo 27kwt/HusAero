@@ -24,7 +24,7 @@
   },
   "video_runtime": {
     "version": "runtime-fix-v1",
-    "script_sha256": "688ef83e8e3688f8c604e3831bf655326365f5da0bc15f6aca1a9bd8cba386df",
+    "script_sha256": "6d299bce0e774ba229fd120f45c2d505f4212501a9bbfd14854a79bf770d6b18",
     "flow_dependency_sha256": "5b553b960b9c0feeb1f2f8495e454e476ed005132588b9d5589ea1a24a72bb5c",
     "weights_changed": false,
     "training_performed": false,
@@ -37,6 +37,8 @@
       "clips": 2,
       "frames_per_clip": 200,
       "profile": "Optional small-target views enabled in this diagnostic; default remains off."
-    }
+    },
+    "tested_script_sha256": "688ef83e8e3688f8c604e3831bf655326365f5da0bc15f6aca1a9bd8cba386df",
+    "tested_canonical_script_sha256": "6d299bce0e774ba229fd120f45c2d505f4212501a9bbfd14854a79bf770d6b18"
   }
 }
