@@ -3,7 +3,7 @@
   "name": "HusAero RGB5 — v2 verified on Pi / no training",
   "started_at": "2026-11-11T17:20:21.979502+00:00",
   "finished_at": "2026-11-11T17:20:21.979502+00:00",
-  "updated_at": "2026-11-11T17:20:21.979502+00:00",
+  "updated_at": "2026-11-11T17:22:28.688469+00:00",
   "status": "completed",
   "model": "HusAero-8n / HusAero-11n",
   "architecture": "YOLOv8n / YOLO11n",
