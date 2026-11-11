@@ -28,3 +28,19 @@ ByteTrack: https://github.com/ifzhang/ByteTrack ; the optional PC demo uses the
 Ultralytics implementation. The current Pi follow results instead use
 FlowAssistedTracker, with OpenCV Lucas-Kanade optical flow. Hailo runtime and
 compiler software must be obtained separately from the vendor.
+
+## HusAero project contribution
+
+Copyright (c) 2026 Hussain Alrashidi (27kwt), for original HusAero contributions.
+HusAero project integration, dataset curation and remapping, model fine-tuning,
+evaluation, tracking integration and deployment tooling are credited to Hussain
+Alrashidi. This credit does not claim authorship of Ultralytics architectures,
+upstream code, public-source photographs or source annotations. Original project
+code contributions are distributed under the included AGPL-3.0 license alongside
+the retained upstream notices.
+
+RGB5 v2 adds four image sources: Yaren Koç fixed-wing UAV, Nyahmet fixed-wing UAV,
+Simeon Okechukwu Ajakwe and collaborators' VisioDECT, and MBAOD v1 by Firas Mohammed
+Kadhum, Abbas Abdulazeez Abdulhameed and Jameelah Harbi Saud. Source links, licenses
+and modifications are recorded in dataset/combined_rgb5_v2/LICENSE_DATA.md.
+Do not treat HusAero credit or the code license as replacing their image rights.

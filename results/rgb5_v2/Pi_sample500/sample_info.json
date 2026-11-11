@@ -1,0 +1,19 @@
+{
+  "id": "20261111_RGB5_Pi500",
+  "seed": 20261111,
+  "selection": "Stratified random test-only sample; rare Nyahmet source included in full. Not population weighted.",
+  "source_counts": {
+    "fixedwing_nyahmet": 21,
+    "fixedwing_yarenk": 146,
+    "visiodect": 166,
+    "mbaod": 167
+  },
+  "class_image_counts": {
+    "fixed_wing_drone": 167,
+    "multirotor_drone": 166,
+    "bird": 56,
+    "airplane": 58,
+    "helicopter": 57
+  },
+  "sample_manifest_sha256": "11720745d0be765ac8c8cfb81555e38df5377a4422834b5062cd1b697902409f"
+}

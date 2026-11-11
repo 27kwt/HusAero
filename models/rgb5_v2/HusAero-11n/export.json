@@ -1,0 +1,22 @@
+{
+  "source": "models/rgb5_v2/HusAero-11n/HusAero-11n_RGB5.pt",
+  "checkpoint_sha256": "9bb57b21caed7ad01da8c1c49542de4a5de842669f602809eb22ac824b6a4381",
+  "onnx": "Intermediate ONNX export, identified by onnx_sha256; not included in this source folder.",
+  "onnx_sha256": "168a04bd2edb0c9402e8698fe3313220232c2212d481ed15007541317689bd26",
+  "names": {
+    "0": "fixed_wing_drone",
+    "1": "multirotor_drone",
+    "2": "bird",
+    "3": "airplane",
+    "4": "helicopter"
+  },
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "opset": 11,
+  "onnx_checker": "PASS",
+  "nms": false
+}

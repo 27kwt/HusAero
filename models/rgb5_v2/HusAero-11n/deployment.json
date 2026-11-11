@@ -1,0 +1,25 @@
+{
+  "model": "HusAero-11n RGB5 / 50 epochs",
+  "experiment": "20261111_151818_RGB5_HusAero-11n",
+  "names": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "hardware": "hailo8",
+  "sensor": "RGB-visible only",
+  "hef_sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
+  "checkpoint_sha256": "9bb57b21caed7ad01da8c1c49542de4a5de842669f602809eb22ac824b6a4381",
+  "onnx_sha256": "168a04bd2edb0c9402e8698fe3313220232c2212d481ed15007541317689bd26",
+  "dataset_manifest_sha256": "7c1a5411cfd31eb1e03f61e4888ba7c21b5f1f708ab51cd54361c6d4b5952a6b",
+  "pi_runtime_verified": true,
+  "pi_verification": {
+    "experiment": "20261111_RGB5_Pi500",
+    "images_per_model": 500,
+    "verified_at": "2026-11-11T15:36:22Z",
+    "device": "Raspberry Pi / Hailo-8, firmware 4.23.0",
+    "scope": "Recorded image inference and scored labels; not live-camera or tracking verification."
+  }
+}

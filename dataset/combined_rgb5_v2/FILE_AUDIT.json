@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-11T15:30:47.978614+00:00",
+  "images_checked": 19536,
+  "labels_checked": 19536,
+  "split_counts": {
+    "test": 2159,
+    "train": 13954,
+    "val": 3423
+  },
+  "source_counts": {
+    "test": {
+      "fixedwing_nyahmet": 21,
+      "fixedwing_yarenk": 443,
+      "mbaod": 1201,
+      "visiodect": 494
+    },
+    "train": {
+      "fixedwing_nyahmet": 37,
+      "fixedwing_yarenk": 2838,
+      "mbaod": 8289,
+      "visiodect": 2790
+    },
+    "val": {
+      "fixedwing_nyahmet": 34,
+      "fixedwing_yarenk": 244,
+      "mbaod": 2430,
+      "visiodect": 715
+    }
+  },
+  "cross_split_collisions": {
+    "image_sha256": 0,
+    "group": 0
+  },
+  "errors": [],
+  "checks": [
+    "Every image and label exists and matches its recorded SHA-256",
+    "Every image passes Pillow format verification and has 640x640 RGB dimensions",
+    "All YOLO class IDs and normalized boxes are valid",
+    "Image and label inventory exactly matches manifest",
+    "No identical encoded-image hash or recorded group crosses splits"
+  ],
+  "limits": "This is a file/annotation structure audit, not manual ground-truth verification of every object. Public metadata does not establish complete recording-session independence."
+}

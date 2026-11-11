@@ -1,5 +1,15 @@
 # HusAero
 
+## Current RGB5 experiment and earlier release
+
+Both current RGB5 HEFs have now completed an actual 500-image test each on Raspberry Pi / Hailo-8. See [hardware evidence](results/rgb5_v2/Pi_sample500/). This is distinct from the earlier release's 18-video benchmark and from the current 2,159-image PC test.
+
+Developed and integrated by **Hussain Alrashidi (27kwt)**. Original contributions and upstream credits: [NOTICE.md](NOTICE.md).
+
+The current **RGB5 v2** experiment uses 19,536 RGB images and five classes: fixed-wing drone, multirotor drone, bird, airplane and helicopter. Both HusAero models completed 50 epochs. Start with the [dataset guide](dataset/README.md), [current models](models/rgb5_v2/README.md), and [full PC test results](results/rgb5_v2/README.md).
+
+The sections below describe the **earlier generic-drone v0.3.0-rc5 release**, including its own class map and historical Pi measurements. They are preserved for reproducibility and must not be used as RGB5 hardware results. The `release_manifest.json` belongs to that earlier source snapshot; use the RGB5 file audit and model hashes for the current additions.
+
 RGB aerial-object detection and drone tracking with **HusAero-8n** (based on
 Ultralytics YOLOv8n) and **HusAero-11n** (based on Ultralytics YOLO11n).
 
@@ -306,7 +316,7 @@ tested versions and scope; plumbing checks are not accuracy benchmarks or
 new hardware tests.
 
 
-## RGB5 combined dataset · 11 November 2026
+## RGB5 combined dataset Â· 11 November 2026
 
 The actual RGB-only inputs used by the new 50-epoch HusAero-8n and HusAero-11n experiments are in [dataset/combined_rgb5_v2](dataset/combined_rgb5_v2/). The folder includes all 19,536 images and their YOLO labels: 13,954 train, 3,423 validation and 2,159 test images. Its five classes are fixed-wing drone, multirotor drone, bird, airplane and helicopter. Kite is excluded from this version.
 

@@ -1,0 +1,42 @@
+{
+  "stage": "COMPILED",
+  "network": "husaero_11n_rgb5",
+  "hardware": "hailo8",
+  "endpoints": [
+    "/model.23/cv2.0/cv2.0.2/Conv",
+    "/model.23/cv3.0/cv3.0.2/Conv",
+    "/model.23/cv2.1/cv2.1.2/Conv",
+    "/model.23/cv3.1/cv3.1.2/Conv",
+    "/model.23/cv2.2/cv2.2.2/Conv",
+    "/model.23/cv3.2/cv3.2.2/Conv"
+  ],
+  "parsed_outputs": [
+    "husaero_11n_rgb5/conv51",
+    "husaero_11n_rgb5/conv54",
+    "husaero_11n_rgb5/conv62",
+    "husaero_11n_rgb5/conv65",
+    "husaero_11n_rgb5/conv77",
+    "husaero_11n_rgb5/conv80"
+  ],
+  "onnx_sha256": "168a04bd2edb0c9402e8698fe3313220232c2212d481ed15007541317689bd26",
+  "elapsed_seconds": 242.11347365379333,
+  "head_mapping_verified": true,
+  "optimization_level": 0,
+  "calibration_shape": [
+    1024,
+    640,
+    640,
+    3
+  ],
+  "calibration_sha256": "512b2a5e0c431e040b715889f26017f0d9a870c6635a5d277f38256b1f87d8e2",
+  "hef_sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
+  "names": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "compiler_effort": 0,
+  "input": "RGB uint8 NHWC 640x640, letterbox 114"
+}

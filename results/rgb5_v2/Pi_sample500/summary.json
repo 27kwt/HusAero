@@ -1,0 +1,47 @@
+{
+  "experiment": "20261111_RGB5_Pi500",
+  "verified": true,
+  "images_per_model": 500,
+  "models": [
+    {
+      "model": "HusAero-8n",
+      "partition": "test",
+      "images": 500,
+      "precision": 0.9314211923157449,
+      "recall": 0.9402822257613895,
+      "mAP50": 0.9650939082034145,
+      "mAP50_95": 0.7074761507611546
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "test",
+      "images": 500,
+      "precision": 0.9480252332433594,
+      "recall": 0.9605513078701715,
+      "mAP50": 0.9713651840856542,
+      "mAP50_95": 0.7296218993110493
+    }
+  ],
+  "device_info": "Executing on device: 0001:01:00.0\nIdentifying board\nControl Protocol Version: 2\nFirmware Version: 4.23.0 (release,app,extended context switch buffer)\nLogger Version: 0\nBoard Name: Hailo-8\nDevice Architecture: HAILO8\n\n",
+  "inference_timing": [
+    {
+      "model": "HusAero-8n",
+      "inference_ms_mean": 8.526222763990518,
+      "inference_ms_median": 8.65187599993078,
+      "wall_seconds": 6.456926957001997
+    },
+    {
+      "model": "HusAero-11n",
+      "inference_ms_mean": 13.452549706016725,
+      "inference_ms_median": 13.259670002298662,
+      "wall_seconds": 8.72062312700291
+    }
+  ],
+  "protocol": "Real Hailo-8, 640x640 RGB, compiled NMS confidence 0.001 / IoU 0.45, maximum 300 proposals/class; P/R at confidence 0.25. AP uses IoU 0.50:0.95, confidence ranking and 101 recall points. Separately labelled from native Ultralytics full-test metrics. Stratified sample is not population weighted. No test loss is calculated by the compiled HEF.",
+  "limitations": [
+    "Training/validation scores are diagnostics, not independent test accuracy.",
+    "P/R fixed at confidence 0.25 differs from PC native max-F1 operating point. NMS and AP protocols differ; do not attribute score changes solely to quantization.",
+    "No test loss is available from compiled HEF; AP/P/R are detection metrics, not classification accuracy.",
+    "Public-source recording-session independence is not fully established. Both models showed subtype confusion on a separate unannotated video."
+  ]
+}

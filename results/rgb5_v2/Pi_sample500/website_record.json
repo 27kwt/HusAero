@@ -1,0 +1,167 @@
+{
+  "id": "20261111_RGB5_Pi500",
+  "name": "HusAero RGB5 — Pi 500-image test",
+  "started_at": "2026-11-11T15:36:22Z",
+  "finished_at": "2026-11-11T15:36:22Z",
+  "updated_at": "2026-11-11T15:48:42.312497+00:00",
+  "status": "completed",
+  "model": "HusAero-8n / HusAero-11n",
+  "architecture": "YOLOv8n / YOLO11n",
+  "epochs": 0,
+  "current_epoch": 0,
+  "device": "Raspberry Pi + Hailo-8 · firmware 4.23.0",
+  "dataset": "RGB5 v2 / 500 actual images per model",
+  "split": {
+    "train": 13954,
+    "val": 3423,
+    "test": 2159
+  },
+  "classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "history": [],
+  "scope": "تم التشغيل فعليًا على drone-pi مع Hailo-8. عينة 500 صورة من Test تغطي المصادر الأربعة والفئات الخمس؛ ليست اختبار الـ19 ألف. نتائج الصور لا تثبت دقة التتبع بالفيديو.",
+  "protocol": "Real Hailo-8, 640x640 RGB, compiled NMS confidence 0.001 / IoU 0.45, maximum 300 proposals/class; P/R at confidence 0.25. AP uses IoU 0.50:0.95, confidence ranking and 101 recall points. Separately labelled from native Ultralytics full-test metrics. Stratified sample is not population weighted. No test loss is calculated by the compiled HEF.",
+  "parameters": {
+    "evaluated_images_per_model": 500,
+    "precision_recall_confidence": 0.25,
+    "nms_confidence": 0.001,
+    "nms_iou": 0.45
+  },
+  "achievements": [
+    "تشغيل النموذجين والتحقق من هوية ملفات HEF ومطابقة كل صورة ووسم للعينة الأصلية.",
+    "حفظ التنبؤات الفعلية وحساب Precision وRecall وmAP وإعادة التحقق منها على الكمبيوتر.",
+    "منحنيات حقيقية لكل قسم، مع فصل قياسات الرازبيري عن نتائج الكمبيوتر.",
+    "التجربة المصغرة محفوظة كسجل مستقل؛ ليست بيانات إضافية خارج المجموعة الأصلية."
+  ],
+  "evaluations": [
+    {
+      "model": "HusAero-8n",
+      "partition": "test",
+      "images": 500,
+      "precision": 0.9314211923157449,
+      "recall": 0.9402822257613895,
+      "mAP50": 0.9650939082034145,
+      "mAP50_95": 0.7074761507611546,
+      "per_class_AP50": [
+        0.9246876164722171,
+        0.9870630747062588,
+        0.9546405728705305,
+        0.9766759889900563,
+        0.9824022879780093
+      ],
+      "speed_ms": {
+        "inference_mean": 8.526222763990518,
+        "inference_median": 8.65187599993078
+      },
+      "plots": [
+        {
+          "name": "HusAero-8n_test_curves.png",
+          "label": "Hailo-8 test PR / F1 / P / R curves"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "test",
+      "images": 500,
+      "precision": 0.9480252332433594,
+      "recall": 0.9605513078701715,
+      "mAP50": 0.9713651840856542,
+      "mAP50_95": 0.7296218993110493,
+      "per_class_AP50": [
+        0.9346642851848923,
+        0.9923978260869565,
+        0.9590583398572036,
+        0.9873761423761424,
+        0.983329326923077
+      ],
+      "speed_ms": {
+        "inference_mean": 13.452549706016725,
+        "inference_median": 13.259670002298662
+      },
+      "plots": [
+        {
+          "name": "HusAero-11n_test_curves.png",
+          "label": "Hailo-8 test PR / F1 / P / R curves"
+        }
+      ]
+    }
+  ],
+  "dataset_sources": [
+    {
+      "name": "Nyahmet fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC0",
+      "train": 37,
+      "val": 34,
+      "test": 21
+    },
+    {
+      "name": "Yaren Koç fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC BY 4.0",
+      "train": 2838,
+      "val": 244,
+      "test": 443
+    },
+    {
+      "name": "VisioDECT",
+      "role": "Multirotor drone",
+      "license": "CC BY-NC-SA 4.0",
+      "train": 2790,
+      "val": 715,
+      "test": 494
+    },
+    {
+      "name": "MBAOD v1",
+      "role": "Bird / airplane / helicopter",
+      "license": "CC BY 4.0",
+      "train": 8289,
+      "val": 2430,
+      "test": 1201
+    }
+  ],
+  "operation_checks": [
+    {
+      "model": "HusAero-8n",
+      "device": "PC CPU",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 162,
+      "tracked_frames": 149,
+      "note": "فيديو RGB غير معلّم، 200 إطار. كلا النموذجين سمّى درون متعدد المراوح fixed_wing_drone في إطار تمت مراجعته. هذه أعداد تشغيل وليست دقة تتبع."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "PC CPU",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 131,
+      "tracked_frames": 131,
+      "note": "فيديو RGB غير معلّم، 200 إطار. كلا النموذجين سمّى درون متعدد المراوح fixed_wing_drone في إطار تمت مراجعته. هذه أعداد تشغيل وليست دقة تتبع."
+    }
+  ],
+  "evidence_links": [
+    {
+      "label": "Dataset, splits and sources",
+      "url": "https://github.com/27kwt/HusAero/tree/main/dataset/combined_rgb5_v2"
+    },
+    {
+      "label": "Models and deployment manifests",
+      "url": "https://github.com/27kwt/HusAero/tree/main/models/rgb5_v2"
+    },
+    {
+      "label": "Results and curves",
+      "url": "https://github.com/27kwt/HusAero/tree/main/results/rgb5_v2"
+    },
+    {
+      "label": "HusAero authorship and upstream credits",
+      "url": "https://github.com/27kwt/HusAero/blob/main/NOTICE.md"
+    }
+  ]
+}

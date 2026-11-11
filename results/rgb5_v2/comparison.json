@@ -1,0 +1,47 @@
+{
+  "created": "2026-11-11T17:38:18.303958+03:00",
+  "test_images": 2159,
+  "dataset": "dataset/combined_rgb5_v2/data.yaml",
+  "dataset_manifest_sha256": "7c1a5411cfd31eb1e03f61e4888ba7c21b5f1f708ab51cd54361c6d4b5952a6b",
+  "ultralytics": "8.4.201",
+  "classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "protocol": {
+    "split": "test",
+    "imgsz": 640,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "device": "RTX 4090",
+    "precision_recall": "Ultralytics operating point at smoothed maximum mean F1; not confidence 0.25"
+  },
+  "results": [
+    {
+      "model": "HusAero-8n",
+      "precision": 0.9624764409503086,
+      "recall": 0.9471608799643418,
+      "mAP50": 0.9789095409836616,
+      "mAP50_95": 0.7157298600096145,
+      "drone_mean_AP50": 0.9821399120017229
+    },
+    {
+      "model": "HusAero-11n",
+      "precision": 0.9531296119061933,
+      "recall": 0.9440862106628531,
+      "mAP50": 0.9758130243628897,
+      "mAP50_95": 0.716747650726226,
+      "drone_mean_AP50": 0.9731725856684336
+    }
+  ],
+  "limitations": [
+    "Same public-data held-out test; complete recording-session independence is not established.",
+    "Starting checkpoints have different prior training histories; not an architecture-only comparison.",
+    "Both models misclassified a visible multirotor as fixed-wing in a separate unannotated video.",
+    "These PC test results do not verify Raspberry Pi deployment or live-camera performance."
+  ]
+}
