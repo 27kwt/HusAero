@@ -1,0 +1,20 @@
+{
+  "status": "candidate_awaiting_pi_run",
+  "training_performed": false,
+  "weights_changed": false,
+  "pc_regression_checks": "PASS",
+  "pi_runtime_verified": false,
+  "changes": [
+    "Draw only associated confirmed detection OR flow box, never both.",
+    "Do not draw CONFIRMING or unmatched candidates as confirmed target.",
+    "Allow tightly contained detections to reacquire an oversized flow box."
+  ],
+  "limitations": [
+    "Raw model false positives and weak difficult-clip recall remain.",
+    "Saved Hailo detections were replayed through tracking/rendering on PC; this is not a new Pi run."
+  ],
+  "code_sha256": {
+    "husaero_rgb5_live.py": "48a8399bb35c33b55067042aa2d23dadb9577aa82c36d4cc09ffe8163dd13b19",
+    "flow_assisted_tracker.py": "38280e9bb7be5ca2095bd6a8e9ad93fb87f606e5bb5cb8d2e03051196f1329bb"
+  }
+}

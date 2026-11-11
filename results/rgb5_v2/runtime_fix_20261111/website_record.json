@@ -2,7 +2,7 @@
   "id": "20261111_RGB5_RuntimeFix",
   "name": "HusAero RGB5 — code fixes / no training",
   "started_at": "2026-11-11T16:43:58.203305+00:00",
-  "updated_at": "2026-11-11T16:43:58.203305+00:00",
+  "updated_at": "2026-11-11T17:11:49.235479+00:00",
   "status": "completed",
   "model": "HusAero-8n / HusAero-11n",
   "architecture": "YOLOv8n / YOLO11n",
@@ -23,7 +23,7 @@
     "helicopter"
   ],
   "history": [],
-  "scope": "تصحيح برمجي بلا تدريب أو تغيير أوزان. أزيل تكرار البوكسات في المقاطع الأربعة، وأضيف تتبع بصري قصير. العرض drone لأن تمييز النوع ما زال غير موثوق. التجربة ذات التكبير زادت false positives لـ8n؛ ليست تحسينًا عامًا، والخيار غير مفعل افتراضيًا.",
+  "scope": "Runtime fix v1 completed, with a subsequently confirmed rendering defect: FLOW and an unmatched/unconfirmed detector proposal can both be drawn. In frame 72, a building-edge proposal was drawn while state was CONFIRMING. Candidate v2 fixes single-target arbitration and nested reacquisition; PC regression/replay passed, but a new Pi run is pending user login. Raw detector classification and difficult-video weaknesses remain. No training or weight change.",
   "parameters": {
     "confidence": 0.25,
     "nms_iou": 0.45,
@@ -34,10 +34,10 @@
   },
   "achievements": [
     "التحقق من ثبات SHA-256 للأوزان وHEF للنموذجين؛ لم يحدث تدريب.",
-    "صفر إطارات ببوكسات مكررة في 4 تشغيلات فعلية × 200 إطار، مقارنة بـ14 و5 إطارات في المقطع الأول قبل التصحيح.",
     "تتبع LK البرتقالي مميز عن الكشف الجديد، وينتهي بعد فجوة محدودة.",
     "إيقاف تأكيد نوع خاطئ في العرض، مع الاحتفاظ بفئة النموذج في السجلات.",
-    "مقارنة الكشف مع visible.json بعد التشغيل فقط؛ المقطعان للتطوير وليسا اختبارًا جديدًا مستقلًا."
+    "مقارنة الكشف مع visible.json بعد التشغيل فقط؛ المقطعان للتطوير وليسا اختبارًا جديدًا مستقلًا.",
+    "NMS duplicate checks concern detector proposals only; they did not cover the FLOW/proposal display overlap subsequently identified."
   ],
   "protocol": "First 200 source frames; fixed detector confidence 0.25; original single-target visible.json; drone subtypes merged for localization only; TP requires IoU >=0.50; at most one match per frame; extra boxes count FP. Labels are used offline only. These are development/regression clips, not new held-out performance. Flow-frame counts are not tracking accuracy. Other real objects may be unannotated. Full-dataset PC/Pi benchmark scores are unchanged and belong to earlier single-pass evaluation. Small-target views trade recall for false positives and extra inference cost. No claim of reliable subtype recognition.",
   "operation_checks": [
@@ -86,7 +86,7 @@
       "device": "Raspberry Pi + Hailo-8",
       "frames": 200,
       "clip": "20190926_111509_1_1",
-      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا."
+      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا. [v1 known display defect: a FLOW box and an unconfirmed proposal may both appear. v2 is prepared and tested by PC replay, awaiting a real Pi verification run.]"
     },
     {
       "name": "PiFix_8n_vs_11n_20190926_102042_1_5.mp4",
@@ -95,7 +95,7 @@
       "device": "Raspberry Pi + Hailo-8",
       "frames": 200,
       "clip": "20190926_102042_1_5",
-      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا."
+      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا. [v1 known display defect: a FLOW box and an unconfirmed proposal may both appear. v2 is prepared and tested by PC replay, awaiting a real Pi verification run.]"
     }
   ],
   "dataset_sources": [

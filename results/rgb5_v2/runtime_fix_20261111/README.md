@@ -9,3 +9,7 @@ The before/after table is annotated_comparison.csv. Scoring uses the original si
 At 8n on the first clip, the diagnostic reduced duplicate frames from 14 to 0 but TP stayed 127 and FP increased from 14 to 25 with optional views. At 11n, duplicate frames fell from 5 to 0, TP rose from 84 to 142, and FP stayed 27. The difficult clip remained weak: TP 1/184 target-present frames for 8n and 16/184 for 11n. See the full table rather than interpreting visible tracking as detector recall.
 
 Run a model from its own model folder with the matching HEF and deployment.json, using husaero_rgb5_live.py --hef <model>.hef --manifest deployment.json --video <RGB input> --port 8084. flow_assisted_tracker.py must stay beside it. Add --small-target only for a separately evaluated experimental run, accepting extra latency and false positives. This is a code update, not a new trained model.
+
+## Subsequent display defect and pending v2
+
+The detector-level NMS checks did not catch simultaneous drawing of a FLOW box and an unmatched detector proposal. A CONFIRMING building-edge proposal was also incorrectly drawn in frame 72. The v1 videos retain these issues as historical evidence. Candidate v2 under deployment/runtime_fix_v2_candidate fixes mutually exclusive single-target display, hides temporally unconfirmed proposals from the confirmed-target view, and supports contained-box reacquisition. PC tests and replay passed; v2 has not yet been rerun on the Pi. Underlying raw detector false positives remain in logs, and no retraining took place.

@@ -1,0 +1,37 @@
+{
+  "scope": "Actual saved Hailo-8 detector boxes, replayed on the PC through corrected tracking/rendering. No new inference, training, labels or new Pi runtime verification. One confirmed target or one flow box at most; unconfirmed candidates stay in source logs.",
+  "runs": [
+    {
+      "model": "HusAero-8n",
+      "clip": "20190926_111509_1_1",
+      "frames": 200,
+      "displayed_frames": 189,
+      "flow_frames": 76,
+      "confirming_candidate_frames_not_drawn": 4
+    },
+    {
+      "model": "HusAero-8n",
+      "clip": "20190926_102042_1_5",
+      "frames": 200,
+      "displayed_frames": 5,
+      "flow_frames": 4,
+      "confirming_candidate_frames_not_drawn": 7
+    },
+    {
+      "model": "HusAero-11n",
+      "clip": "20190926_111509_1_1",
+      "frames": 200,
+      "displayed_frames": 196,
+      "flow_frames": 32,
+      "confirming_candidate_frames_not_drawn": 2
+    },
+    {
+      "model": "HusAero-11n",
+      "clip": "20190926_102042_1_5",
+      "frames": 200,
+      "displayed_frames": 57,
+      "flow_frames": 45,
+      "confirming_candidate_frames_not_drawn": 10
+    }
+  ]
+}
