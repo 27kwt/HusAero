@@ -2,7 +2,7 @@
 
 ## Current RGB5 experiment and earlier release
 
-Both current RGB5 HEFs have now completed an actual 500-image test each on Raspberry Pi / Hailo-8. See [hardware evidence](results/rgb5_v2/Pi_sample500/). This is distinct from the earlier release's 18-video benchmark and from the current 2,159-image PC test.
+Both current RGB5 HEFs have completed an actual evaluation of all 19,536 images each on Raspberry Pi / Hailo-8, with Train / Validation / Test scored separately. See [full hardware evidence](results/rgb5_v2/Pi_all_images/) and the earlier [500-image check](results/rgb5_v2/Pi_sample500/). This is distinct from the earlier release's 18-video benchmark and from the current 2,159-image PC test.
 
 Developed and integrated by **Hussain Alrashidi (27kwt)**. Original contributions and upstream credits: [NOTICE.md](NOTICE.md).
 

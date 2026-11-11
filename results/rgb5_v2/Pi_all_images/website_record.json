@@ -1,0 +1,328 @@
+{
+  "id": "20261111_RGB5_PiAllImages",
+  "name": "HusAero RGB5 — Pi all 19,536 images",
+  "started_at": "2026-11-11T15:55:55Z",
+  "finished_at": "2026-11-11T15:55:55Z",
+  "updated_at": "2026-11-11T16:10:26.653356+00:00",
+  "status": "completed",
+  "model": "HusAero-8n / HusAero-11n",
+  "architecture": "YOLOv8n / YOLO11n",
+  "epochs": 0,
+  "current_epoch": 0,
+  "device": "Raspberry Pi + Hailo-8 · firmware 4.23.0",
+  "dataset": "RGB5 v2 / 19536 actual images per model",
+  "split": {
+    "train": 13954,
+    "val": 3423,
+    "test": 2159
+  },
+  "classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "history": [],
+  "scope": "تم التشغيل فعليًا على drone-pi مع Hailo-8. فُحصت كل الـ19,536 صورة لكل نموذج، والنتائج مفصولة إلى Train وValidation وTest. نتائج الصور لا تثبت دقة التتبع بالفيديو.",
+  "protocol": "Real Hailo-8, 640x640 RGB, compiled NMS confidence 0.001 / IoU 0.45, maximum 300 proposals/class; P/R at confidence 0.25. AP uses IoU 0.50:0.95, confidence ranking and 101 recall points. Separately labelled from native Ultralytics full-test metrics. All dataset partitions evaluated and reported separately; only Test is held-out. No test loss is calculated by the compiled HEF.",
+  "parameters": {
+    "evaluated_images_per_model": 19536,
+    "precision_recall_confidence": 0.25,
+    "nms_confidence": 0.001,
+    "nms_iou": 0.45
+  },
+  "achievements": [
+    "تشغيل النموذجين والتحقق من هوية ملفات HEF ومطابقة كل صورة ووسم للعينة الأصلية.",
+    "حفظ التنبؤات الفعلية وحساب Precision وRecall وmAP وإعادة التحقق منها على الكمبيوتر.",
+    "منحنيات حقيقية لكل قسم، مع فصل قياسات الرازبيري عن نتائج الكمبيوتر.",
+    "التجربة المصغرة محفوظة كسجل مستقل؛ ليست بيانات إضافية خارج المجموعة الأصلية.",
+    "تسجيل مقطعي RGB مختلفين على النموذجين بالرازبيري: 4 مخرجات فعلية × 200 إطار، وتجميع مقطعي مقارنة دون تغيير الصناديق أو درجات الثقة."
+  ],
+  "evaluations": [
+    {
+      "model": "HusAero-8n",
+      "partition": "test",
+      "images": 2159,
+      "precision": 0.9314065105645941,
+      "recall": 0.9360768488297418,
+      "mAP50": 0.9542040734151055,
+      "mAP50_95": 0.684776093817993,
+      "per_class_AP50": [
+        0.9153164575878964,
+        0.9823426904952407,
+        0.9336238579819217,
+        0.9737828280461437,
+        0.9659545329643247
+      ],
+      "speed_ms": {
+        "inference_mean": 8.728910823455081,
+        "inference_median": 8.739847498873132
+      },
+      "plots": [
+        {
+          "name": "HusAero-8n_test_curves.png",
+          "label": "Hailo-8 test PR / F1 / P / R curves"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-8n",
+      "partition": "train",
+      "images": 13954,
+      "precision": 0.9315845918671197,
+      "recall": 0.9550658761680644,
+      "mAP50": 0.9664802038636612,
+      "mAP50_95": 0.6932473028797412,
+      "per_class_AP50": [
+        0.9907037981575986,
+        0.9467778360687148,
+        0.9388586415871313,
+        0.9726360106416982,
+        0.9834247328631632
+      ],
+      "speed_ms": {
+        "inference_mean": 8.728910823455081,
+        "inference_median": 8.739847498873132
+      },
+      "plots": [
+        {
+          "name": "HusAero-8n_train_curves.png",
+          "label": "Hailo-8 train PR / F1 / P / R curves"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-8n",
+      "partition": "val",
+      "images": 3423,
+      "precision": 0.9019860931469866,
+      "recall": 0.8760927814032617,
+      "mAP50": 0.9126532668671127,
+      "mAP50_95": 0.6143619828629241,
+      "per_class_AP50": [
+        0.8845315163535985,
+        0.8009253902975907,
+        0.9441394576583325,
+        0.9617702965816426,
+        0.9718996734443996
+      ],
+      "speed_ms": {
+        "inference_mean": 8.728910823455081,
+        "inference_median": 8.739847498873132
+      },
+      "plots": [
+        {
+          "name": "HusAero-8n_val_curves.png",
+          "label": "Hailo-8 val PR / F1 / P / R curves"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "test",
+      "images": 2159,
+      "precision": 0.9393210608060848,
+      "recall": 0.9469257711720704,
+      "mAP50": 0.9735172431143155,
+      "mAP50_95": 0.7220310087197837,
+      "per_class_AP50": [
+        0.9506703242252715,
+        0.9899885128081471,
+        0.9529830651539699,
+        0.9900942771738662,
+        0.9838500362103229
+      ],
+      "speed_ms": {
+        "inference_mean": 13.791811007053726,
+        "inference_median": 13.792973000818165
+      },
+      "plots": [
+        {
+          "name": "HusAero-11n_test_curves.png",
+          "label": "Hailo-8 test PR / F1 / P / R curves"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "train",
+      "images": 13954,
+      "precision": 0.9558389529043849,
+      "recall": 0.9603392680988145,
+      "mAP50": 0.9785702686772675,
+      "mAP50_95": 0.7479195378831802,
+      "per_class_AP50": [
+        0.9946342917971124,
+        0.9682735817879593,
+        0.9540090475849267,
+        0.9847590406998653,
+        0.9911753815164733
+      ],
+      "speed_ms": {
+        "inference_mean": 13.791811007053726,
+        "inference_median": 13.792973000818165
+      },
+      "plots": [
+        {
+          "name": "HusAero-11n_train_curves.png",
+          "label": "Hailo-8 train PR / F1 / P / R curves"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "val",
+      "images": 3423,
+      "precision": 0.9079951573059576,
+      "recall": 0.877130508923387,
+      "mAP50": 0.9267513242181822,
+      "mAP50_95": 0.6591899552876503,
+      "per_class_AP50": [
+        0.9010300857067995,
+        0.8117712973270053,
+        0.958018558372404,
+        0.9790233469805457,
+        0.9839133327041563
+      ],
+      "speed_ms": {
+        "inference_mean": 13.791811007053726,
+        "inference_median": 13.792973000818165
+      },
+      "plots": [
+        {
+          "name": "HusAero-11n_val_curves.png",
+          "label": "Hailo-8 val PR / F1 / P / R curves"
+        }
+      ]
+    }
+  ],
+  "dataset_sources": [
+    {
+      "name": "Nyahmet fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC0",
+      "train": 37,
+      "val": 34,
+      "test": 21
+    },
+    {
+      "name": "Yaren Koç fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC BY 4.0",
+      "train": 2838,
+      "val": 244,
+      "test": 443
+    },
+    {
+      "name": "VisioDECT",
+      "role": "Multirotor drone",
+      "license": "CC BY-NC-SA 4.0",
+      "train": 2790,
+      "val": 715,
+      "test": 494
+    },
+    {
+      "name": "MBAOD v1",
+      "role": "Bird / airplane / helicopter",
+      "license": "CC BY 4.0",
+      "train": 8289,
+      "val": 2430,
+      "test": 1201
+    }
+  ],
+  "operation_checks": [
+    {
+      "model": "HusAero-8n",
+      "device": "PC CPU",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 162,
+      "tracked_frames": 149,
+      "note": "فيديو RGB غير معلّم، 200 إطار. كلا النموذجين سمّى درون متعدد المراوح fixed_wing_drone في إطار تمت مراجعته. هذه أعداد تشغيل وليست دقة تتبع."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "PC CPU",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 131,
+      "tracked_frames": 131,
+      "note": "فيديو RGB غير معلّم، 200 إطار. كلا النموذجين سمّى درون متعدد المراوح fixed_wing_drone في إطار تمت مراجعته. هذه أعداد تشغيل وليست دقة تتبع."
+    },
+    {
+      "model": "HusAero-8n",
+      "device": "Raspberry Pi + Hailo-8",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 127,
+      "tracked_frames": 127,
+      "note": "تشغيل فعلي على فيديو RGB مسجّل غير معلّم، مع ربط مراكز الصناديق. أعداد الإطارات ليست Accuracy أو Recall؛ مخرجات الفئة تبقى كما تنبأ بها النموذج."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 105,
+      "tracked_frames": 105,
+      "note": "تشغيل فعلي على فيديو RGB مسجّل غير معلّم، مع ربط مراكز الصناديق. أعداد الإطارات ليست Accuracy أو Recall؛ مخرجات الفئة تبقى كما تنبأ بها النموذج."
+    },
+    {
+      "model": "HusAero-8n",
+      "device": "Raspberry Pi + Hailo-8",
+      "clip_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "frames": 200,
+      "detected_frames": 1,
+      "tracked_frames": 1,
+      "note": "تشغيل فعلي على فيديو RGB مسجّل غير معلّم، مع ربط مراكز الصناديق. أعداد الإطارات ليست Accuracy أو Recall؛ مخرجات الفئة تبقى كما تنبأ بها النموذج."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "clip_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "frames": 200,
+      "detected_frames": 11,
+      "tracked_frames": 11,
+      "note": "تشغيل فعلي على فيديو RGB مسجّل غير معلّم، مع ربط مراكز الصناديق. أعداد الإطارات ليست Accuracy أو Recall؛ مخرجات الفئة تبقى كما تنبأ بها النموذج."
+    }
+  ],
+  "evidence_links": [
+    {
+      "label": "Dataset, splits and sources",
+      "url": "https://github.com/27kwt/HusAero/tree/main/dataset/combined_rgb5_v2"
+    },
+    {
+      "label": "Models and deployment manifests",
+      "url": "https://github.com/27kwt/HusAero/tree/main/models/rgb5_v2"
+    },
+    {
+      "label": "Results and curves",
+      "url": "https://github.com/27kwt/HusAero/tree/main/results/rgb5_v2"
+    },
+    {
+      "label": "HusAero authorship and upstream credits",
+      "url": "https://github.com/27kwt/HusAero/blob/main/NOTICE.md"
+    }
+  ],
+  "video_demos": [
+    {
+      "name": "Pi_RGB5_8n_vs_11n_20190926_111509_1_1.mp4",
+      "label": "HusAero-8n vs HusAero-11n / real Pi 20190926_111509_1_1",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_111509_1_1",
+      "note": "يسار: HusAero-8n، يمين: HusAero-11n. نفس أول 200 إطار لكل نموذج، وشُغّلا بالتتابع على نفس الرازبيري. المقارنة متزامنة حسب رقم الإطار، وليست تشغيلًا متوازيًا أو قياس سرعة."
+    },
+    {
+      "name": "Pi_RGB5_8n_vs_11n_20190926_102042_1_5.mp4",
+      "label": "HusAero-8n vs HusAero-11n / real Pi 20190926_102042_1_5",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_102042_1_5",
+      "note": "يسار: HusAero-8n، يمين: HusAero-11n. نفس أول 200 إطار لكل نموذج، وشُغّلا بالتتابع على نفس الرازبيري. المقارنة متزامنة حسب رقم الإطار، وليست تشغيلًا متوازيًا أو قياس سرعة. حالة صعبة: ظهر كشف في إطار واحد فقط لـ 8n وفي 11 إطارًا لـ 11n من 200. هذه أعداد كشف وليست نسبة دقة."
+    }
+  ]
+}

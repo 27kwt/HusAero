@@ -1,0 +1,83 @@
+{
+  "experiment": "20261111_RGB5_PiAllImages",
+  "verified": true,
+  "images_per_model": 19536,
+  "models": [
+    {
+      "model": "HusAero-8n",
+      "partition": "test",
+      "images": 2159,
+      "precision": 0.9314065105645941,
+      "recall": 0.9360768488297418,
+      "mAP50": 0.9542040734151055,
+      "mAP50_95": 0.684776093817993
+    },
+    {
+      "model": "HusAero-8n",
+      "partition": "train",
+      "images": 13954,
+      "precision": 0.9315845918671197,
+      "recall": 0.9550658761680644,
+      "mAP50": 0.9664802038636612,
+      "mAP50_95": 0.6932473028797412
+    },
+    {
+      "model": "HusAero-8n",
+      "partition": "val",
+      "images": 3423,
+      "precision": 0.9019860931469866,
+      "recall": 0.8760927814032617,
+      "mAP50": 0.9126532668671127,
+      "mAP50_95": 0.6143619828629241
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "test",
+      "images": 2159,
+      "precision": 0.9393210608060848,
+      "recall": 0.9469257711720704,
+      "mAP50": 0.9735172431143155,
+      "mAP50_95": 0.7220310087197837
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "train",
+      "images": 13954,
+      "precision": 0.9558389529043849,
+      "recall": 0.9603392680988145,
+      "mAP50": 0.9785702686772675,
+      "mAP50_95": 0.7479195378831802
+    },
+    {
+      "model": "HusAero-11n",
+      "partition": "val",
+      "images": 3423,
+      "precision": 0.9079951573059576,
+      "recall": 0.877130508923387,
+      "mAP50": 0.9267513242181822,
+      "mAP50_95": 0.6591899552876503
+    }
+  ],
+  "device_info": "Executing on device: 0001:01:00.0\nIdentifying board\nControl Protocol Version: 2\nFirmware Version: 4.23.0 (release,app,extended context switch buffer)\nLogger Version: 0\nBoard Name: Hailo-8\nDevice Architecture: HAILO8\n\n",
+  "inference_timing": [
+    {
+      "model": "HusAero-8n",
+      "inference_ms_mean": 8.728910823455081,
+      "inference_ms_median": 8.739847498873132,
+      "wall_seconds": 253.456344369999
+    },
+    {
+      "model": "HusAero-11n",
+      "inference_ms_mean": 13.791811007053726,
+      "inference_ms_median": 13.792973000818165,
+      "wall_seconds": 353.48592622399883
+    }
+  ],
+  "protocol": "Real Hailo-8, 640x640 RGB, compiled NMS confidence 0.001 / IoU 0.45, maximum 300 proposals/class; P/R at confidence 0.25. AP uses IoU 0.50:0.95, confidence ranking and 101 recall points. Separately labelled from native Ultralytics full-test metrics. Stratified sample is not population weighted. No test loss is calculated by the compiled HEF.",
+  "limitations": [
+    "Training/validation scores are diagnostics, not independent test accuracy.",
+    "P/R fixed at confidence 0.25 differs from PC native max-F1 operating point. NMS and AP protocols differ; do not attribute score changes solely to quantization.",
+    "No test loss is available from compiled HEF; AP/P/R are detection metrics, not classification accuracy.",
+    "Public-source recording-session independence is not fully established. Both models showed subtype confusion on a separate unannotated video."
+  ]
+}

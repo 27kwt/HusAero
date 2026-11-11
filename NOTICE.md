@@ -44,3 +44,5 @@ Simeon Okechukwu Ajakwe and collaborators' VisioDECT, and MBAOD v1 by Firas Moha
 Kadhum, Abbas Abdulazeez Abdulhameed and Jameelah Harbi Saud. Source links, licenses
 and modifications are recorded in dataset/combined_rgb5_v2/LICENSE_DATA.md.
 Do not treat HusAero credit or the code license as replacing their image rights.
+
+Additional RGB5 attribution detail: nyahmet is Ahmet Nuri Yılmaz. VisioDECT DOI-listed creators are Simeon Okechukwu Ajakwe, Vivian Ukamaka Ihekoronye, Golam Mohtasin, Rubina Akter, Dong Seong Kim and Jae Min Lee; Ali Aouto is additionally credited in the original dataset citation. Distribution-license details and source links are in dataset/combined_rgb5_v2/LICENSE_DATA.md.

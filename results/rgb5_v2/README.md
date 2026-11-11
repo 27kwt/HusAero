@@ -16,3 +16,9 @@ Each model folder contains test curves, confusion matrices, predictions, metric 
 Current RGB5 video check: **one unique unannotated RGB clip, 200 frames per model**, basic centre association. These operation counts are not tracking accuracy. Both candidates misclassified a visible multirotor as fixed-wing in a reviewed frame. Earlier 18-clip results elsewhere belong to the previous model release and are not extra RGB5 clips.
 
 Both compiled Hailo-8 models were verified on Raspberry Pi with a 500-image stratified test-only sample; see [Pi_sample500](Pi_sample500/). This actual sample is separate from the full 2,159-image native PC test above. A complete-dataset Pi run reports training, validation and test separately; no unreturned result is claimed. Complete source recording-session independence is not established; prior checkpoint histories differ.
+
+## Complete Raspberry Pi evaluation and videos
+
+[Pi_all_images](Pi_all_images/) contains the verified evaluation of all 19,536 images per model (39,072 model-image evaluations): 13,954 training, 3,423 validation and 2,159 test, scored separately. On the held-out Pi test, 8n mAP50 / mAP50-95 = 95.42% / 68.48%, and 11n = 97.35% / 72.20%. 11n leads image-test quality on this hardware; 8n has lower mean synchronous inference time (8.73 ms versus 13.79 ms). These timings are not live-camera latency.
+
+[Video evidence](Pi_all_images/video_evidence/) records two RGB clips on both models, 200 frames per run. The second clip was difficult: 8n produced detections in 1/200 frames and 11n in 11/200. These are unannotated operation counts, not measured recall. Both candidates still show subtype confusion in the other clip. The two actual side-by-side Pi comparisons are available beneath the existing video on the website Camera and Tracking page.

@@ -1,0 +1,20 @@
+{
+  "id": "20261111_RGB5_PiAllImages",
+  "seed": 20261111,
+  "images_count": 19536,
+  "selection": "All train/validation/test images, reported separately. Training scores are not held-out performance.",
+  "source_counts": {
+    "fixedwing_nyahmet": 92,
+    "fixedwing_yarenk": 3525,
+    "mbaod": 11920,
+    "visiodect": 3999
+  },
+  "class_image_counts": {
+    "fixed_wing_drone": 3617,
+    "multirotor_drone": 3999,
+    "bird": 3922,
+    "airplane": 4117,
+    "helicopter": 4098
+  },
+  "sample_manifest_sha256": "70ecd441b0c0d301fdeb4bfdabe03f8c16249a23ebe99038170a8380440ece0e"
+}

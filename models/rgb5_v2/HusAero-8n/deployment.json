@@ -16,9 +16,9 @@
   "dataset_manifest_sha256": "7c1a5411cfd31eb1e03f61e4888ba7c21b5f1f708ab51cd54361c6d4b5952a6b",
   "pi_runtime_verified": true,
   "pi_verification": {
-    "experiment": "20261111_RGB5_Pi500",
-    "images_per_model": 500,
-    "verified_at": "2026-11-11T15:36:22Z",
+    "experiment": "20261111_RGB5_PiAllImages",
+    "images_per_model": 19536,
+    "verified_at": "2026-11-11T15:55:55Z",
     "device": "Raspberry Pi / Hailo-8, firmware 4.23.0",
     "scope": "Recorded image inference and scored labels; not live-camera or tracking verification."
   }

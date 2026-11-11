@@ -25,7 +25,7 @@ See the [preparation details](combined_rgb5_v2/README.md), [data card](combined_
 
 ### Testing
 
-Both RGB5 checkpoints were tested on **all 2,159 test images**, not a sample. These images were not used for checkpoint selection in the new fine-tuning runs. Actual PC curves and scores are in [results/rgb5_v2](../results/rgb5_v2/). A separately labelled stratified 500-image test was completed on the actual Raspberry Pi / Hailo-8 for both checkpoints; see [verified hardware evidence](../results/rgb5_v2/Pi_sample500/). Full-dataset hardware evaluation is a separate run, with Train, Validation and Test reported separately.
+Both RGB5 checkpoints were tested on **all 2,159 test images**, not a sample. These images were not used for checkpoint selection in the new fine-tuning runs. Actual PC curves and scores are in [results/rgb5_v2](../results/rgb5_v2/). A separately labelled stratified 500-image test was completed on the actual Raspberry Pi / Hailo-8 for both checkpoints; see [verified hardware evidence](../results/rgb5_v2/Pi_sample500/). The [full-dataset Pi evaluation](../results/rgb5_v2/Pi_all_images/) is also complete: 19,536 images per model, with Train, Validation and Test reported separately.
 
 ## Earlier release: MBAOD starter subset
 

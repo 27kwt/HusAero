@@ -1,0 +1,100 @@
+{
+  "hostname": "drone-pi",
+  "device_info": "Executing on device: 0001:01:00.0\nIdentifying board\nControl Protocol Version: 2\nFirmware Version: 4.23.0 (release,app,extended context switch buffer)\nLogger Version: 0\nBoard Name: Hailo-8\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\nDevice Architecture: HAILO8\n\n",
+  "backend": "Hailo-8",
+  "runs": [
+    {
+      "frames": 200,
+      "detected_frames": 127,
+      "tracked_frames": 127,
+      "subtype_outputs": {
+        "fixed_wing_drone": 58,
+        "multirotor_drone": 83
+      },
+      "model": "HusAero-8n",
+      "clip": "20190926_111509_1_1",
+      "source_video_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "source_fps": 20.0,
+      "output_file": "HusAero-8n_20190926_111509_1_1.mp4",
+      "output_sha256": "13535f4fecad1beaa411e8213c6460a6cb122031914f1cae938da2068ab93a68",
+      "hef_sha256": "d0d3a21cc32cd18a03fe0caaccc2210caab0236004ec0c8f73a26e8c7f08eb3a",
+      "inference_ms_mean": 10.092151390017534
+    },
+    {
+      "frames": 200,
+      "detected_frames": 1,
+      "tracked_frames": 1,
+      "subtype_outputs": {
+        "fixed_wing_drone": 1,
+        "multirotor_drone": 0
+      },
+      "model": "HusAero-8n",
+      "clip": "20190926_102042_1_5",
+      "source_video_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "source_fps": 20.0,
+      "output_file": "HusAero-8n_20190926_102042_1_5.mp4",
+      "output_sha256": "7e2b177076426680ef674fafd3e9a59295ee1065a878ac1b2c149b07b68f449a",
+      "hef_sha256": "d0d3a21cc32cd18a03fe0caaccc2210caab0236004ec0c8f73a26e8c7f08eb3a",
+      "inference_ms_mean": 10.007521605202783
+    },
+    {
+      "frames": 200,
+      "detected_frames": 105,
+      "tracked_frames": 105,
+      "subtype_outputs": {
+        "fixed_wing_drone": 109,
+        "multirotor_drone": 2
+      },
+      "model": "HusAero-11n",
+      "clip": "20190926_111509_1_1",
+      "source_video_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "source_fps": 20.0,
+      "output_file": "HusAero-11n_20190926_111509_1_1.mp4",
+      "output_sha256": "5368133084d2b532825ceb51d48e4f0279e0404de1958b8a8deb45eeb9977dd5",
+      "hef_sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
+      "inference_ms_mean": 15.093543359962496
+    },
+    {
+      "frames": 200,
+      "detected_frames": 11,
+      "tracked_frames": 11,
+      "subtype_outputs": {
+        "fixed_wing_drone": 11,
+        "multirotor_drone": 0
+      },
+      "model": "HusAero-11n",
+      "clip": "20190926_102042_1_5",
+      "source_video_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "source_fps": 20.0,
+      "output_file": "HusAero-11n_20190926_102042_1_5.mp4",
+      "output_sha256": "84a8b687fcb4e8c21e454779e834c504d07034a090743cf93b335340baa4370c",
+      "hef_sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
+      "inference_ms_mean": 15.050473084847908
+    }
+  ],
+  "scope": "Real RGB inference with basic centre association, not ByteTrack or optical flow. Unannotated source footage: counts are operation evidence, not accuracy or recall. Preserve source text/watermarks. Video playback uses source FPS, not measured processing throughput.",
+  "comparisons": [
+    {
+      "name": "Pi_RGB5_8n_vs_11n_20190926_111509_1_1.mp4",
+      "label": "HusAero-8n vs HusAero-11n / real Pi 20190926_111509_1_1",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_111509_1_1",
+      "note": "\u064a\u0633\u0627\u0631: HusAero-8n\u060c \u064a\u0645\u064a\u0646: HusAero-11n. \u0646\u0641\u0633 \u0623\u0648\u0644 200 \u0625\u0637\u0627\u0631 \u0644\u0643\u0644 \u0646\u0645\u0648\u0630\u062c\u060c \u0648\u0634\u064f\u063a\u0651\u0644\u0627 \u0628\u0627\u0644\u062a\u062a\u0627\u0628\u0639 \u0639\u0644\u0649 \u0646\u0641\u0633 \u0627\u0644\u0631\u0627\u0632\u0628\u064a\u0631\u064a. \u0627\u0644\u0645\u0642\u0627\u0631\u0646\u0629 \u0645\u062a\u0632\u0627\u0645\u0646\u0629 \u062d\u0633\u0628 \u0631\u0642\u0645 \u0627\u0644\u0625\u0637\u0627\u0631\u060c \u0648\u0644\u064a\u0633\u062a \u062a\u0634\u063a\u064a\u0644\u064b\u0627 \u0645\u062a\u0648\u0627\u0632\u064a\u064b\u0627 \u0623\u0648 \u0642\u064a\u0627\u0633 \u0633\u0631\u0639\u0629.",
+      "sha256": "8aa34916959b62a86b6406aba1b4c0895cdddbc5ec159ce923b6bc58fb3e5198",
+      "bytes": 1767322
+    },
+    {
+      "name": "Pi_RGB5_8n_vs_11n_20190926_102042_1_5.mp4",
+      "label": "HusAero-8n vs HusAero-11n / real Pi 20190926_102042_1_5",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_102042_1_5",
+      "note": "\u064a\u0633\u0627\u0631: HusAero-8n\u060c \u064a\u0645\u064a\u0646: HusAero-11n. \u0646\u0641\u0633 \u0623\u0648\u0644 200 \u0625\u0637\u0627\u0631 \u0644\u0643\u0644 \u0646\u0645\u0648\u0630\u062c\u060c \u0648\u0634\u064f\u063a\u0651\u0644\u0627 \u0628\u0627\u0644\u062a\u062a\u0627\u0628\u0639 \u0639\u0644\u0649 \u0646\u0641\u0633 \u0627\u0644\u0631\u0627\u0632\u0628\u064a\u0631\u064a. \u0627\u0644\u0645\u0642\u0627\u0631\u0646\u0629 \u0645\u062a\u0632\u0627\u0645\u0646\u0629 \u062d\u0633\u0628 \u0631\u0642\u0645 \u0627\u0644\u0625\u0637\u0627\u0631\u060c \u0648\u0644\u064a\u0633\u062a \u062a\u0634\u063a\u064a\u0644\u064b\u0627 \u0645\u062a\u0648\u0627\u0632\u064a\u064b\u0627 \u0623\u0648 \u0642\u064a\u0627\u0633 \u0633\u0631\u0639\u0629.",
+      "sha256": "a6f7739d7a402fe48b10b079d826bcc1da57396de3a13cc302524c3e9ccb1c39",
+      "bytes": 2339664
+    }
+  ]
+}
