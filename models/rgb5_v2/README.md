@@ -21,3 +21,5 @@ Both candidates confused a multirotor with fixed-wing in an independent RGB vide
 ## Runtime correction v1
 
 The trained best PT/HEF bytes are unchanged. Keep flow_assisted_tracker.py beside husaero_rgb5_live.py. The display now uses generic drone because subtype recognition is not verified. Raw predicted classes remain in the experiment logs. Overlapping/nested drone boxes are suppressed before association. Short LK-flow boxes are orange and explicitly labelled as having no new detector result. Optional --small-target views remain disabled by default because the recorded Pi diagnostic increased false positives for 8n. See results/rgb5_v2/runtime_fix_20261111 for actual test scope and remaining limitations.
+
+Verified update: runtime v2 has now been rerun on Raspberry Pi / Hailo-8 with both unchanged models and two 200-frame clips each. Small-target views were OFF. See results/rgb5_v2/runtime_fix_v2 for scope, raw logs, displayed-box scoring and remaining weak detection. The candidate folder name is retained for historical links; status.json now records Pi verification.

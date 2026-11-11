@@ -32,23 +32,16 @@
         }
       },
       "video_runtime": {
-        "version": "runtime-fix-v1",
-        "script_sha256": "6d299bce0e774ba229fd120f45c2d505f4212501a9bbfd14854a79bf770d6b18",
-        "flow_dependency_sha256": "5b553b960b9c0feeb1f2f8495e454e476ed005132588b9d5589ea1a24a72bb5c",
+        "version": "runtime-fix-v2",
+        "pi_verified": true,
         "weights_changed": false,
         "training_performed": false,
-        "display": "drone; raw subtype remains in logs",
-        "duplicate_filter": "cross-drone IoU 0.45 or containment 0.90 with centre gate",
-        "tracker": "detector association with short LK flow; no velocity-only box rendered",
+        "script_sha256": "0cf757843728826387846b589e4c43eeb281c55394b898966a683e0d8474ddbc",
+        "flow_dependency_sha256": "38280e9bb7be5ca2095bd6a8e9ad93fb87f606e5bb5cb8d2e03051196f1329bb",
         "small_target_default": false,
-        "small_target_scope": "Experimental four-view fallback. Actual Pi test completed but it increased false positives for 8n; not recommended as default.",
-        "pi_video_verified": {
-          "clips": 2,
-          "frames_per_clip": 200,
-          "profile": "Optional small-target views enabled in this diagnostic; default remains off."
-        },
-        "tested_script_sha256": "688ef83e8e3688f8c604e3831bf655326365f5da0bc15f6aca1a9bd8cba386df",
-        "tested_canonical_script_sha256": "6d299bce0e774ba229fd120f45c2d505f4212501a9bbfd14854a79bf770d6b18"
+        "small_target_tested": false,
+        "single_target_display": true,
+        "scope": "Actual Pi run: two 200-frame RGB clips per model. A confirmed associated detection OR a short optical-flow box is displayed. Raw candidates retained in logs. Subtype recognition and difficult-scene detection remain weak."
       }
     },
     "HusAero-11n": {
@@ -75,23 +68,16 @@
         }
       },
       "video_runtime": {
-        "version": "runtime-fix-v1",
-        "script_sha256": "6d299bce0e774ba229fd120f45c2d505f4212501a9bbfd14854a79bf770d6b18",
-        "flow_dependency_sha256": "5b553b960b9c0feeb1f2f8495e454e476ed005132588b9d5589ea1a24a72bb5c",
+        "version": "runtime-fix-v2",
+        "pi_verified": true,
         "weights_changed": false,
         "training_performed": false,
-        "display": "drone; raw subtype remains in logs",
-        "duplicate_filter": "cross-drone IoU 0.45 or containment 0.90 with centre gate",
-        "tracker": "detector association with short LK flow; no velocity-only box rendered",
+        "script_sha256": "0cf757843728826387846b589e4c43eeb281c55394b898966a683e0d8474ddbc",
+        "flow_dependency_sha256": "38280e9bb7be5ca2095bd6a8e9ad93fb87f606e5bb5cb8d2e03051196f1329bb",
         "small_target_default": false,
-        "small_target_scope": "Experimental four-view fallback. Actual Pi test completed but it increased false positives for 8n; not recommended as default.",
-        "pi_video_verified": {
-          "clips": 2,
-          "frames_per_clip": 200,
-          "profile": "Optional small-target views enabled in this diagnostic; default remains off."
-        },
-        "tested_script_sha256": "688ef83e8e3688f8c604e3831bf655326365f5da0bc15f6aca1a9bd8cba386df",
-        "tested_canonical_script_sha256": "6d299bce0e774ba229fd120f45c2d505f4212501a9bbfd14854a79bf770d6b18"
+        "small_target_tested": false,
+        "single_target_display": true,
+        "scope": "Actual Pi run: two 200-frame RGB clips per model. A confirmed associated detection OR a short optical-flow box is displayed. Raw candidates retained in logs. Subtype recognition and difficult-scene detection remain weak."
       }
     }
   },

@@ -26,3 +26,5 @@ Both compiled Hailo-8 models were verified on Raspberry Pi with a 500-image stra
 ## Code-only runtime correction (no training)
 
 [Runtime correction evidence](runtime_fix_20261111/) covers duplicate suppression, generic drone display, bounded LK tracking and the optional small-target experiment. Actual Pi runs showed zero duplicate-box frames. Optional views increased false positives for 8n, so they remain OFF by default. Difficult-video detection and subtype classification are not solved; no new benchmark score or trained weight is claimed. Original visible.json annotations were located and used offline for this regression comparison; the earlier video records had only reported unscored operation counts.
+
+Verified update: runtime v2 has now been rerun on Raspberry Pi / Hailo-8 with both unchanged models and two 200-frame clips each. Small-target views were OFF. See results/rgb5_v2/runtime_fix_v2 for scope, raw logs, displayed-box scoring and remaining weak detection. The candidate folder name is retained for historical links; status.json now records Pi verification.

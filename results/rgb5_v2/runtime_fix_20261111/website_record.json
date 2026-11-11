@@ -2,7 +2,7 @@
   "id": "20261111_RGB5_RuntimeFix",
   "name": "HusAero RGB5 — code fixes / no training",
   "started_at": "2026-11-11T16:43:58.203305+00:00",
-  "updated_at": "2026-11-11T17:11:49.235479+00:00",
+  "updated_at": "2026-11-11T17:21:26.079278+00:00",
   "status": "completed",
   "model": "HusAero-8n / HusAero-11n",
   "architecture": "YOLOv8n / YOLO11n",
@@ -23,7 +23,7 @@
     "helicopter"
   ],
   "history": [],
-  "scope": "Runtime fix v1 completed, with a subsequently confirmed rendering defect: FLOW and an unmatched/unconfirmed detector proposal can both be drawn. In frame 72, a building-edge proposal was drawn while state was CONFIRMING. Candidate v2 fixes single-target arbitration and nested reacquisition; PC regression/replay passed, but a new Pi run is pending user login. Raw detector classification and difficult-video weaknesses remain. No training or weight change.",
+  "scope": "Runtime fix v1 completed, with a subsequently confirmed rendering defect: FLOW and an unmatched/unconfirmed detector proposal can both be drawn. In frame 72, a building-edge proposal was drawn while state was CONFIRMING. Candidate v2 fixes single-target arbitration and nested reacquisition; PC regression/replay passed, and a subsequent actual Pi run has now verified v2; see experiment 20261111_RGB5_RuntimeV2. Raw detector classification and difficult-video weaknesses remain. No training or weight change.",
   "parameters": {
     "confidence": 0.25,
     "nms_iou": 0.45,
@@ -86,7 +86,7 @@
       "device": "Raspberry Pi + Hailo-8",
       "frames": 200,
       "clip": "20190926_111509_1_1",
-      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا. [v1 known display defect: a FLOW box and an unconfirmed proposal may both appear. v2 is prepared and tested by PC replay, awaiting a real Pi verification run.]"
+      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا. [v1 known display defect: a FLOW box and an unconfirmed proposal may both appear. v2 is prepared and tested by PC replay, subsequently verified in the separate v2 Pi experiment.]"
     },
     {
       "name": "PiFix_8n_vs_11n_20190926_102042_1_5.mp4",
@@ -95,7 +95,7 @@
       "device": "Raspberry Pi + Hailo-8",
       "frames": 200,
       "clip": "20190926_102042_1_5",
-      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا. [v1 known display defect: a FLOW box and an unconfirmed proposal may both appear. v2 is prepared and tested by PC replay, awaiting a real Pi verification run.]"
+      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا. [v1 known display defect: a FLOW box and an unconfirmed proposal may both appear. v2 is prepared and tested by PC replay, subsequently verified in the separate v2 Pi experiment.]"
     }
   ],
   "dataset_sources": [

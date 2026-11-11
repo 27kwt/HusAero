@@ -238,11 +238,15 @@ def draw_tracking(frame, detections, selected, tracker, state, device_label):
         cv2.circle(frame, tuple(points[-1].round().astype(int)), 3,
                    (255, 230, 120), -1, cv2.LINE_AA)
 
-    if tracker.flow_box is not None:
+    if selected is None and tracker.flow_box is not None:
         x1,y1,x2,y2=np.round(np.asarray(tracker.flow_box)*scale).astype(int)
         cv2.rectangle(frame,(x1,y1),(x2,y2),(30,185,250),2,cv2.LINE_AA)
         cv2.putText(frame,'FLOW ID '+str(tracker.track_id)+' | no new detection',(max(0,x1),max(40,y1-8)),cv2.FONT_HERSHEY_SIMPLEX,.45,(30,185,250),1,cv2.LINE_AA)
     for i, (box, score, class_id) in enumerate(detections):
+        # Single-target view: only a temporally confirmed, associated detection
+        # gets a box. Raw/unmatched proposals remain in the experiment log.
+        if i != selected:
+            continue
         coords = np.round(np.asarray(box) * scale).astype(int)
         x1, x2 = np.clip(coords[[0, 2]], 0, width - 1)
         y1, y2 = np.clip(coords[[1, 3]], 0, height - 1)

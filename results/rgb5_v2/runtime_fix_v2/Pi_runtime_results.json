@@ -1,0 +1,92 @@
+{
+  "hostname": "drone-pi",
+  "device_info": "Executing on device: 0001:01:00.0\nIdentifying board\nControl Protocol Version: 2\nFirmware Version: 4.23.0 (release,app,extended context switch buffer)\nLogger Version: 0\nBoard Name: Hailo-8\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\nDevice Architecture: HAILO8\n\n",
+  "backend": "hailo",
+  "runs": [
+    {
+      "max_display_boxes": 1,
+      "confirmed_candidate_frames": 124,
+      "frames": 200,
+      "detected_frames": 127,
+      "tracked_frames": 194,
+      "flow_frames": 70,
+      "motion_only_frames": 1,
+      "subtype_outputs": {
+        "fixed_wing_drone": 46,
+        "multirotor_drone": 81
+      },
+      "model": "HusAero-8n",
+      "clip": "20190926_111509_1_1",
+      "source_video_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "source_fps": 20.0,
+      "output_file": "HusAero-8n_20190926_111509_1_1.mp4",
+      "output_sha256": "49308c6571905e4f65883571a7657365751009154ee11fc0ba457c9e93091f8a",
+      "hef_sha256": "d0d3a21cc32cd18a03fe0caaccc2210caab0236004ec0c8f73a26e8c7f08eb3a",
+      "inference_ms_mean": 10.124878365113545
+    },
+    {
+      "max_display_boxes": 0,
+      "confirmed_candidate_frames": 0,
+      "frames": 200,
+      "detected_frames": 1,
+      "tracked_frames": 0,
+      "flow_frames": 0,
+      "motion_only_frames": 0,
+      "subtype_outputs": {
+        "fixed_wing_drone": 1,
+        "multirotor_drone": 0
+      },
+      "model": "HusAero-8n",
+      "clip": "20190926_102042_1_5",
+      "source_video_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "source_fps": 20.0,
+      "output_file": "HusAero-8n_20190926_102042_1_5.mp4",
+      "output_sha256": "3198fbb99d59ecefe40bb122bfef874096a673be783814ce702f47efdebf0bcb",
+      "hef_sha256": "d0d3a21cc32cd18a03fe0caaccc2210caab0236004ec0c8f73a26e8c7f08eb3a",
+      "inference_ms_mean": 10.071900355032994
+    },
+    {
+      "max_display_boxes": 1,
+      "confirmed_candidate_frames": 99,
+      "frames": 200,
+      "detected_frames": 105,
+      "tracked_frames": 166,
+      "flow_frames": 67,
+      "motion_only_frames": 1,
+      "subtype_outputs": {
+        "fixed_wing_drone": 104,
+        "multirotor_drone": 1
+      },
+      "model": "HusAero-11n",
+      "clip": "20190926_111509_1_1",
+      "source_video_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "source_fps": 20.0,
+      "output_file": "HusAero-11n_20190926_111509_1_1.mp4",
+      "output_sha256": "db188d6295997b52e7df6b3d6d1f851f62fc5408e606af326bee9e7f992a6c2d",
+      "hef_sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
+      "inference_ms_mean": 15.068416999947658
+    },
+    {
+      "max_display_boxes": 1,
+      "confirmed_candidate_frames": 7,
+      "frames": 200,
+      "detected_frames": 11,
+      "tracked_frames": 39,
+      "flow_frames": 32,
+      "motion_only_frames": 0,
+      "subtype_outputs": {
+        "fixed_wing_drone": 11,
+        "multirotor_drone": 0
+      },
+      "model": "HusAero-11n",
+      "clip": "20190926_102042_1_5",
+      "source_video_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "source_fps": 20.0,
+      "output_file": "HusAero-11n_20190926_102042_1_5.mp4",
+      "output_sha256": "9a18eed9123b9dafa542412ed03ccfe87bb22c200b9594eade6f3f6854192f14",
+      "hef_sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
+      "inference_ms_mean": 15.054989105137793
+    }
+  ],
+  "scope": "Runtime fix v2: confirmed-target-only rendering and contained reacquisition; cross-subtype/contained-box duplicate suppression; small-target views disabled; fixed confidence 0.25; detector association plus bounded LK optical flow. Generic drone display, original class IDs retained in logs. No training/weight changes. Unannotated video counts are not accuracy. Orange FLOW means no new detection."
+}

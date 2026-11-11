@@ -1,0 +1,157 @@
+{
+  "id": "20261111_RGB5_RuntimeV2",
+  "name": "HusAero RGB5 — v2 verified on Pi / no training",
+  "started_at": "2026-11-11T17:20:21.979502+00:00",
+  "finished_at": "2026-11-11T17:20:21.979502+00:00",
+  "updated_at": "2026-11-11T17:20:21.979502+00:00",
+  "status": "completed",
+  "model": "HusAero-8n / HusAero-11n",
+  "architecture": "YOLOv8n / YOLO11n",
+  "epochs": 0,
+  "current_epoch": 0,
+  "device": "Raspberry Pi + Hailo-8",
+  "dataset": "Same two RGB development clips / 200 frames each",
+  "split": {
+    "train": 13954,
+    "val": 3423,
+    "test": 2159
+  },
+  "classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "history": [],
+  "scope": "تحقق v2 على الرازبيري: 4 تشغيلات × 200 إطار، بنفس PT/HEF وبدون تدريب. لا يرسم مرشح CONFIRMING، ويعرض كشفًا مرتبطًا مؤكّدًا أو بوكس FLOW واحدًا. صححنا تعارض الرسم واستعادة الهدف من بوكس أكبر؛ هذا لا يعني زوال أخطاء النموذج أو تحسن كل المشاهد.",
+  "parameters": {
+    "confidence": 0.25,
+    "small_target": false,
+    "max_display_boxes": 1,
+    "training_performed": false,
+    "weights_changed": false
+  },
+  "achievements": [
+    "تحقق فعلي من Hailo-8 وهوية HEF دون تغيير الأوزان.",
+    "فحص السجلات: صفر بوكسات معروضة في حالة CONFIRMING في 800 إطار تشغيل.",
+    "بوكس كشف مؤكّد أو FLOW واحد؛ لا يرسم المرشح غير المرتبط فوق التتبع.",
+    "حفظ البوكس المعروض وحالته بكل إطار، وتقييمه بعد التشغيل فقط بوسوم الفيديو الأصلية.",
+    "المقطع الأول: تموضع التتبع الصحيح 194/200 لـ8n و136/200 لـ11n. المقطع الثاني: 0/184 و39/184؛ الضعف موثق."
+  ],
+  "protocol": "Actual v2 Pi raw detections and displayed target boxes scored offline against original visible.json. Confidence 0.25, IoU>=0.50, one target annotation per frame. Two development clips, not new held-out evidence; earlier training overlap is not ruled out. Follow localization is not classification accuracy, formal MOT IDF1/HOTA or live-camera performance. No ground truth enters runtime. Single-target confirmed display is distinct from detector accuracy. Earlier v1 used optional views; v2 disables them, so comparison is between runtime profiles, not an isolated one-variable benchmark.",
+  "operation_checks": [
+    {
+      "model": "HusAero-8n",
+      "device": "Pi + Hailo-8 / runtime-v2",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 127,
+      "tracked_frames": 194,
+      "note": "قياس موضع التتبع مقابل visible.json عند IoU≥0.50: 194/200 إطارًا فيه الهدف. هذا فحص تطوير لمقطعين، وليس دقة عامة أو اختبار MOT."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "Pi + Hailo-8 / runtime-v2",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 105,
+      "tracked_frames": 166,
+      "note": "قياس موضع التتبع مقابل visible.json عند IoU≥0.50: 136/200 إطارًا فيه الهدف. هذا فحص تطوير لمقطعين، وليس دقة عامة أو اختبار MOT."
+    },
+    {
+      "model": "HusAero-8n",
+      "device": "Pi + Hailo-8 / runtime-v2",
+      "clip_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "frames": 200,
+      "detected_frames": 1,
+      "tracked_frames": 0,
+      "note": "قياس موضع التتبع مقابل visible.json عند IoU≥0.50: 0/184 إطارًا فيه الهدف. هذا فحص تطوير لمقطعين، وليس دقة عامة أو اختبار MOT."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "Pi + Hailo-8 / runtime-v2",
+      "clip_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "frames": 200,
+      "detected_frames": 11,
+      "tracked_frames": 39,
+      "note": "قياس موضع التتبع مقابل visible.json عند IoU≥0.50: 39/184 إطارًا فيه الهدف. هذا فحص تطوير لمقطعين، وليس دقة عامة أو اختبار MOT."
+    }
+  ],
+  "video_demos": [
+    {
+      "name": "PiV2_8n_vs_11n_20190926_111509_1_1.mp4",
+      "label": "Verified Pi v2 / 8n vs 11n / 20190926_111509_1_1",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_111509_1_1",
+      "note": "تشغيل v2 فعلي: يسار 8n ويمين 11n على نفس الإطارات بالتتابع. يظهر كشف مؤكّد أو FLOW وحده؛ المرشحات غير المؤكدة لا تُعرض كهدف. لا توجد مناطق مكبرة إضافية. النوع غير موثوق والعرض drone؛ ضعف الرصد بالمقطع الثاني ما زال موجودًا."
+    },
+    {
+      "name": "PiV2_8n_vs_11n_20190926_102042_1_5.mp4",
+      "label": "Verified Pi v2 / 8n vs 11n / 20190926_102042_1_5",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_102042_1_5",
+      "note": "تشغيل v2 فعلي: يسار 8n ويمين 11n على نفس الإطارات بالتتابع. يظهر كشف مؤكّد أو FLOW وحده؛ المرشحات غير المؤكدة لا تُعرض كهدف. لا توجد مناطق مكبرة إضافية. النوع غير موثوق والعرض drone؛ ضعف الرصد بالمقطع الثاني ما زال موجودًا."
+    }
+  ],
+  "dataset_sources": [
+    {
+      "name": "Nyahmet fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC0",
+      "train": 37,
+      "val": 34,
+      "test": 21
+    },
+    {
+      "name": "Yaren Koç fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC BY 4.0",
+      "train": 2838,
+      "val": 244,
+      "test": 443
+    },
+    {
+      "name": "VisioDECT",
+      "role": "Multirotor drone",
+      "license": "CC BY-NC-SA 4.0",
+      "train": 2790,
+      "val": 715,
+      "test": 494
+    },
+    {
+      "name": "MBAOD v1",
+      "role": "Bird / airplane / helicopter",
+      "license": "CC BY 4.0",
+      "train": 8289,
+      "val": 2430,
+      "test": 1201
+    }
+  ],
+  "evidence_links": [
+    {
+      "label": "Verified v2 code and evidence",
+      "url": "https://github.com/27kwt/HusAero/tree/main/results/rgb5_v2/runtime_fix_v2"
+    },
+    {
+      "label": "Dataset, splits and sources",
+      "url": "https://github.com/27kwt/HusAero/tree/main/dataset/combined_rgb5_v2"
+    },
+    {
+      "label": "Models and deployment manifests",
+      "url": "https://github.com/27kwt/HusAero/tree/main/models/rgb5_v2"
+    },
+    {
+      "label": "Results and curves",
+      "url": "https://github.com/27kwt/HusAero/tree/main/results/rgb5_v2"
+    },
+    {
+      "label": "HusAero authorship and upstream credits",
+      "url": "https://github.com/27kwt/HusAero/blob/main/NOTICE.md"
+    }
+  ]
+}

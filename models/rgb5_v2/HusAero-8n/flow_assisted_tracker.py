@@ -44,11 +44,14 @@ class FlowAssistedTracker:
             self.identity+=1;self.box=candidate.copy();self.velocity=np.zeros(2);self.missed=0;self.no_flow=0;self.state='DETECTION_CONFIRMED'
         else:
             motion=self._flow(gray);self.no_flow=0 if motion is not None else self.no_flow+1;delta=motion if motion is not None else self.velocity;pred=self.box+np.tile(delta,2);old_center=(self.box[:2]+self.box[2:])/2
-            candidates=p[p[:,4]>=self.keep_threshold];matched=None
+            candidates=p[p[:,4]>=self.keep_threshold];matched=None;resize_match=False
             if len(candidates):
-                boxes=candidates[:,:4];ratio=np.maximum(0,boxes[:,2:]-boxes[:,:2]).prod(axis=1)/max(1,np.maximum(0,pred[2:]-pred[:2]).prod());distance=np.linalg.norm((boxes[:,:2]+boxes[:,2:])/2-(pred[:2]+pred[2:])/2,axis=1)/max(16,np.linalg.norm(pred[2:]-pred[:2]));overlap=self._iou(pred,boxes);ok=(ratio>=.4)&(ratio<=2.5)&(distance<=1.5)&(overlap>=.1)
-                if ok.any():indices=np.flatnonzero(ok);j=indices[np.argmax(candidates[indices,4]+.5*overlap[indices]-.05*np.abs(np.log(ratio[indices])))];matched=boxes[j]
-            if matched is not None:self.box=.65*matched+.35*pred;self.missed=0;self.state='DETECTION_CONFIRMED'
+                boxes=candidates[:,:4];area=np.maximum(0,boxes[:,2:]-boxes[:,:2]).prod(axis=1);old_area=max(1,np.maximum(0,pred[2:]-pred[:2]).prod());ratio=area/old_area;distance=np.linalg.norm((boxes[:,:2]+boxes[:,2:])/2-(pred[:2]+pred[2:])/2,axis=1)/max(16,np.linalg.norm(pred[2:]-pred[:2]));overlap=self._iou(pred,boxes)
+                intersection=np.maximum(0,np.minimum(boxes[:,2:],pred[2:])-np.maximum(boxes[:,:2],pred[:2])).prod(axis=1)
+                contained=(intersection/np.maximum(np.minimum(area,old_area),1)>=.9)&(distance<=.4)&(ratio>=.15)&(ratio<=6)
+                ok=((ratio>=.4)&(ratio<=2.5)&(distance<=1.5)&(overlap>=.1))|contained
+                if ok.any():indices=np.flatnonzero(ok);j=indices[np.argmax(candidates[indices,4]+.5*overlap[indices]-.05*np.abs(np.log(ratio[indices])))];matched=boxes[j];resize_match=bool(contained[j] and (ratio[j]<.4 or ratio[j]>2.5))
+            if matched is not None:self.box=matched.copy() if resize_match else .65*matched+.35*pred;self.missed=0;self.state='DETECTION_CONFIRMED'
             else:
                 self.missed+=1
                 if self.missed>self.max_gap or self.no_flow>2:

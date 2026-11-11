@@ -1,20 +1,22 @@
 {
-  "status": "candidate_awaiting_pi_run",
+  "status": "verified_pi_video_run",
   "training_performed": false,
   "weights_changed": false,
   "pc_regression_checks": "PASS",
-  "pi_runtime_verified": false,
+  "pi_runtime_verified": true,
   "changes": [
     "Draw only associated confirmed detection OR flow box, never both.",
     "Do not draw CONFIRMING or unmatched candidates as confirmed target.",
     "Allow tightly contained detections to reacquire an oversized flow box."
   ],
   "limitations": [
-    "Raw model false positives and weak difficult-clip recall remain.",
-    "Saved Hailo detections were replayed through tracking/rendering on PC; this is not a new Pi run."
+    "Raw model false positives, subtype confusion and weak difficult-clip recall remain.",
+    "Initial PC replay was followed by an actual Pi/Hailo-8 run; verification is limited to two recorded clips, not live-camera operation."
   ],
   "code_sha256": {
     "husaero_rgb5_live.py": "0cf757843728826387846b589e4c43eeb281c55394b898966a683e0d8474ddbc",
     "flow_assisted_tracker.py": "38280e9bb7be5ca2095bd6a8e9ad93fb87f606e5bb5cb8d2e03051196f1329bb"
-  }
+  },
+  "pi_evidence": "results/rgb5_v2/runtime_fix_v2",
+  "pi_profile": "Small-target views disabled, two 200-frame clips per model; not live camera."
 }
