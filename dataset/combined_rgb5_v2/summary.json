@@ -1,0 +1,61 @@
+{
+  "version": "HusAero-RGB5-v2",
+  "classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "sensor": "RGB-visible only; no IR or thermal",
+  "counts": {
+    "train": {
+      "images": 13954,
+      "classes": {
+        "fixed_wing_drone": 2875,
+        "multirotor_drone": 2790,
+        "bird": 2679,
+        "airplane": 2878,
+        "helicopter": 2890
+      }
+    },
+    "val": {
+      "images": 3423,
+      "classes": {
+        "fixed_wing_drone": 278,
+        "multirotor_drone": 715,
+        "bird": 829,
+        "airplane": 826,
+        "helicopter": 812
+      }
+    },
+    "test": {
+      "images": 2159,
+      "classes": {
+        "fixed_wing_drone": 464,
+        "multirotor_drone": 494,
+        "bird": 414,
+        "airplane": 413,
+        "helicopter": 396
+      }
+    }
+  },
+  "candidate_files": 34967,
+  "selected_images": 19536,
+  "excluded": {
+    "missing_fixedwing_label": 184,
+    "multirotor_temporal_thinning": 13948,
+    "missing_multirotor_label": 502,
+    "legacy_image_has_removed_or_generic_class": 17891,
+    "empty_or_missing_label": 579,
+    "grayscale_only_excluded": 1165,
+    "target_under_2px_at_640": 3,
+    "fixedwing_augmented_variants_removed": 6757,
+    "conflicting_duplicate_images": 0,
+    "fixedwing_boundary_guard": 368,
+    "class_balance_cap": 7138
+  },
+  "manifest_sha256": "7c1a5411cfd31eb1e03f61e4888ba7c21b5f1f708ab51cd54361c6d4b5952a6b",
+  "grouping": "VisioDECT model/scenario groups; fixed-wing original augmentation families plus numeric neighborhoods with boundary guards; MBAOD original split with family protection. Recording-session independence is not established for all public source images.",
+  "preprocessing": "640x640 letterbox 114; source labels remapped; no unlabelled removed-class images; no grayscale-only images; one fixed-wing color variant per original; exact pixel duplicates and conflicting class duplicates removed; cap approximately 4000 images per class."
+}

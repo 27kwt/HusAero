@@ -304,3 +304,12 @@ predictions per model were rescored without changing model weights or the
 historical AP calculation. See `results/software_validation.json` for the
 tested versions and scope; plumbing checks are not accuracy benchmarks or
 new hardware tests.
+
+
+## RGB5 combined dataset · 11 November 2026
+
+The actual RGB-only inputs used by the new 50-epoch HusAero-8n and HusAero-11n experiments are in [dataset/combined_rgb5_v2](dataset/combined_rgb5_v2/). The folder includes all 19,536 images and their YOLO labels: 13,954 train, 3,423 validation and 2,159 test images. Its five classes are fixed-wing drone, multirotor drone, bird, airplane and helicopter. Kite is excluded from this version.
+
+Use the matching RGB5 checkpoints with this class map. The earlier starter dataset and released models remain available under their original paths. See the combined dataset README and LICENSE_DATA.md for sources, preprocessing and image licenses.
+
+The RGB5 checkpoints are experimental: an independent RGB video check revealed fixed-wing/multirotor confusion. Their public-image scores do not establish reliable subtype recognition in new scenes.
