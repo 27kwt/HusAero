@@ -1,0 +1,27 @@
+{
+  "native_classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "output_classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "native_to_output": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3
+  },
+  "weights": "Existing unchanged PT/HEF files in ../rgb5_v2",
+  "new_training_performed": false,
+  "unknown_label": "unknown_airborne_object",
+  "unknown_is_trained_class": false,
+  "deployment": "PC adapter available; existing Pi runtime remains native RGB5 with generic drone display"
+}

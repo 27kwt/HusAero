@@ -1,0 +1,76 @@
+{
+  "version": "HusAero-RGB4-unified-drone",
+  "prepared_at": "2026-11-11T17:39:40.304291+00:00",
+  "classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "native_rgb5_to_current": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3
+  },
+  "counts": {
+    "train": {
+      "images": 13954,
+      "labels": 13954,
+      "class_images": {
+        "drone": 5665,
+        "helicopter": 2890,
+        "bird": 2679,
+        "airplane": 2878
+      },
+      "instances": {
+        "drone": 5675,
+        "helicopter": 4358,
+        "bird": 6100,
+        "airplane": 3907
+      }
+    },
+    "val": {
+      "images": 3423,
+      "labels": 3423,
+      "class_images": {
+        "drone": 993,
+        "airplane": 826,
+        "helicopter": 812,
+        "bird": 829
+      },
+      "instances": {
+        "drone": 1010,
+        "airplane": 1114,
+        "helicopter": 1244,
+        "bird": 1726
+      }
+    },
+    "test": {
+      "images": 2159,
+      "labels": 2159,
+      "class_images": {
+        "drone": 958,
+        "helicopter": 396,
+        "bird": 414,
+        "airplane": 413
+      },
+      "instances": {
+        "drone": 975,
+        "helicopter": 598,
+        "bird": 820,
+        "airplane": 530
+      }
+    }
+  },
+  "selected_images": 19536,
+  "sensor": "RGB-visible only",
+  "dataset_changes": "Only class IDs remapped; source image bytes, bounding-box coordinates, source groups and train/val/test partitions preserved.",
+  "canonical_images": "../combined_rgb5_v2/images",
+  "manifest_sha256": "eeb014f8078b24fb3e1f39122a6dd31e706ef02745bb18d7e0732f03bea8ae4f",
+  "training_status": "Prepared labels, not a newly trained four-output model",
+  "native_checkpoint_heads": 5,
+  "current_label_categories": 4,
+  "limitations": "No subtype or mission identification. Existing benchmark scores describe native RGB5 checkpoints and have not been recomputed for merged labels."
+}

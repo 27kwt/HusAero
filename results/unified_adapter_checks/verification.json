@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-11T17:39:08.415321+00:00",
+  "checks": [
+    "Both drone subtypes map to one class and overlapping proposals merge",
+    "Non-drone aircraft identity is not asserted in default display",
+    "Conflicting/low-score hypotheses abstain",
+    "Native class IDs and checkpoint bytes remain unchanged"
+  ],
+  "actual_smoke_checks": [
+    {
+      "model": "HusAero-8n",
+      "source": "fixedwing_nyahmet",
+      "image": "dataset/combined_rgb5_v2/images/test/fixedwing_nyahmet_02249396051c03d4343c953a.jpg",
+      "predictions": [
+        {
+          "box": [
+            308.8486328125,
+            212.82388305664062,
+            563.973876953125,
+            297.3511047363281
+          ],
+          "score": 0.8859361410140991,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "drone",
+          "abstained": false,
+          "reason": "model_prediction",
+          "native_class_id": 0,
+          "native_class": "fixed_wing_drone"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-8n",
+      "source": "fixedwing_yarenk",
+      "image": "dataset/combined_rgb5_v2/images/test/fixedwing_yarenk_0042af227065c2427ea8957b.jpg",
+      "predictions": [
+        {
+          "box": [
+            440.0234069824219,
+            245.5648193359375,
+            602.225341796875,
+            347.53924560546875
+          ],
+          "score": 0.7728123068809509,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "drone",
+          "abstained": false,
+          "reason": "model_prediction",
+          "native_class_id": 0,
+          "native_class": "fixed_wing_drone"
+        },
+        {
+          "box": [
+            224.7286376953125,
+            540.0469970703125,
+            566.7418212890625,
+            640.0
+          ],
+          "score": 0.2745027244091034,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "unknown_airborne_object",
+          "abstained": true,
+          "reason": "low_score",
+          "native_class_id": 0,
+          "native_class": "fixed_wing_drone"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-8n",
+      "source": "mbaod",
+      "image": "dataset/combined_rgb5_v2/images/test/mbaod_00429e5772ee2620f51faff8.jpg",
+      "predictions": [
+        {
+          "box": [
+            337.519287109375,
+            311.2779235839844,
+            377.029541015625,
+            354.4294128417969
+          ],
+          "score": 0.5966117978096008,
+          "mapped_class_id": 3,
+          "mapped_class": "helicopter",
+          "display_label": "unknown_airborne_object",
+          "abstained": true,
+          "reason": "non_drone_type_unverified",
+          "native_class_id": 4,
+          "native_class": "helicopter"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-8n",
+      "source": "visiodect",
+      "image": "dataset/combined_rgb5_v2/images/test/visiodect_014903e9a093c8e35c63af22.jpg",
+      "predictions": [
+        {
+          "box": [
+            484.6837158203125,
+            229.78582763671875,
+            520.4150390625,
+            260.56219482421875
+          ],
+          "score": 0.8582035303115845,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "drone",
+          "abstained": false,
+          "reason": "model_prediction",
+          "native_class_id": 1,
+          "native_class": "multirotor_drone"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "source": "fixedwing_nyahmet",
+      "image": "dataset/combined_rgb5_v2/images/test/fixedwing_nyahmet_02249396051c03d4343c953a.jpg",
+      "predictions": [
+        {
+          "box": [
+            307.5833740234375,
+            210.51263427734375,
+            565.7454833984375,
+            299.9812316894531
+          ],
+          "score": 0.8788180351257324,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "drone",
+          "abstained": false,
+          "reason": "model_prediction",
+          "native_class_id": 0,
+          "native_class": "fixed_wing_drone"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "source": "fixedwing_yarenk",
+      "image": "dataset/combined_rgb5_v2/images/test/fixedwing_yarenk_0042af227065c2427ea8957b.jpg",
+      "predictions": [
+        {
+          "box": [
+            439.86151123046875,
+            240.98968505859375,
+            603.1776733398438,
+            350.6177978515625
+          ],
+          "score": 0.8350019454956055,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "drone",
+          "abstained": false,
+          "reason": "model_prediction",
+          "native_class_id": 0,
+          "native_class": "fixed_wing_drone"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "source": "mbaod",
+      "image": "dataset/combined_rgb5_v2/images/test/mbaod_00429e5772ee2620f51faff8.jpg",
+      "predictions": [
+        {
+          "box": [
+            337.16485595703125,
+            311.032958984375,
+            380.56768798828125,
+            355.63739013671875
+          ],
+          "score": 0.6697157025337219,
+          "mapped_class_id": 3,
+          "mapped_class": "helicopter",
+          "display_label": "unknown_airborne_object",
+          "abstained": true,
+          "reason": "non_drone_type_unverified",
+          "native_class_id": 4,
+          "native_class": "helicopter"
+        }
+      ]
+    },
+    {
+      "model": "HusAero-11n",
+      "source": "visiodect",
+      "image": "dataset/combined_rgb5_v2/images/test/visiodect_014903e9a093c8e35c63af22.jpg",
+      "predictions": [
+        {
+          "box": [
+            483.14599609375,
+            229.8349609375,
+            520.938720703125,
+            260.81744384765625
+          ],
+          "score": 0.8126474618911743,
+          "mapped_class_id": 0,
+          "mapped_class": "drone",
+          "display_label": "drone",
+          "abstained": false,
+          "reason": "model_prediction",
+          "native_class_id": 1,
+          "native_class": "multirotor_drone"
+        }
+      ]
+    }
+  ],
+  "scope": "Eight image-inference smoke checks, four source images per model. Functional adapter verification only, not accuracy/mAP, not training, not Pi deployment."
+}

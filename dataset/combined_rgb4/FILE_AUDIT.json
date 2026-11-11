@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-11T17:42:54.305580+00:00",
+  "images_verified": 19536,
+  "labels_verified": 19536,
+  "split_counts": {
+    "train": 13954,
+    "val": 3423,
+    "test": 2159
+  },
+  "classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "checks": [
+    "Every canonical image SHA-256 and every current label SHA-256 checked by prepare_current_dataset.py",
+    "Every current label class ID and normalized coordinates checked",
+    "Ultralytics resolves all train/val/test directories and four categories with auto-download disabled",
+    "PT and HEF hashes for both historical best models remain unchanged"
+  ],
+  "training_started": false,
+  "new_four_output_model": false,
+  "new_merged_metrics": false
+}

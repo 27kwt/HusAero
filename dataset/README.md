@@ -1,38 +1,17 @@
-# HusAero datasets
+# HusAero dataset versions
 
-## Current experiment: RGB5 v2 (50 epochs per model)
+## Current: unified drone (RGB4)
 
-The complete combined RGB-only dataset is in [combined_rgb5_v2](combined_rgb5_v2/). Images and matching YOLO labels are included directly in this repository.
+Use [combined_rgb4](combined_rgb4/) for the current labels: **0 drone, 1 bird, 2 airplane, 3 helicopter**. Both fixed-wing and multirotor source objects map to drone. All 19,536 RGB images retain their original split: **13,954 train / 3,423 validation / 2,159 test**.
 
-| Split | Images | Labels |
-| --- | ---: | ---: |
-| Training | 13,954 | 13,954 |
-| Validation | 3,423 | 3,423 |
-| Test | 2,159 | 2,159 |
-| Total | 19,536 | 19,536 |
+The remapped labels and provenance manifest are included in that folder. Image files are shared from [combined_rgb5_v2/images](combined_rgb5_v2/images/) so GitHub contains one copy of each canonical image. Run `python tools/prepare_current_dataset.py` from the repository root to create the local YOLO image/label layout. No training starts.
 
-Class IDs: **0 fixed_wing_drone, 1 multirotor_drone, 2 bird, 3 airplane, 4 helicopter**. Images are 640 × 640 RGB. Kite is excluded. Class counts are not equal; images may contain multiple classes. See [summary.json](combined_rgb5_v2/summary.json).
+The current label merge is prepared, but the existing completed 50-epoch model weights remain native RGB5. Use the documented prediction adapter; no new four-output checkpoint or merged mAP score is claimed.
 
-Use **[combined_rgb5_v2/data.yaml](combined_rgb5_v2/data.yaml)** with the RGB5 model checkpoints. Each image in `combined_rgb5_v2/images/<split>/` has a matching label in `combined_rgb5_v2/labels/<split>/`.
+## Previous training data: native RGB5
 
-### Sources and combination
+[combined_rgb5_v2](combined_rgb5_v2/) preserves the exact old labels, images and evidence for the completed runs: 0 fixed_wing_drone, 1 multirotor_drone, 2 bird, 3 airplane, 4 helicopter. Original source licenses, grouping and file audit remain there. Keeping these records is essential for interpreting the historical metrics.
 
-Four source datasets form three task groups: two fixed-wing sources (Yaren Koç and Nyahmet), VisioDECT for multirotors, and MBAOD v1 for birds, airplanes and helicopters. Labels were remapped into one five-class map, images and boxes letterboxed together, unsuitable/removed-class images and duplicates excluded, and the retained files grouped and split. The resulting files are already combined; there is no need to concatenate the old folders.
+## Earlier starter subset
 
-DUT Anti-UAV was used in earlier checkpoint training; it is **not an image source of this RGB5 v2 dataset**. Fine-tuning starts from released HusAero checkpoints with earlier training histories, not from scratch.
-
-See the [preparation details](combined_rgb5_v2/README.md), [data card](combined_rgb5_v2/DATA_CARD.md), [source licenses](combined_rgb5_v2/LICENSE_DATA.md), [per-image provenance](combined_rgb5_v2/manifest.jsonl), and [full file audit](combined_rgb5_v2/FILE_AUDIT.json).
-
-### Testing
-
-Both RGB5 checkpoints were tested on **all 2,159 test images**, not a sample. These images were not used for checkpoint selection in the new fine-tuning runs. Actual PC curves and scores are in [results/rgb5_v2](../results/rgb5_v2/). A separately labelled stratified 500-image test was completed on the actual Raspberry Pi / Hailo-8 for both checkpoints; see [verified hardware evidence](../results/rgb5_v2/Pi_sample500/). The [full-dataset Pi evaluation](../results/rgb5_v2/Pi_all_images/) is also complete: 19,536 images per model, with Train, Validation and Test reported separately.
-
-## Earlier release: MBAOD starter subset
-
-The root `images/`, `labels/`, `data.yaml` and `curation_report.json` belong to the earlier generic-drone release: **1,200 train / 250 validation / 250 test**. Its IDs are **0 drone, 1 bird, 2 airplane, 3 helicopter, 4 kite**.
-
-These folders stay in their original locations so the earlier released software and historical results remain reproducible. **Do not merge their labels into RGB5:** identical IDs mean different classes. They are not extra RGB5 samples. The root `data.yaml` is intentionally the legacy configuration.
-
-The starter subset is from MBAOD v1 by Firas Mohammed Kadhum, Abbas Abdulazeez Abdulhameed and Jameelah Harbi Saud, publisher-listed CC BY 4.0, DOI [10.17632/zfc8hndczp.1](https://doi.org/10.17632/zfc8hndczp.1). Earlier released checkpoints also used DUT/video data not redistributed in this starter subset.
-
-HusAero integration, data preparation, fine-tuning and evaluation: **Hussain Alrashidi (27kwt)**. Source creators retain attribution to their original images, annotations and software; see [NOTICE.md](../NOTICE.md).
+The root `images/`, `labels/` and `data.yaml` belong to the earlier **1,700-image** generic-drone/kite release (1,200 / 250 / 250), not the current combined dataset. Those IDs are 0 drone, 1 bird, 2 airplane, 3 helicopter, 4 kite. They stay at their old paths for old release code. Do not concatenate these labels with RGB4 or RGB5 labels. See [archived guide](README_RGB5_ARCHIVE.md).
