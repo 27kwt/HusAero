@@ -30,6 +30,23 @@
           "sha256": "d0d3a21cc32cd18a03fe0caaccc2210caab0236004ec0c8f73a26e8c7f08eb3a",
           "bytes": 4452969
         }
+      },
+      "video_runtime": {
+        "version": "runtime-fix-v1",
+        "script_sha256": "688ef83e8e3688f8c604e3831bf655326365f5da0bc15f6aca1a9bd8cba386df",
+        "flow_dependency_sha256": "5b553b960b9c0feeb1f2f8495e454e476ed005132588b9d5589ea1a24a72bb5c",
+        "weights_changed": false,
+        "training_performed": false,
+        "display": "drone; raw subtype remains in logs",
+        "duplicate_filter": "cross-drone IoU 0.45 or containment 0.90 with centre gate",
+        "tracker": "detector association with short LK flow; no velocity-only box rendered",
+        "small_target_default": false,
+        "small_target_scope": "Experimental four-view fallback. Actual Pi test completed but it increased false positives for 8n; not recommended as default.",
+        "pi_video_verified": {
+          "clips": 2,
+          "frames_per_clip": 200,
+          "profile": "Optional small-target views enabled in this diagnostic; default remains off."
+        }
       }
     },
     "HusAero-11n": {
@@ -53,6 +70,23 @@
           "path": "models/rgb5_v2/HusAero-11n/HusAero-11n_RGB5.hef",
           "sha256": "46c8268b8efd93cd6d521d0e238b06778789aa3b69aa28f99e6d54f4a534e1f4",
           "bytes": 6520806
+        }
+      },
+      "video_runtime": {
+        "version": "runtime-fix-v1",
+        "script_sha256": "688ef83e8e3688f8c604e3831bf655326365f5da0bc15f6aca1a9bd8cba386df",
+        "flow_dependency_sha256": "5b553b960b9c0feeb1f2f8495e454e476ed005132588b9d5589ea1a24a72bb5c",
+        "weights_changed": false,
+        "training_performed": false,
+        "display": "drone; raw subtype remains in logs",
+        "duplicate_filter": "cross-drone IoU 0.45 or containment 0.90 with centre gate",
+        "tracker": "detector association with short LK flow; no velocity-only box rendered",
+        "small_target_default": false,
+        "small_target_scope": "Experimental four-view fallback. Actual Pi test completed but it increased false positives for 8n; not recommended as default.",
+        "pi_video_verified": {
+          "clips": 2,
+          "frames_per_clip": 200,
+          "profile": "Optional small-target views enabled in this diagnostic; default remains off."
         }
       }
     }

@@ -1,0 +1,200 @@
+{"frame": 1, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 2, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 3, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 4, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 5, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 6, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 7, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 8, "state": "CONFIRMING", "track_id": null, "detections": [[[940.6944007873535, 207.1743049621582, 983.082109451294, 335.2738265991211], 0.28244706988334656, 0]]}
+{"frame": 9, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 10, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 11, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 12, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 13, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 14, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 15, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 16, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 17, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 18, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 19, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 20, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 21, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 22, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 23, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 24, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 25, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 26, "state": "SEARCHING", "track_id": null, "detections": []}
+{"frame": 27, "state": "CONFIRMING", "track_id": null, "detections": [[[810.545539855957, 459.44589614868164, 978.5829162597656, 520.1543998718262], 0.2935962975025177, 0]]}
+{"frame": 28, "state": "DETECTION_CONFIRMED ID 1", "track_id": 1, "detections": [[[803.6735916137695, 481.6610527038574, 960.2533721923828, 542.8725814819336], 0.26758143305778503, 0]]}
+{"frame": 29, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 30, "state": "DETECTION_CONFIRMED ID 1", "track_id": 1, "detections": [[[760.1684761047363, 468.6233139038086, 919.4256019592285, 534.4063568115234], 0.40186432003974915, 0]]}
+{"frame": 31, "state": "DETECTION_CONFIRMED ID 1", "track_id": 1, "detections": [[[763.5385322570801, 467.40068435668945, 914.7815895080566, 527.2543716430664], 0.3736633062362671, 0]]}
+{"frame": 32, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 33, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 34, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 35, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 36, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 37, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 38, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 39, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 40, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 41, "state": "FLOW_ASSISTED ID 1", "track_id": 1, "detections": []}
+{"frame": 42, "state": "LOST", "track_id": 1, "detections": []}
+{"frame": 43, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 44, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 45, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 46, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 47, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 48, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 49, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 50, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 51, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 52, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 53, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 54, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 55, "state": "SEARCHING", "track_id": 1, "detections": []}
+{"frame": 56, "state": "CONFIRMING", "track_id": 1, "detections": [[[887.7425651550293, 497.5576858520508, 1066.044937133789, 564.0125427246094], 0.28244706988334656, 0]]}
+{"frame": 57, "state": "DETECTION_CONFIRMED ID 2", "track_id": 2, "detections": [[[860.0682020187378, 494.8004608154297, 1041.4548225402832, 559.7947540283203], 0.40137213468551636, 0]]}
+{"frame": 58, "state": "DETECTION_CONFIRMED ID 2", "track_id": 2, "detections": [[[841.0858268737793, 486.5164604187012, 1016.466007232666, 553.2750205993652], 0.26758143305778503, 0]]}
+{"frame": 59, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 60, "state": "DETECTION_CONFIRMED ID 2", "track_id": 2, "detections": [[[817.4628639221191, 474.69715118408203, 973.5615921020508, 539.1506767272949], 0.44416582584381104, 0]]}
+{"frame": 61, "state": "DETECTION_CONFIRMED ID 2", "track_id": 2, "detections": [[[793.1336402893066, 467.3235511779785, 979.4064331054688, 533.1108856201172], 0.46884170174598694, 0]]}
+{"frame": 62, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 63, "state": "DETECTION_CONFIRMED ID 2", "track_id": 2, "detections": [[[797.8036308288574, 463.8164520263672, 965.6301498413086, 517.7420997619629], 0.5005678534507751, 0]]}
+{"frame": 64, "state": "DETECTION_CONFIRMED ID 2", "track_id": 2, "detections": [[[850.1751136779785, 457.78987884521484, 1005.5876541137695, 513.7526893615723], 0.5428693294525146, 0]]}
+{"frame": 65, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 66, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 67, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 68, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 69, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 70, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 71, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 72, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 73, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 74, "state": "FLOW_ASSISTED ID 2", "track_id": 2, "detections": []}
+{"frame": 75, "state": "LOST", "track_id": 2, "detections": []}
+{"frame": 76, "state": "CONFIRMING", "track_id": 2, "detections": [[[912.0793533325195, 393.02839279174805, 1056.1869049072266, 451.4732551574707], 0.40186432003974915, 0]]}
+{"frame": 77, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 78, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 79, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 80, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 81, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 82, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 83, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 84, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 85, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 86, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 87, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 88, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 89, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 90, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 91, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 92, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 93, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 94, "state": "CONFIRMING", "track_id": 2, "detections": [[[567.465648651123, 636.8948822021484, 773.6378631591797, 776.4738464355469], 0.3327662944793701, 0]]}
+{"frame": 95, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 96, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 97, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 98, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 99, "state": "CONFIRMING", "track_id": 2, "detections": [[[994.2789974212646, 329.74385833740234, 1156.623950958252, 388.76783752441406], 0.34546229243278503, 0]]}
+{"frame": 100, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 101, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 102, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 103, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 104, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 105, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 106, "state": "CONFIRMING", "track_id": 2, "detections": [[[1143.6337509155273, 640.6927185058594, 1368.036849975586, 769.1519393920898], 0.26758143305778503, 0]]}
+{"frame": 107, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 108, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 109, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 110, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 111, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 112, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 113, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 114, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 115, "state": "CONFIRMING", "track_id": 2, "detections": [[[768, 466.2565383911133, 849.7698154449463, 542.0263938903809], 0.26085928082466125, 0]]}
+{"frame": 116, "state": "SEARCHING", "track_id": 2, "detections": []}
+{"frame": 117, "state": "CONFIRMING", "track_id": 2, "detections": [[[768, 489.1574020385742, 818.8102312088013, 569.3850288391113], 0.40891456604003906, 0]]}
+{"frame": 118, "state": "DETECTION_CONFIRMED ID 3", "track_id": 3, "detections": [[[768, 489.43927001953125, 843.5999450683594, 567.472583770752], 0.29258543252944946, 0]]}
+{"frame": 119, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 120, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 121, "state": "DETECTION_CONFIRMED ID 3", "track_id": 3, "detections": [[[791.866021156311, 526.7303352355957, 959.9132995605469, 586.7972946166992], 0.36420804262161255, 0]]}
+{"frame": 122, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 123, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 124, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 125, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 126, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 127, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 128, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 129, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 130, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 131, "state": "FLOW_ASSISTED ID 3", "track_id": 3, "detections": []}
+{"frame": 132, "state": "LOST", "track_id": 3, "detections": []}
+{"frame": 133, "state": "CONFIRMING", "track_id": 3, "detections": [[[666.7323303222656, 480.0351905822754, 837.7256011962891, 541.8758010864258], 0.497042715549469, 0]]}
+{"frame": 134, "state": "DETECTION_CONFIRMED ID 4", "track_id": 4, "detections": [[[639.0522766113281, 458.3892059326172, 817.6962661743164, 523.9405059814453], 0.32783666253089905, 0]]}
+{"frame": 135, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": [[[939.0128574371338, 748.2271728515625, 980.8081283569336, 876.2132263183594], 0.31961116194725037, 0]]}
+{"frame": 136, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 137, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 138, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 139, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 140, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 141, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 142, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 143, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 144, "state": "FLOW_ASSISTED ID 4", "track_id": 4, "detections": []}
+{"frame": 145, "state": "LOST", "track_id": 4, "detections": []}
+{"frame": 146, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 147, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 148, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 149, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 150, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 151, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 152, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 153, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 154, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 155, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 156, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 157, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 158, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 159, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 160, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 161, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 162, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 163, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 164, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 165, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 166, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 167, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 168, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 169, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 170, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 171, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 172, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 173, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 174, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 175, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 176, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 177, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 178, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 179, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 180, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 181, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 182, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 183, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 184, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 185, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 186, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 187, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 188, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 189, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 190, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 191, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 192, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 193, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 194, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 195, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 196, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 197, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 198, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 199, "state": "SEARCHING", "track_id": 4, "detections": []}
+{"frame": 200, "state": "SEARCHING", "track_id": 4, "detections": []}

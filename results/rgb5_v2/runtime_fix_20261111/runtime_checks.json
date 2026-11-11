@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Cross-subtype duplicates removed",
+    "Nested same-class boxes removed including observed frame 3",
+    "Separated drones retained",
+    "Optical flow follows actual image motion without a detector box",
+    "Flow terminates after configured gap"
+  ],
+  "replayed_archived_logs": [
+    {
+      "file": "HusAero-11n_20190926_102042_1_5.jsonl",
+      "frames": 200,
+      "removed_duplicate_predictions": 0
+    },
+    {
+      "file": "HusAero-11n_20190926_111509_1_1.jsonl",
+      "frames": 200,
+      "removed_duplicate_predictions": 6
+    },
+    {
+      "file": "HusAero-8n_20190926_102042_1_5.jsonl",
+      "frames": 200,
+      "removed_duplicate_predictions": 0
+    },
+    {
+      "file": "HusAero-8n_20190926_111509_1_1.jsonl",
+      "frames": 200,
+      "removed_duplicate_predictions": 14
+    }
+  ],
+  "limitations": "Replay tests postprocessing only, not new Hailo inference. No weights changed; subtype recognition is not corrected."
+}

@@ -17,3 +17,7 @@ yolo val model=models/rgb5_v2/HusAero-11n/HusAero-11n_RGB5.pt data=dataset/combi
 Select a local CUDA device when available, or add device=cpu. Original training arguments and per-epoch metrics are under results/rgb5_v2/<model>/Training_reference. Reproducing the exact fine-tuning also requires the earlier starting checkpoint and class-head remapping; PT files here are the completed outputs, not fresh baseline weights.
 
 Both candidates confused a multirotor with fixed-wing in an independent RGB video. Use as experimental models; the image benchmark is not a guarantee of reliable subtype recognition.
+
+## Runtime correction v1
+
+The trained best PT/HEF bytes are unchanged. Keep flow_assisted_tracker.py beside husaero_rgb5_live.py. The display now uses generic drone because subtype recognition is not verified. Raw predicted classes remain in the experiment logs. Overlapping/nested drone boxes are suppressed before association. Short LK-flow boxes are orange and explicitly labelled as having no new detector result. Optional --small-target views remain disabled by default because the recorded Pi diagnostic increased false positives for 8n. See results/rgb5_v2/runtime_fix_20261111 for actual test scope and remaining limitations.

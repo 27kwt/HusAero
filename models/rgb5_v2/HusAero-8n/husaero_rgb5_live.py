@@ -3,8 +3,9 @@
 
 Run on the Raspberry Pi: python3 drone_live.py
 Open http://PI_ADDRESS:8080 on the same network. Ctrl+C stops the server.
-Uses a prerecorded visible video, not a camera. Tracking uses centre-distance
-association; it is not SORT, ByteTrack, or appearance-based re-identification.
+Uses a prerecorded visible video, not a camera. Tracking uses detector association
+and short-lived Lucas-Kanade optical flow, with flow-only boxes marked separately.
+Drone subtype remains experimental; display uses drone and logs retain class IDs.
 Record the annotated output with Record, then use Stop and download.
 HailoRT API reference: https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/community_projects/Navigator/modules/hailo.py
 """
@@ -43,6 +44,41 @@ def letterbox(frame, size=640):
     return np.ascontiguousarray(rgb[None]), (nw / w, nh / h, left, top)
 
 
+def suppress_duplicates(detections, iou_threshold=.45, containment=.90):
+    """Merge spatial duplicates across the two drone subtypes, keeping actual top confidence.
+
+    Containment handles oversized nested predictions which ordinary IoU NMS misses.
+    Separated targets are retained. This does not correct a predicted subtype.
+    """
+    kept=[]
+    for candidate in sorted(detections,key=lambda d:d[1],reverse=True):
+        box=np.asarray(candidate[0],dtype=float);area=np.prod(np.maximum(0,box[2:]-box[:2]));duplicate=False
+        if area<=0 or not np.isfinite([*box,candidate[1]]).all():continue
+        for previous,_,_ in kept:
+            other=np.asarray(previous,dtype=float);other_area=np.prod(np.maximum(0,other[2:]-other[:2]))
+            inter=np.prod(np.maximum(0,np.minimum(box[2:],other[2:])-np.maximum(box[:2],other[:2])))
+            overlap=inter/max(area+other_area-inter,1e-9)
+            inside=inter/max(min(area,other_area),1e-9)
+            distance=np.linalg.norm((box[:2]+box[2:]-other[:2]-other[2:])/2)
+            close=distance<=.5*min(np.linalg.norm(box[2:]-box[:2]),np.linalg.norm(other[2:]-other[:2]))
+            if overlap>=iou_threshold or (inside>=containment and close):duplicate=True;break
+        if not duplicate:kept.append(candidate)
+    return kept
+
+
+def tile_fallback(predict, frame, detections):
+    """Four overlapping views only after a full-frame miss; no target coordinates supplied."""
+    if detections:return detections
+    h,w=frame.shape[:2]
+    if max(h,w)<=640:return detections
+    tw,th=round(w*.6),round(h*.6);combined=[]
+    for y in [0,h-th]:
+        for x in [0,w-tw]:
+            for box,confidence,cls in predict(frame[y:y+th,x:x+tw]):
+                combined.append(([box[0]+x,box[1]+y,box[2]+x,box[3]+y],confidence,cls))
+    return suppress_duplicates(combined)
+
+
 def decode(raw, shape, transform):
     """Hailo NMS output: batch -> class -> [ymin,xmin,ymax,xmax,score]."""
     h, w = shape[:2]
@@ -66,12 +102,12 @@ def decode(raw, shape, transform):
                    max(0, min(w-1, box[2])), max(0, min(h-1, box[3]))]
             if box[2] > box[0] and box[3] > box[1]:
                 detections.append((box, float(score), class_id))
-    return detections
+    return suppress_duplicates(detections)
 
 
 
 @contextmanager
-def detector(backend, model_path):
+def detector(backend, model_path, small_target=False):
     if backend == 'pc':
         import torch
         from ultralytics import YOLO
@@ -81,11 +117,15 @@ def detector(backend, model_path):
         if list(model.names.values()) != NAMES:
             raise ValueError('Expected the five-class HusAero checkpoint.')
 
-        def predict(frame):
+        def predict_once(frame):
             boxes = model.predict(frame, device='cpu', imgsz=640, conf=.25,
-                                  iou=.45, classes=[0, 1], verbose=False)[0].boxes
-            return [(box, float(score), int(cls)) for box, score, cls in
-                    zip(boxes.xyxy.cpu().tolist(), boxes.conf.cpu().tolist(), boxes.cls.cpu().tolist())]
+                                  rect=False, iou=.45, agnostic_nms=True, classes=[0, 1], verbose=False)[0].boxes
+            return suppress_duplicates([(box, float(score), int(cls)) for box, score, cls in
+                    zip(boxes.xyxy.cpu().tolist(), boxes.conf.cpu().tolist(), boxes.cls.cpu().tolist())])
+
+        def predict(frame):
+            detections=predict_once(frame)
+            return tile_fallback(predict_once,frame,detections) if small_target else detections
 
         yield predict
         return
@@ -104,10 +144,14 @@ def detector(backend, model_path):
         out = OutputVStreamParams.make(group, quantized=False, format_type=FormatType.FLOAT32)
         with InferVStreams(group, inp, out) as pipeline:
             with group.activate(group.create_params()):
-                def predict(frame):
+                def predict_once(frame):
                     data, transform = letterbox(frame)
                     result = pipeline.infer({input_info.name: data})
                     return decode(result[output_info.name], frame.shape, transform)
+
+                def predict(frame):
+                    detections=predict_once(frame)
+                    return tile_fallback(predict_once,frame,detections) if small_target else detections
 
                 yield predict
 
@@ -116,6 +160,7 @@ class Tracker:
     def __init__(self, max_gap=15):
         self.max_gap = max_gap
         self.next_id = 1
+        self.flow=None
         self.reset()
 
     def reset(self):
@@ -123,8 +168,28 @@ class Tracker:
         self.track_id = None
         self.gap = 0
         self.trail = deque(maxlen=12)
+        self.flow_box=None
 
-    def update(self, detections, shape):
+    def update(self, detections, shape, frame=None):
+        if frame is not None:
+            from flow_assisted_tracker import FlowAssistedTracker
+            if self.flow is None:
+                self.flow=FlowAssistedTracker(20,activation=.25,keep_threshold=.25,max_gap_seconds=.5)
+            # Both subtypes belong to one tracking category; original predicted classes stay intact.
+            rows=np.asarray([[*box,score,0] for box,score,_ in detections],np.float32).reshape(-1,6)
+            tracks=self.flow.update(frame,rows)
+            self.flow_box=None
+            if not len(tracks):self.box=None;self.trail.clear();return None,self.flow.state
+            self.box=tracks[0,:4].tolist();self.track_id=int(tracks[0,4])
+            state=self.flow.state
+            selected=None
+            if state=='DETECTION_CONFIRMED' and detections:
+                selected=max(range(len(detections)),key=lambda i:float(self.flow._iou(np.asarray(self.box),np.asarray([detections[i][0]]))[0]))
+            elif state=='FLOW_ASSISTED':self.flow_box=self.box
+            # Do not render velocity-only propagation as a measured target position.
+            if selected is not None or self.flow_box is not None:
+                self.trail.append((round((self.box[0]+self.box[2])/2),round((self.box[1]+self.box[3])/2)))
+            return selected,state+' ID '+str(self.track_id)
         chosen = None
         if self.box is not None:
             cx = (self.box[0]+self.box[2])/2
@@ -157,7 +222,7 @@ def draw_tracking(frame, detections, selected, tracker, state, device_label):
     height, width = frame.shape[:2]
 
     # The short display trail uses recent measured centres only.
-    if selected is not None and len(tracker.trail) > 1:
+    if (selected is not None or tracker.flow_box is not None) and len(tracker.trail) > 1:
         points = np.asarray(tracker.trail, dtype=np.float32) * scale
         smoothed = np.array([points[max(0, i - 2):i + 1].mean(axis=0)
                              for i in range(len(points))])
@@ -173,6 +238,10 @@ def draw_tracking(frame, detections, selected, tracker, state, device_label):
         cv2.circle(frame, tuple(points[-1].round().astype(int)), 3,
                    (255, 230, 120), -1, cv2.LINE_AA)
 
+    if tracker.flow_box is not None:
+        x1,y1,x2,y2=np.round(np.asarray(tracker.flow_box)*scale).astype(int)
+        cv2.rectangle(frame,(x1,y1),(x2,y2),(30,185,250),2,cv2.LINE_AA)
+        cv2.putText(frame,'FLOW ID '+str(tracker.track_id)+' | no new detection',(max(0,x1),max(40,y1-8)),cv2.FONT_HERSHEY_SIMPLEX,.45,(30,185,250),1,cv2.LINE_AA)
     for i, (box, score, class_id) in enumerate(detections):
         coords = np.round(np.asarray(box) * scale).astype(int)
         x1, x2 = np.clip(coords[[0, 2]], 0, width - 1)
@@ -180,7 +249,7 @@ def draw_tracking(frame, detections, selected, tracker, state, device_label):
         color = (80, 235, 115) if i == selected else (60, 190, 245)
         cv2.rectangle(frame, (x1, y1), (x2, y2), (15, 25, 20), 4, cv2.LINE_AA)
         cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2, cv2.LINE_AA)
-        label = f'{NAMES[class_id]}  {score:.2f}'
+        label = f'drone | model score {score:.2f}'
         if i == selected:
             label = f'ID {tracker.track_id}  |  ' + label
         (tw, th), baseline = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, .48, 1)
@@ -210,7 +279,7 @@ img{width:100%;background:#000;border-radius:8px;min-height:150px}#status{white-
 <a id="download" href="/download" style="display:none;color:#8ee4ff">Download last clip</a></div>
 <div id="recordStatus" aria-live="polite"></div>
 <div id="status">Waiting for the detector...</div><p><img src="/stream" alt="Drone video stream"></p>
-<p>Basic centre association tracker. IDs may change after target loss. Recording saves the annotated frames at the source video frame rate.</p>
+<p>Detection plus short-lived optical flow; orange FLOW boxes have no new detection. Drone subtype is unverified; original predicted class IDs remain in logs. Optional small-target views cost additional inference time. Recording uses source playback FPS.</p>
 <script>async function act(a){let r=await fetch('/'+a,{method:'POST'});if(!r.ok)throw new Error(await r.text());}
 async function saveClip(){try{await act('record-stop');let s=await(await fetch('/status')).json();if(s.download_ready)window.location='/download';else alert('No frames recorded yet.');}catch(e){alert(e.message);}}async function poll(){try{let s=await(await fetch('/status')).json();document.getElementById('record').disabled=s.recording||!!s.error||s.state==='INITIALIZING';document.getElementById('save').disabled=!s.recording;document.getElementById('download').style.display=s.download_ready?'inline':'none';document.getElementById('recordStatus').textContent=s.recording_error||(s.recording?`Recording: ${s.recorded_frames} frames / ${s.recorded_seconds.toFixed(1)} seconds`:s.download_ready?'Recording saved. Ready to download.':'Press Record and play to save a clip.');document.getElementById('status').textContent=s.error||`${s.state} | Video ${s.index+1}/${s.total} | ${s.video}\nPosition ${s.seconds.toFixed(1)} s | Processing ${s.fps.toFixed(1)} FPS | ${s.detections} detections`;}catch(e){}setTimeout(poll,700)}poll()</script></html>'''
 
@@ -278,7 +347,7 @@ class App:
                             self.info['state'] = 'VIDEO ENDED - Replay or Next video'
                         continue
                     detections = predict(frame)
-                    selected, state = tracker.update(detections, frame.shape)
+                    selected, state = tracker.update(detections, frame.shape, frame)
                     frame = draw_tracking(frame, detections, selected, tracker,
                                           state, self.device_label)
                     with self.lock:
@@ -466,6 +535,7 @@ def main():
     parser.add_argument('--hef', type=Path)
     parser.add_argument('--weights', type=Path)
     parser.add_argument('--model-name', default='HusAero RGB5')
+    parser.add_argument('--small-target',action='store_true',help='Try four overlapping views after a miss; increases inference cost')
     parser.add_argument('--manifest', type=Path, help='HEF deployment.json with names and hef_sha256')
     parser.add_argument('--video-root', type=Path, default=VIDEO_ROOT)
     parser.add_argument('--video', type=Path)
@@ -501,7 +571,7 @@ def main():
     # Filenames use the simple backend name rather than the display label.
     host = args.host or ('127.0.0.1' if args.backend == 'pc' else '0.0.0.0')
     server = ThreadingHTTPServer((host, args.port), make_handler(app))
-    factory = partial(detector, args.backend, model_path)
+    factory = partial(detector, args.backend, model_path, args.small_target)
     worker = threading.Thread(target=app.worker, args=(factory,), daemon=True)
     worker.start()
     print(f'Browser: http://localhost:{args.port} | Ctrl+C to stop', flush=True)

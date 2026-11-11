@@ -1,0 +1,153 @@
+{
+  "id": "20261111_RGB5_RuntimeFix",
+  "name": "HusAero RGB5 — code fixes / no training",
+  "started_at": "2026-11-11T16:43:58.203305+00:00",
+  "updated_at": "2026-11-11T16:43:58.203305+00:00",
+  "status": "completed",
+  "model": "HusAero-8n / HusAero-11n",
+  "architecture": "YOLOv8n / YOLO11n",
+  "epochs": 0,
+  "current_epoch": 0,
+  "device": "Raspberry Pi + Hailo-8",
+  "dataset": "Same two RGB development clips; unchanged best checkpoints",
+  "split": {
+    "train": 13954,
+    "val": 3423,
+    "test": 2159
+  },
+  "classes": [
+    "fixed_wing_drone",
+    "multirotor_drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "history": [],
+  "scope": "تصحيح برمجي بلا تدريب أو تغيير أوزان. أزيل تكرار البوكسات في المقاطع الأربعة، وأضيف تتبع بصري قصير. العرض drone لأن تمييز النوع ما زال غير موثوق. التجربة ذات التكبير زادت false positives لـ8n؛ ليست تحسينًا عامًا، والخيار غير مفعل افتراضيًا.",
+  "parameters": {
+    "confidence": 0.25,
+    "nms_iou": 0.45,
+    "containment": 0.9,
+    "optional_views": 4,
+    "training_performed": false,
+    "weights_changed": false
+  },
+  "achievements": [
+    "التحقق من ثبات SHA-256 للأوزان وHEF للنموذجين؛ لم يحدث تدريب.",
+    "صفر إطارات ببوكسات مكررة في 4 تشغيلات فعلية × 200 إطار، مقارنة بـ14 و5 إطارات في المقطع الأول قبل التصحيح.",
+    "تتبع LK البرتقالي مميز عن الكشف الجديد، وينتهي بعد فجوة محدودة.",
+    "إيقاف تأكيد نوع خاطئ في العرض، مع الاحتفاظ بفئة النموذج في السجلات.",
+    "مقارنة الكشف مع visible.json بعد التشغيل فقط؛ المقطعان للتطوير وليسا اختبارًا جديدًا مستقلًا."
+  ],
+  "protocol": "First 200 source frames; fixed detector confidence 0.25; original single-target visible.json; drone subtypes merged for localization only; TP requires IoU >=0.50; at most one match per frame; extra boxes count FP. Labels are used offline only. These are development/regression clips, not new held-out performance. Flow-frame counts are not tracking accuracy. Other real objects may be unannotated. Full-dataset PC/Pi benchmark scores are unchanged and belong to earlier single-pass evaluation. Small-target views trade recall for false positives and extra inference cost. No claim of reliable subtype recognition.",
+  "operation_checks": [
+    {
+      "model": "HusAero-8n",
+      "device": "Pi + Hailo-8 / runtime-fix-v1",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 152,
+      "tracked_frames": 194,
+      "note": "صناديق FLOW البرتقالية تتبع بصري بلا كشف جديد. النوع غير مؤكد، والفئة الأصلية محفوظة في السجل. أعداد التشغيل ليست دقة تتبع."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "Pi + Hailo-8 / runtime-fix-v1",
+      "clip_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "frames": 200,
+      "detected_frames": 168,
+      "tracked_frames": 196,
+      "note": "صناديق FLOW البرتقالية تتبع بصري بلا كشف جديد. النوع غير مؤكد، والفئة الأصلية محفوظة في السجل. أعداد التشغيل ليست دقة تتبع."
+    },
+    {
+      "model": "HusAero-8n",
+      "device": "Pi + Hailo-8 / runtime-fix-v1",
+      "clip_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "frames": 200,
+      "detected_frames": 8,
+      "tracked_frames": 5,
+      "note": "صناديق FLOW البرتقالية تتبع بصري بلا كشف جديد. النوع غير مؤكد، والفئة الأصلية محفوظة في السجل. أعداد التشغيل ليست دقة تتبع."
+    },
+    {
+      "model": "HusAero-11n",
+      "device": "Pi + Hailo-8 / runtime-fix-v1",
+      "clip_sha256": "32c1ab80bfa0189ef940dc450cd6ddaa3a7e960d3aec15bfe5658de3cb1204b5",
+      "frames": 200,
+      "detected_frames": 23,
+      "tracked_frames": 57,
+      "note": "صناديق FLOW البرتقالية تتبع بصري بلا كشف جديد. النوع غير مؤكد، والفئة الأصلية محفوظة في السجل. أعداد التشغيل ليست دقة تتبع."
+    }
+  ],
+  "video_demos": [
+    {
+      "name": "PiFix_8n_vs_11n_20190926_111509_1_1.mp4",
+      "label": "Runtime correction / 8n vs 11n / 20190926_111509_1_1",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_111509_1_1",
+      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا."
+    },
+    {
+      "name": "PiFix_8n_vs_11n_20190926_102042_1_5.mp4",
+      "label": "Runtime correction / 8n vs 11n / 20190926_102042_1_5",
+      "model": "HusAero-8n vs HusAero-11n",
+      "device": "Raspberry Pi + Hailo-8",
+      "frames": 200,
+      "clip": "20190926_102042_1_5",
+      "note": "يسار 8n ويمين 11n، على نفس الإطارات بالتتابع. بوكس أخضر: كشف، وبرتقالي FLOW: تتبع بصري بلا كشف جديد. النوع غير مؤكد لذلك العرض drone. هذه تجربة مع تكبير مناطق عند الفقد؛ زاد الإنذارات الخاطئة لـ8n، والخيار يبقى مطفأ افتراضيًا. المقطع الصعب ما زال ضعيفًا."
+    }
+  ],
+  "dataset_sources": [
+    {
+      "name": "Nyahmet fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC0",
+      "train": 37,
+      "val": 34,
+      "test": 21
+    },
+    {
+      "name": "Yaren Koç fixed-wing",
+      "role": "Fixed-wing drone",
+      "license": "CC BY 4.0",
+      "train": 2838,
+      "val": 244,
+      "test": 443
+    },
+    {
+      "name": "VisioDECT",
+      "role": "Multirotor drone",
+      "license": "CC BY-NC-SA 4.0",
+      "train": 2790,
+      "val": 715,
+      "test": 494
+    },
+    {
+      "name": "MBAOD v1",
+      "role": "Bird / airplane / helicopter",
+      "license": "CC BY 4.0",
+      "train": 8289,
+      "val": 2430,
+      "test": 1201
+    }
+  ],
+  "evidence_links": [
+    {
+      "label": "Dataset, splits and sources",
+      "url": "https://github.com/27kwt/HusAero/tree/main/dataset/combined_rgb5_v2"
+    },
+    {
+      "label": "Models and deployment manifests",
+      "url": "https://github.com/27kwt/HusAero/tree/main/models/rgb5_v2"
+    },
+    {
+      "label": "Results and curves",
+      "url": "https://github.com/27kwt/HusAero/tree/main/results/rgb5_v2"
+    },
+    {
+      "label": "HusAero authorship and upstream credits",
+      "url": "https://github.com/27kwt/HusAero/blob/main/NOTICE.md"
+    }
+  ]
+}
