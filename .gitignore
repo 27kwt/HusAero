@@ -13,5 +13,3 @@ runs/
 *.zip
 *.mp4
 *.avi
-dataset/images/
-dataset/labels/

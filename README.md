@@ -32,9 +32,7 @@ Open this repository's **Releases** and download
 It contains both `.pt` checkpoints, both tested Hailo-8 `.hef` files, all code,
 20 labeled samples, and the 1,700-image starter dataset.
 
-The source repository and GitHub's automatic source-code archives omit model
-binaries and the full dataset. Use the Complete asset for immediate execution.
-Model file hashes are recorded in `models/registry.json`.
+The source repository includes the 1,700-image starter dataset and its matching YOLO labels under `dataset/images/` and `dataset/labels/`. The Complete asset also contains the model binaries needed for immediate execution. Model file hashes are recorded in `models/registry.json`.
 
 ## 2. Install and run detection on a PC
 
