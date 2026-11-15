@@ -6,6 +6,9 @@ The model paths, byte counts and SHA-256 fingerprints are in [the registry](../r
 
 Held-out RGB4 Test evaluation, RGB4 ONNX/HEF compilation, and Raspberry Pi 5 + Hailo-8 (26 TOPS) verification are still pending. The HEFs in `models/rgb5_v2` are older five-output models and cannot be substituted for these checkpoints.
 
-## Checkpoint availability
+## Download the checkpoints
 
-The two PT files are verified locally but their GitHub upload is still pending. The large binary upload exceeded the automatic approval review capacity. This folder currently provides their documentation; the registry records their expected paths and SHA-256 fingerprints. Place the verified PT files here before using the RGB4 PC demo. Existing RGB5 weights remain available in `models/rgb5_v2`.
+- [HusAero-8n RGB4 best checkpoint](HusAero-8n_RGB4_best.pt)
+- [HusAero-11n RGB4 best checkpoint](HusAero-11n_RGB4_best.pt)
+
+Both PT files are included in this folder. Their bytes match the locally verified best checkpoints and the SHA-256 fingerprints in the registry. Run `python verify_release.py` from the repository root to verify the downloaded files before using the PC demo.

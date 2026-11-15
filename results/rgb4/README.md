@@ -1,8 +1,8 @@
-# RGB4 training and validation â€” 14 November 2026
+# RGB4 training and validation — 14 November 2026
 
 Both models completed **100 epochs** using 13,954 training images and 3,423 validation images. Input size: 640; batch: 32; SGD; initial learning rate: 0.001; seed: 42; training GPU: RTX 4090. The recorded environment used Ultralytics 8.4.201 and PyTorch 2.11.0+cu128.
 
-| Model | Precision | Recall | mAP@50 | mAP@50â€“95 |
+| Model | Precision | Recall | mAP@50 | mAP@50–95 |
 | --- | ---: | ---: | ---: | ---: |
 | HusAero-8n | 94.70% | 91.14% | 94.77% | 67.82% |
 | HusAero-11n | 94.48% | 90.74% | 94.67% | 67.82% |
@@ -19,7 +19,7 @@ These are the recorded best-checkpoint **validation** metrics. They are not Test
 
 ![11n training and validation curves](HusAero-11n/results.png)
 
-Each model folder also contains precision/recall and confusion-matrix figures, `results.csv` and the recorded training arguments. [Exact metrics](validation_summary.json) Â· [Checkpoint details; PT upload pending](../../models/rgb4/)
+Each model folder also contains precision/recall and confusion-matrix figures, `results.csv` and the recorded training arguments. [Exact metrics](validation_summary.json) · [Current checkpoints](../../models/rgb4/)
 
 ## Provenance and limits
 

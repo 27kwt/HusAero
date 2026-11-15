@@ -8,12 +8,12 @@ The dataset has 19,536 images: 13,954 training, 3,423 validation and 2,159 test 
 
 Sources:
 
-- [Yaren KoÃ§ fixed-wing UAV dataset](https://github.com/yarenk/fixed-wing-uav-dataset-and-model), dataset CC BY 4.0. One color variant is retained per original image family.
+- [Yaren Koç fixed-wing UAV dataset](https://github.com/yarenk/fixed-wing-uav-dataset-and-model), dataset CC BY 4.0. One color variant is retained per original image family.
 - [Nyahmet fixed-wing UAV dataset](https://www.kaggle.com/datasets/nyahmet/fixed-wing-uav-dataset), listed as CC0. Original-name aliases are grouped with the first fixed-wing source.
 - [Simeon Ajakwe's VisioDECT](https://www.kaggle.com/datasets/simeonajakwe/visiodect-for-scenario-based-multi-drone-detection), CC BY-NC-SA 4.0. All six source aircraft models are multirotors. Consecutive frames are thinned before balancing.
 - [MBAOD v1](https://data.mendeley.com/datasets/zfc8hndczp/1), Firas Mohammed Kadhum, Abbas Abdulazeez Abdulhameed and Jameelah Harbi Saud, CC BY 4.0. Only images whose annotations contain the retained bird, airplane and helicopter classes are used. Images containing any excluded source-class annotations are excluded entirely.
 
-Images are resized with padding to 640 Ã— 640; boxes are transformed with them. Unreadable or unlabeled candidates, grayscale-only images, targets smaller than two pixels after resizing, repeated fixed-wing augmentation variants and conflicting exact duplicates are excluded. Class volumes are capped at approximately 4,000 images per primary class to avoid one source dominating the comparison. Augmentation during model training applies only to training data.
+Images are resized with padding to 640 × 640; boxes are transformed with them. Unreadable or unlabeled candidates, grayscale-only images, targets smaller than two pixels after resizing, repeated fixed-wing augmentation variants and conflicting exact duplicates are excluded. Class volumes are capped at approximately 4,000 images per primary class to avoid one source dominating the comparison. Augmentation during model training applies only to training data.
 
 VisioDECT model/scenario groups stay in a single partition. Fixed-wing augmentation families and numbered neighborhoods stay together, with boundary frames purged. The original MBAOD holdout is preserved with protection for repeated original names. These measures prevent the recorded groups and exact duplicates crossing partitions; complete recording-session independence cannot be established from all public-source metadata.
 

@@ -35,6 +35,5 @@
   "validation": "results/rgb4/validation_summary.json",
   "test_evaluation": false,
   "hef_available": false,
-  "rgb4_checkpoint_upload_status": "Pending: local checkpoints verified, but binary upload exceeded automatic approval review capacity.",
-  "local_checkpoint_package": "HusAero_RGB4_Checkpoints.zip"
+  "rgb4_checkpoint_upload_status": "Uploaded: both PT checkpoint fingerprints verified against the completed training artifacts."
 }
