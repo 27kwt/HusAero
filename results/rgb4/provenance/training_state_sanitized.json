@@ -1,0 +1,74 @@
+{
+  "status": "completed",
+  "started_at": "2026-11-14T17:05:45.703729",
+  "preflight": "<PROJECT_ROOT>/results/RGB4_Preflight_20261114_165455_252530/preflight_report.json",
+  "data": "<PROJECT_ROOT>/dataset/combined_rgb4/data.yaml",
+  "classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "ultralytics": "8.4.201",
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "settings": {
+    "epochs": 100,
+    "patience": 30,
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "workers": 4,
+    "amp": true,
+    "cache": false,
+    "seed": 42,
+    "deterministic": true,
+    "optimizer": "SGD",
+    "lr0": 0.001,
+    "resume": false,
+    "val": true,
+    "save": true,
+    "plots": true,
+    "exist_ok": false
+  },
+  "test_evaluation": false,
+  "models": [
+    {
+      "name": "HusAero-8n",
+      "status": "completed",
+      "starting_weights": "<PROJECT_ROOT>/results/RGB4_Preflight_20261114_165455_252530/HusAero-8n_RGB4_initialized.pt",
+      "epochs_completed": 101,
+      "validation": {
+        "metrics/precision(B)": 0.9469713686808183,
+        "metrics/recall(B)": 0.9114246588738899,
+        "metrics/mAP50(B)": 0.9477211924734694,
+        "metrics/mAP50-95(B)": 0.678219130229636
+      },
+      "best_validation_fitness": 0.67819,
+      "updated_at": "2026-11-14T18:05:20.884542",
+      "best_weights": "<PROJECT_ROOT>/results/RGB4_Training_20261114_170545_703729/HusAero-8n/weights/best.pt",
+      "best_sha256": "0dc1faf39636a8c76fb5b683215cc4fb204067459683aba77d646d684b5338be",
+      "last_weights": "<PROJECT_ROOT>/results/RGB4_Training_20261114_170545_703729/HusAero-8n/weights/last.pt",
+      "run_dir": "<PROJECT_ROOT>/results/RGB4_Training_20261114_170545_703729/HusAero-8n"
+    },
+    {
+      "name": "HusAero-11n",
+      "status": "completed",
+      "starting_weights": "<PROJECT_ROOT>/results/RGB4_Preflight_20261114_165455_252530/HusAero-11n_RGB4_initialized.pt",
+      "epochs_completed": 101,
+      "validation": {
+        "metrics/precision(B)": 0.9448270539375259,
+        "metrics/recall(B)": 0.9074031777509286,
+        "metrics/mAP50(B)": 0.9467008622423863,
+        "metrics/mAP50-95(B)": 0.6782178865228742
+      },
+      "best_validation_fitness": 0.67817,
+      "updated_at": "2026-11-14T19:08:19.531772",
+      "best_weights": "<PROJECT_ROOT>/results/RGB4_Training_20261114_170545_703729/HusAero-11n/weights/best.pt",
+      "best_sha256": "0842611d2295fd9ab0405889841e6f15d6b92e61a206baf750deebf686a6c861",
+      "last_weights": "<PROJECT_ROOT>/results/RGB4_Training_20261114_170545_703729/HusAero-11n/weights/last.pt",
+      "run_dir": "<PROJECT_ROOT>/results/RGB4_Training_20261114_170545_703729/HusAero-11n"
+    }
+  ],
+  "finished_at": "2026-11-14T19:08:20.999544"
+}

@@ -1,0 +1,33 @@
+{
+  "run_date": "2026-11-14",
+  "partition": "val",
+  "images": 3423,
+  "classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "models": [
+    {
+      "model": "HusAero-8n",
+      "epochs_completed": 100,
+      "precision": 0.9469713686808183,
+      "recall": 0.9114246588738899,
+      "mAP50": 0.9477211924734694,
+      "mAP50_95": 0.678219130229636,
+      "checkpoint_sha256": "0dc1faf39636a8c76fb5b683215cc4fb204067459683aba77d646d684b5338be"
+    },
+    {
+      "model": "HusAero-11n",
+      "epochs_completed": 100,
+      "precision": 0.9448270539375259,
+      "recall": 0.9074031777509286,
+      "mAP50": 0.9467008622423863,
+      "mAP50_95": 0.6782178865228742,
+      "checkpoint_sha256": "0842611d2295fd9ab0405889841e6f15d6b92e61a206baf750deebf686a6c861"
+    }
+  ],
+  "test_evaluation": false,
+  "training_device": "NVIDIA GeForce RTX 4090"
+}

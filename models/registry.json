@@ -1,47 +1,40 @@
 {
-  "release": "v0.3.0-rc5",
+  "release": "RGB4-20261114",
   "default": "HusAero-8n",
   "classes": [
     "drone",
     "bird",
     "airplane",
-    "helicopter",
-    "kite"
+    "helicopter"
   ],
+  "hardware_target": "Raspberry Pi 5 + Hailo-8, 26 TOPS",
   "models": {
     "HusAero-8n": {
       "architecture": "YOLOv8n",
-      "best_adaptation_epoch": 8,
+      "epochs_completed": 100,
       "weights": {
         "pt": {
-          "path": "models/HusAero-8n.pt",
-          "sha256": "a50bd749f978d7e34e9ac4b3aea9bbf32ae6363cef138e3d9cc8a1921db9d00c",
-          "bytes": 6516472
-        },
-        "hef": {
-          "path": "models/HusAero-8n.hef",
-          "sha256": "8dbe8b9d52d3d4407588cb483a849f13aa6439e032810b51c4313df475469cc5",
-          "bytes": 4440115
+          "path": "models/rgb4/HusAero-8n_RGB4_best.pt",
+          "sha256": "0dc1faf39636a8c76fb5b683215cc4fb204067459683aba77d646d684b5338be",
+          "bytes": 6257514
         }
       }
     },
     "HusAero-11n": {
       "architecture": "YOLO11n",
-      "best_adaptation_epoch": 6,
+      "epochs_completed": 100,
       "weights": {
         "pt": {
-          "path": "models/HusAero-11n.pt",
-          "sha256": "c9c1617bdf68a691f133ef2ad8561a7eb4aa012267771dc9e43869fccc7d8568",
-          "bytes": 5524933
-        },
-        "hef": {
-          "path": "models/HusAero-11n.hef",
-          "sha256": "cda1695906d8f35f70d7cf327f2154a0515f04337b79beff833e432f7426eebf",
-          "bytes": 6524456
+          "path": "models/rgb4/HusAero-11n_RGB4_best.pt",
+          "sha256": "0842611d2295fd9ab0405889841e6f15d6b92e61a206baf750deebf686a6c861",
+          "bytes": 5479962
         }
       }
     }
   },
-  "hardware": "Hailo-8, not Hailo-8L",
-  "weight_provenance": "PT and HEF files match the saved hardware-tested model hashes."
+  "validation": "results/rgb4/validation_summary.json",
+  "test_evaluation": false,
+  "hef_available": false,
+  "rgb4_checkpoint_upload_status": "Pending: local checkpoints verified, but binary upload exceeded automatic approval review capacity.",
+  "local_checkpoint_package": "HusAero_RGB4_Checkpoints.zip"
 }

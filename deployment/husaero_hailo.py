@@ -1,4 +1,4 @@
-"""Evaluate or demonstrate a five-class HusAero HEF on Hailo-8."""
+"""Evaluate or demonstrate a four-class HusAero HEF on Hailo-8."""
 import argparse,hashlib,json,time
 from pathlib import Path
 import cv2,numpy as np
@@ -8,9 +8,9 @@ if __package__:
 else:
     from hailo_adapter import prepare
     from detection_scores import Scores,read_labels
-NAMES=['drone','bird','airplane','helicopter','kite']
+NAMES=['drone', 'bird', 'airplane', 'helicopter']
 def decode(raw,shape,transform,floor=.001):
-    if len(raw)!=1 or len(raw[0])!=len(NAMES):raise ValueError('Expected five-class Hailo NMS output')
+    if len(raw)!=1 or len(raw[0])!=len(NAMES):raise ValueError('Expected four-class Hailo NMS output')
     h,w=shape[:2];sx,sy,left,top=transform;rows=[]
     for c,boxes in enumerate(raw[0]):
         for y1,x1,y2,x2,score in np.asarray(boxes,dtype=np.float32).reshape(-1,5):
@@ -41,6 +41,6 @@ def main():
                             x1,y1,x2,y2=map(int,[x1,y1,x2,y2]);cv2.rectangle(frame,(x1,y1),(x2,y2),(30,210,255),2);cv2.putText(frame,f'{NAMES[int(c)]} {conf:.2f}',(x1,max(18,y1-4)),cv2.FONT_HERSHEY_SIMPLEX,.5,(30,210,255),1)
                         cv2.imwrite(str(a.out/path.name),frame)
                     if i%50==0:print(i,'/',len(files),flush=True)
-    report=scores.result();report.update(hef_sha256=hashlib.sha256(a.hef.read_bytes()).hexdigest(),wall_seconds=time.perf_counter()-t,detector_preprocess_infer_decode_seconds=infer_seconds,input_size=640,confidence_floor=.001,nms_iou=.45,max_detections=300,split=a.split,scope='Five-class HusAero '+a.split+' evaluation; session independence unverified')
+    report=scores.result();report.update(hef_sha256=hashlib.sha256(a.hef.read_bytes()).hexdigest(),wall_seconds=time.perf_counter()-t,detector_preprocess_infer_decode_seconds=infer_seconds,input_size=640,confidence_floor=.001,nms_iou=.45,max_detections=300,split=a.split,scope='Four-class HusAero '+a.split+' evaluation; session independence unverified')
     (a.out/'metrics.json').write_text(json.dumps(report,indent=2));(a.out/'test_input_hashes.json').write_text(json.dumps(inputs,indent=2));print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

@@ -1,4 +1,4 @@
-"""Hailo-8 DFC 3.x parser/compiler for five-class YOLOv8/11 detection ONNX.
+"""Hailo-8 DFC 3.x parser/compiler for four-class YOLOv8/11 detection ONNX.
 
 Run in Linux x86_64 with the licensed Hailo Dataflow Compiler installed. Outputs
 are exclusive. Calibration arrays must be RGB uint8 NHWC, from training only.
@@ -12,7 +12,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--onnx',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
     p.add_argument('--name',required=True);p.add_argument('--calibration',type=Path);p.add_argument('--parse-only',action='store_true')
     p.add_argument('--optimization-level',type=int,choices=[0,1,2],default=0)
-    p.add_argument('--class-names',nargs='+',default=['drone','bird','airplane','helicopter','kite'])
+    p.add_argument('--class-names',nargs='+',default=['drone', 'bird', 'airplane', 'helicopter'])
     p.add_argument('--compiler-effort',type=int,choices=[0,1],default=1);a=p.parse_args();nc=len(a.class_names)
     if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_]*',a.name):raise ValueError('Invalid network name')
     import onnx

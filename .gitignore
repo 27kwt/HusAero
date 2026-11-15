@@ -15,4 +15,3 @@ runs/
 *.avi
 
 # Local YOLO layout shares the already committed canonical images.
-/dataset/combined_rgb4/images/

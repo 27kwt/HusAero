@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-15T13:11:44.679373+00:00",
+  "base_commit": "774b59ec94fbd4520f13b0bd019c44cb99d4c33d",
+  "images_verified": 19536,
+  "labels_verified": 19536,
+  "split_counts": {
+    "train": 13954,
+    "val": 3423,
+    "test": 2159
+  },
+  "classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "checks": [
+    "All image and label SHA-256 fingerprints match the previous RGB4 manifest.",
+    "Each image has one matching YOLO label; class IDs are 0 through 3 and coordinates are normalized.",
+    "Train, validation and test assignments are unchanged.",
+    "Recorded source groups and exact image hashes do not cross partitions.",
+    "Image blobs and label blobs are reused without changing their bytes."
+  ],
+  "limitations": "A structural and checksum audit does not establish complete source-session independence or annotation accuracy."
+}

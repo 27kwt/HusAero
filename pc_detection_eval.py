@@ -10,7 +10,7 @@ def main():
     p.add_argument('--out',type=Path,required=True);p.add_argument('--device',default='0');a=p.parse_args()
     from ultralytics import YOLO
     a.out.mkdir(parents=True,exist_ok=False);model=YOLO(str(a.weights));names=list(model.names.values());scores=Scores(names);inputs=[];t=time.perf_counter()
-    if names not in [NAMES,NAMES[:5]]:raise ValueError('Unexpected class mapping')
+    if names != NAMES:raise ValueError('Unexpected class mapping')
     source=a.data/'test.txt' if (a.data/'test.txt').is_file() else a.data/'images/test'
     expected=len(source.read_text().splitlines()) if source.is_file() else len(list(source.glob('*.jpg')))
     results=model.predict(source=str(source),stream=True,batch=16,imgsz=640,rect=False,

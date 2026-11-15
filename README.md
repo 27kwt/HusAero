@@ -1,58 +1,73 @@
-# HusAero
+# HusAero â€” Vision-Based Drone Detection and Tracking
 
-RGB drone detection and single-target tracking on PC and Raspberry Pi / Hailo-8.
-Project integration, dataset preparation, fine-tuning and evaluation: **Hussain Alrashidi (27kwt)**. Built on Ultralytics YOLOv8n and YOLO11n; upstream and image-source credits are in [NOTICE.md](NOTICE.md).
+Final Year Project by **Hussain Alrashidi (27kwt)**. The system uses a visible-light camera, **Raspberry Pi 5 and Hailo-8 (26 TOPS)**, with pan-tilt control to keep a detected drone in view. HusAero-8n and HusAero-11n are fine-tuned Ultralytics YOLOv8n and YOLO11n models. [Sources and attribution](NOTICE.md)
 
-## Current focus: one drone category
+## Start here
 
-Fixed-wing and multirotor drones are grouped as **drone**. The current dataset categories are **drone, bird, airplane and helicopter**. Bird/airplane/helicopter examples help distinguish other airborne objects; no kite class is included in this version.
+| What to view | Location |
+| --- | --- |
+| One organized dataset: images, labels and configuration | [dataset](dataset/) |
+| Current four-class checkpoint details (PT upload pending) | [models/rgb4](models/rgb4/) |
+| Current 100-epoch training, validation tables and plots | [results/rgb4](results/rgb4/) |
+| Earlier RGB5 Test results and Raspberry Pi evidence | [results/rgb5_v2](results/rgb5_v2/) |
+| One-page English Test report for the supervisor | [PDF](docs/HusAero_RGB5_Test_Results_One_Page_English.pdf) |
+| Earlier versions and reproducibility | [archive](archive/README.md) |
 
-The project detects a visual drone category. It does not identify a particular aircraft model, military/civilian status, payload or mission from appearance. Confusing scenes remain a model limitation. The drone-focused output adapter uses **unknown_airborne_object** for unverified non-drone types or low/conflicting scores, rather than asserting an aircraft type. These are conservative display rules, not calibrated certainty or a guarantee against misclassification.
+## Current project status
 
-## Dataset and preparation
+The current dataset and PT checkpoints use **four classes: drone, bird, airplane and helicopter**. Fixed-wing and multirotor drones share the `drone` category. This system does not identify drone subtypes, payloads or missions.
 
-| Split | RGB images | Matching labels |
-| --- | ---: | ---: |
-| Train | 13,954 | 13,954 |
-| Validation | 3,423 | 3,423 |
-| Test | 2,159 | 2,159 |
-| Total | 19,536 | 19,536 |
+| Stage | Status |
+| --- | --- |
+| Dataset: 13,954 train / 3,423 validation / 2,159 Test images | Prepared; images and labels audited |
+| RGB4 HusAero-8n training | 100/100 epochs completed |
+| RGB4 HusAero-11n training | 100/100 epochs completed |
+| RGB4 validation and plots | Available below |
+| RGB4 PT files on GitHub | Pending binary upload; locally verified |
+| RGB4 held-out Test evaluation | Pending |
+| RGB4 Hailo-8 HEF and Raspberry Pi verification | Pending |
+| Live-camera pan-tilt system validation | Pending |
 
-Start with [the unified dataset](dataset/combined_rgb4/). All source images and the current labels are in this repository. Image bytes are shared with the [canonical image folder](dataset/combined_rgb5_v2/images/) instead of uploading duplicates. Sources, filtering, source groups, split limits and licenses are documented alongside the data.
+## Current RGB4 validation
+
+| Model | Precision | Recall | mAP@50 | mAP@50â€“95 |
+| --- | ---: | ---: | ---: | ---: |
+| HusAero-8n | 94.70% | 91.14% | 94.77% | 67.82% |
+| HusAero-11n | 94.48% | 90.74% | 94.67% | 67.82% |
+
+These are best-checkpoint results on **3,423 validation images**, not Test or Raspberry Pi results. [View the training curves and exact metrics](results/rgb4/).
+
+## Preserved RGB5 experiments
+
+The earlier five-class experiments separated fixed-wing and multirotor drones. Both models completed 50 epochs and were evaluated on all 2,159 Test images on PC. Their model files, Test curves and recorded Pi experiments remain available with their original class maps.
+
+| Earlier model | Test precision | Test recall | Test mAP@50 | Test mAP@50â€“95 |
+| --- | ---: | ---: | ---: | ---: |
+| RGB5 HusAero-8n | 96.25% | 94.72% | 97.89% | 71.57% |
+| RGB5 HusAero-11n | 95.31% | 94.41% | 97.58% | 71.67% |
+
+![Earlier RGB5 held-out Test comparison](results/rgb5_v2/Test_Comparison_20261111.png)
+
+[English one-page Test report](docs/HusAero_RGB5_Test_Results_One_Page_English.pdf) Â· [Original Test and Pi evidence](results/rgb5_v2/) Â· [Verified RGB5 Pi runtime](results/rgb5_v2/runtime_fix_v2/)
+
+The two tables describe different class definitions and evaluation partitions; they cannot establish whether RGB4 improved on RGB5. Both earlier models confused drone subtypes in a reviewed video. Recorded-file Pi timings do not establish live-camera latency, and flow-assisted boxes are not fresh detector observations.
+
+## Use the current model on a PC
+
+First place the two verified RGB4 PT files in `models/rgb4/`; their upload is pending. The registry contains the required fingerprints. Until they are uploaded, the RGB4 demo will report missing checkpoints. Use Python 3.11 and the pinned [requirements](requirements.txt). On Windows, `setup_cpu.cmd` prepares the environment; `run_demo.cmd` runs the current 8n model on the small demonstration images. For a photo or video:
+
+```sh
+python demo.py --model HusAero-8n --source path/to/input.jpg
+```
+
+To verify the full dataset without starting training:
 
 ```sh
 python tools/prepare_current_dataset.py
 ```
 
-The command verifies the file fingerprints and prepares YOLO's image/label layout. It does not start training. Current IDs: **0 drone, 1 bird, 2 airplane, 3 helicopter**.
+The dataset is already in `dataset/images` and `dataset/labels`. No nested RGB4/RGB5 preparation folders or hard links are required. Demonstration images are not a benchmark. RGB4 HEFs have not yet been produced; use the clearly labelled [RGB5 runtime guide](models/rgb5_v2/README.md) only for reproducing that earlier hardware experiment.
 
-## Models: what is completed
+## Data and interpretation
 
-Both **HusAero-8n** and **HusAero-11n** completed the recorded 50-epoch RGB5 experiments. Their best PT checkpoints and Hailo-8 HEFs are in [models/rgb5_v2](models/rgb5_v2/), with hashes and verified runtime information.
-
-Those existing weights still have **five native outputs**. The unified four-category labels are a later preparation change; **no four-output retraining has been run**. The adapter maps native IDs 0/1 to drone and shifts the remaining categories. It preserves native predictions in its log. Renaming a dataset does not change model weights or fix missed drones.
-
-Use Python 3.11. For the tested CPU environment setup, see [the installation guide](README_RGB5_ARCHIVE.md#2-install-and-run-detection-on-a-pc).
-
-Example using the existing 8n checkpoint (replace the source with your RGB photo or video):
-
-```sh
-python -m pip install -r requirements.txt
-python tools/predict_unified.py --model models/rgb5_v2/HusAero-8n/HusAero-8n_RGB5.pt --source path/to/input.jpg --output results/unified_predictions.jsonl
-```
-
-Use HusAero-11n/HusAero-11n_RGB5.pt for the second model. The adapter is a PC output mapping and abstention layer. The verified Pi runtime remains the documented native RGB5 HEF pipeline, displaying generic drone and retaining native class IDs in experiment logs. A new four-output HEF has not been compiled.
-
-## Results and actual operation evidence
-
-- [Completed native RGB5 image tests and curves](results/rgb5_v2/): all 2,159 test images per model on PC; all 19,536 images per model on Pi with train/validation/test reported separately.
-- [Verified Pi runtime v2](results/rgb5_v2/runtime_fix_v2/): two recorded RGB clips per model, 200 frames each, with per-frame detector proposals and the displayed target box.
-- [Project website](https://fyp1-tracking-lab-hussain.lustrousdulse1.chatgpt.site/#camera): the earlier PC/Pi demonstration remains; the current two Pi model comparisons appear below it.
-
-The existing mAP tables concern the native five-category models. **They are not new four-category scores.** The current relabeling/adapter has no newly measured training or test mAP. The difficult video still has weak detection, and source-session/training overlap is not ruled out. Recorded-file/image timings do not establish live-camera delay. Flow-assisted following is separated from fresh detection and is not advertised as general accuracy or formal MOT performance.
-
-## Provenance and earlier versions
-
-The RGB4 and RGB5 preparations use four public source datasets: Yaren Koç fixed-wing, Ahmet Nuri Yılmaz (nyahmet) fixed-wing, VisioDECT, and MBAOD v1. Full creators, source links, licenses and modifications: [dataset license notice](dataset/combined_rgb4/LICENSE_DATA.md). VisioDECT's recorded distribution includes noncommercial/share-alike terms; the code license does not replace image licenses. Public source imagery is not presented as our own photography.
-
-Earlier generic-drone/kite release files and the original RGB5 labels remain for reproducibility; their class IDs must not be mixed with current IDs. [Archived project guide](README_RGB5_ARCHIVE.md), [dataset version guide](dataset/README.md), [model registry](models/rgb5_v2/registry.json). The old release_manifest.json describes its historical source snapshot, not all current additions.
+Source photos come from four public datasets; they are not presented as our own camera recordings. See [source details and limits](dataset/provenance/DATA_CARD.md) and [image licenses](dataset/provenance/LICENSE_DATA.md). VisioDECT material retains the recorded noncommercial/share-alike terms. Source groups and exact duplicates are checked, but complete source-session independence remains unverified. The two starting checkpoints also have different prior histories.

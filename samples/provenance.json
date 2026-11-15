@@ -142,41 +142,5 @@
     "curated_test_path": "images/test/mbaod_191e3160b0f9f7f486c00725244b434515d1403a418300b875a6376ec2615bfb.jpg",
     "sha256": "6a9f639e7dd3fe45966b578d807deda466785b501c5f5497e846e16035567c32",
     "label_sha256": "71f27739b7da6cdccb994b1bbae325603e1ddac6a6091183088adbac7f873dbd"
-  },
-  {
-    "image": "kite_1.jpg",
-    "source": "MBAOD v1",
-    "source_doi": "10.17632/zfc8hndczp.1",
-    "original": "Kite_0000608_jpg.rf.2f00dd839fb6ecb50cd6573a57e4c681.jpg",
-    "curated_test_path": "images/test/mbaod_97b937ddeecd944b8bd53598d260eadd7034b92d5ea9e841f6150580fb5d31ad.jpg",
-    "sha256": "b08b36cbaa99d39f34f7b7536218ab831890eb1ff72e6e0a3ba50568ab560ffd",
-    "label_sha256": "b99662fc380cfb07a69cd26d29a7b4d5f12f138ed28cb8a400797b98f538dc33"
-  },
-  {
-    "image": "kite_2.jpg",
-    "source": "MBAOD v1",
-    "source_doi": "10.17632/zfc8hndczp.1",
-    "original": "Kite_0003459_jpg.rf.578aab7c0007f0ae603ca93ee850436d.jpg",
-    "curated_test_path": "images/test/mbaod_fbd32a0019d82e8546dc1b9884bb0b227895086caba692314179766e1290f08c.jpg",
-    "sha256": "d1b5a37f3b0cd2d232a866d912ba4a8d760b53daec930b6dce5963c9de5dce0c",
-    "label_sha256": "1b8c8a0e8214ff299b94f3a36e1e366591e0aef2ae02c2a12199126a4a47e95c"
-  },
-  {
-    "image": "kite_3.jpg",
-    "source": "MBAOD v1",
-    "source_doi": "10.17632/zfc8hndczp.1",
-    "original": "Kite_0000663_jpg.rf.63c6c8d87077704c836b72284f02f514.jpg",
-    "curated_test_path": "images/test/mbaod_b36f6f9fa95be4e9359d8fc8421992609228f0b46ab396141a52da385e1d1863.jpg",
-    "sha256": "dc52d9321fa131f65e187898385bf7971bac5ebd75afa945d23630d3c96fb190",
-    "label_sha256": "64715a6dc57c339684dbdeef5a6cc8eec09e80986bc93af3c4c53272efeef2df"
-  },
-  {
-    "image": "kite_4.jpg",
-    "source": "MBAOD v1",
-    "source_doi": "10.17632/zfc8hndczp.1",
-    "original": "Kite_0002924_jpg.rf.19aebca1d7af6f3195ed3d726af21785.jpg",
-    "curated_test_path": "images/test/mbaod_ea29dd0ad350120942cb6f2af8c260c30c85437d93bf9270eaa56fd0420440e7.jpg",
-    "sha256": "5db12522aa77d8b5cedb0f60c1f9e903a9589d6a0715e300f251fcff95e84bd4",
-    "label_sha256": "b34893f33e21b58687df0183d5142fe8e7f565a17d40332ac289fbe9dbc33008"
   }
 ]

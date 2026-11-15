@@ -1,9 +1,9 @@
-"""Run the downloaded five-class models on images or video without retraining."""
+"""Run the current four-class models on images or video without retraining."""
 import argparse,json
 from datetime import datetime
 from pathlib import Path
 from verify_release import ROOT,verify
-NAMES=['drone','bird','airplane','helicopter','kite']
+NAMES=['drone', 'bird', 'airplane', 'helicopter']
 MODELS=['HusAero-11n','HusAero-8n']
 def tracking_config(activation,source):
     import yaml
@@ -29,7 +29,7 @@ def main():
         detector_confidence=config['track_low_thresh'];tracker_path=out/'bytetrack.yaml'
         tracker_path.write_text(yaml.safe_dump(config,sort_keys=False))
     for name in (MODELS if a.model=='both' else [a.model]):
-        model=YOLO(str(ROOT/'models'/(name+'.pt')))
+        model=YOLO(str(ROOT/manifest['models'][name]['weights']['pt']['path']))
         if list(model.names.values())!=NAMES:raise ValueError('Unexpected model classes')
         kwargs=dict(source=a.source,imgsz=640,rect=False,conf=detector_confidence,iou=.45,max_det=300,device=a.device,save=True,save_txt=True,save_conf=True,project=str(out),name=name,exist_ok=False,stream=True,verbose=False,quantize=32)
         results=model.track(tracker=str(tracker_path),classes=[0],**kwargs) if a.track else model.predict(**kwargs)

@@ -1,17 +1,30 @@
-# HusAero dataset versions
+# Project dataset
 
-## Current: unified drone (RGB4)
+This is the single dataset used for the current HusAero RGB4 models. Open `images` for photos or `labels` for their matching YOLO annotations. There is no separate RGB4/RGB5 image preparation step.
 
-Use [combined_rgb4](combined_rgb4/) for the current labels: **0 drone, 1 bird, 2 airplane, 3 helicopter**. Both fixed-wing and multirotor source objects map to drone. All 19,536 RGB images retain their original split: **13,954 train / 3,423 validation / 2,159 test**.
+```text
+dataset/
+  images/       train/  val/  test/
+  labels/       train/  val/  test/
+  data.yaml     one training/evaluation definition
+  provenance/   sources, licenses, counts and per-file checksums
+```
 
-The remapped labels and provenance manifest are included in that folder. Image files are shared from [combined_rgb5_v2/images](combined_rgb5_v2/images/) so GitHub contains one copy of each canonical image. Run `python tools/prepare_current_dataset.py` from the repository root to create the local YOLO image/label layout. No training starts.
+| Split | Images | Labels |
+| --- | ---: | ---: |
+| Train | 13,954 | 13,954 |
+| Validation | 3,423 | 3,423 |
+| Test | 2,159 | 2,159 |
+| **Total** | **19,536** | **19,536** |
 
-The current label merge is prepared, but the existing completed 50-epoch model weights remain native RGB5. Use the documented prediction adapter; no new four-output checkpoint or merged mAP score is claimed.
+Class IDs: **0 drone, 1 bird, 2 airplane, 3 helicopter**. Both drone subtypes are included in `drone`. The dataset contains visible-light RGB camera images.
 
-## Previous training data: native RGB5
+An image such as `images/train/example.jpg` pairs with `labels/train/example.txt`. Each label line is `class_id x_center y_center width height`, with normalized coordinates. The folders are already ready for YOLO. To verify the downloaded files without training:
 
-[combined_rgb5_v2](combined_rgb5_v2/) preserves the exact old labels, images and evidence for the completed runs: 0 fixed_wing_drone, 1 multirotor_drone, 2 bird, 3 airplane, 4 helicopter. Original source licenses, grouping and file audit remain there. Keeping these records is essential for interpreting the historical metrics.
+```sh
+python tools/prepare_current_dataset.py
+```
 
-## Earlier starter subset
+[Sources and preparation](provenance/DATA_CARD.md) · [Licenses and attribution](provenance/LICENSE_DATA.md) · [Audit](provenance/FILE_AUDIT.json) · [Counts](provenance/summary.json)
 
-The root `images/`, `labels/` and `data.yaml` belong to the earlier **1,700-image** generic-drone/kite release (1,200 / 250 / 250), not the current combined dataset. Those IDs are 0 drone, 1 bird, 2 airplane, 3 helicopter, 4 kite. They stay at their old paths for old release code. Do not concatenate these labels with RGB4 or RGB5 labels. See [archived guide](README_RGB5_ARCHIVE.md).
+The reorganization changes paths only: all 19,536 image files, RGB4 labels and train/validation/test assignments are preserved. The obsolete starter dataset and separate RGB5 label directory are no longer in this folder. Original versions remain available through [the experiment archive](../archive/README.md). Use that frozen version to reproduce RGB5; its five-class labels must not be mixed with these four-class labels.

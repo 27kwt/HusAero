@@ -13,13 +13,12 @@ Publisher-listed license: CC BY 4.0, https://creativecommons.org/licenses/by/4.0
 Changes: subset selection, file renaming, class/YOLO label conversion, duplicate
 and quality screening, and split packaging. Photos are credited to their source
 creators. Visible watermarks remain. Publisher licensing does not independently
-establish clearance of every underlying watermarked image. See the provenance
-records in samples and the Complete dataset inventory.
+establish clearance of every underlying watermarked image. See the historical source snapshot linked in archive/README.md. Current dataset sources and licenses are recorded in dataset/provenance/.
 
 Parent and adaptation training used DUT Anti-UAV and supplied source recordings:
 https://github.com/wangdongdut/DUT-Anti-UAV . Those images, recordings and
 extracted frames are excluded from the public package. They are described in
-the report so that the included 1,700-image starter set is not mistaken for the
+the report so that the historical 1,700-image starter set is not mistaken for the
 complete training provenance of the shipped weights.
 
 SORT: https://github.com/abewley/sort . Original license, source provenance and
@@ -42,7 +41,7 @@ the retained upstream notices.
 RGB5 v2 adds four image sources: Yaren Koç fixed-wing UAV, Nyahmet fixed-wing UAV,
 Simeon Okechukwu Ajakwe and collaborators' VisioDECT, and MBAOD v1 by Firas Mohammed
 Kadhum, Abbas Abdulazeez Abdulhameed and Jameelah Harbi Saud. Source links, licenses
-and modifications are recorded in dataset/combined_rgb5_v2/LICENSE_DATA.md.
+and modifications are recorded in dataset/provenance/LICENSE_DATA.md.
 Do not treat HusAero credit or the code license as replacing their image rights.
 
-Additional RGB5 attribution detail: nyahmet is Ahmet Nuri Yılmaz. VisioDECT DOI-listed creators are Simeon Okechukwu Ajakwe, Vivian Ukamaka Ihekoronye, Golam Mohtasin, Rubina Akter, Dong Seong Kim and Jae Min Lee; Ali Aouto is additionally credited in the original dataset citation. Distribution-license details and source links are in dataset/combined_rgb5_v2/LICENSE_DATA.md.
+Additional RGB5 attribution detail: nyahmet is Ahmet Nuri Yılmaz. VisioDECT DOI-listed creators are Simeon Okechukwu Ajakwe, Vivian Ukamaka Ihekoronye, Golam Mohtasin, Rubina Akter, Dong Seong Kim and Jae Min Lee; Ali Aouto is additionally credited in the original dataset citation. Distribution-license details and source links are in dataset/provenance/LICENSE_DATA.md.
