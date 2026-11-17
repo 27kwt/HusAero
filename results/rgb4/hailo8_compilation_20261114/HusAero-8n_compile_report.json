@@ -1,0 +1,41 @@
+{
+  "stage": "COMPILED",
+  "network": "husaero_8n_rgb4",
+  "hardware": "hailo8",
+  "endpoints": [
+    "/model.22/cv2.0/cv2.0.2/Conv",
+    "/model.22/cv3.0/cv3.0.2/Conv",
+    "/model.22/cv2.1/cv2.1.2/Conv",
+    "/model.22/cv3.1/cv3.1.2/Conv",
+    "/model.22/cv2.2/cv2.2.2/Conv",
+    "/model.22/cv3.2/cv3.2.2/Conv"
+  ],
+  "parsed_outputs": [
+    "husaero_8n_rgb4/conv41",
+    "husaero_8n_rgb4/conv42",
+    "husaero_8n_rgb4/conv52",
+    "husaero_8n_rgb4/conv53",
+    "husaero_8n_rgb4/conv62",
+    "husaero_8n_rgb4/conv63"
+  ],
+  "onnx_sha256": "ded22be5c1bad73e43fc9bc483245bfb0b9c5271cdcb5c2ca19e93c43f6974fc",
+  "elapsed_seconds": 147.8187928199768,
+  "head_mapping_verified": true,
+  "optimization_level": 0,
+  "calibration_shape": [
+    1024,
+    640,
+    640,
+    3
+  ],
+  "calibration_sha256": "512b2a5e0c431e040b715889f26017f0d9a870c6635a5d277f38256b1f87d8e2",
+  "hef_sha256": "fd52806ec65eb3d3214233f296d089d45390357115233eb60b10ea3a11695e3b",
+  "names": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "compiler_effort": 0,
+  "input": "RGB uint8 NHWC 640x640, letterbox 114"
+}

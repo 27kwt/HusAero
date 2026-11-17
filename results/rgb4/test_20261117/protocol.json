@@ -1,0 +1,73 @@
+{
+  "created_before_evaluation": "2026-11-17T17:41:15.068829+03:00",
+  "settings": {
+    "split": "test",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "workers": 0,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "rect": false,
+    "augment": false,
+    "quantize": 32,
+    "plots": true,
+    "save_json": true,
+    "verbose": false,
+    "seed": 42,
+    "deterministic": true,
+    "single_cls": false,
+    "agnostic_nms": false
+  },
+  "classes": [
+    "drone",
+    "bird",
+    "airplane",
+    "helicopter"
+  ],
+  "checkpoints": {
+    "HusAero-8n": "0dc1faf39636a8c76fb5b683215cc4fb204067459683aba77d646d684b5338be",
+    "HusAero-11n": "0842611d2295fd9ab0405889841e6f15d6b92e61a206baf750deebf686a6c861"
+  },
+  "dataset_audit": {
+    "images": 2159,
+    "labels": 2159,
+    "instances": {
+      "drone": 975,
+      "helicopter": 598,
+      "bird": 820,
+      "airplane": 530
+    },
+    "class_images": {
+      "drone": 958,
+      "helicopter": 396,
+      "bird": 414,
+      "airplane": 413
+    },
+    "source_manifest_sha256": "eeb014f8078b24fb3e1f39122a6dd31e706ef02745bb18d7e0732f03bea8ae4f",
+    "test_manifest_sha256": "fde927e034cfc64c84e6b9eff1e90421279665a214b6166581f11c67de694a43",
+    "all_test_images_and_labels_match_manifest": true,
+    "isolated_copies_match": true,
+    "manifest_cross_split_overlap_counts": {
+      "image_sha256": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "group": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      }
+    },
+    "scope": "Test files rehashed; train/val overlap checked against manifest. Full source-session independence is not established."
+  },
+  "ultralytics": "8.4.201",
+  "torch": "2.11.0+cu128",
+  "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "metric_implementation": "Native Ultralytics detection AP; secondary COCO evaluation disabled; predictions exported.",
+  "precision_recall": "At the Ultralytics smoothed maximum mean-F1 operating point for each model; not fixed confidence 0.25.",
+  "test_policy": "Frozen checkpoints selected by validation, no training, no weight update, no Test threshold tuning or reruns for selection."
+}

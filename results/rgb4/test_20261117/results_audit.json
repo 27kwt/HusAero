@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "model": "HusAero-8n",
+      "images": 2159,
+      "objects": 2923,
+      "prediction_count": 35183,
+      "f1_equals_harmonic_mean": true,
+      "reported_PR_matches_saved_curves": true,
+      "overall_AP_matches_per_class_mean": true,
+      "prediction_count_matches_raw_statistics": true,
+      "confusion_matrix_ground_truth_totals_match": true
+    },
+    {
+      "model": "HusAero-11n",
+      "images": 2159,
+      "objects": 2923,
+      "prediction_count": 12872,
+      "f1_equals_harmonic_mean": true,
+      "reported_PR_matches_saved_curves": true,
+      "overall_AP_matches_per_class_mean": true,
+      "prediction_count_matches_raw_statistics": true,
+      "confusion_matrix_ground_truth_totals_match": true
+    }
+  ],
+  "scope": "Consistency audit of saved outputs; no additional model evaluation."
+}

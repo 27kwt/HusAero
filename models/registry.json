@@ -33,7 +33,16 @@
     }
   },
   "validation": "results/rgb4/validation_summary.json",
-  "test_evaluation": false,
+  "test_evaluation": true,
   "hef_available": false,
-  "rgb4_checkpoint_upload_status": "Uploaded: both PT checkpoint fingerprints verified against the completed training artifacts."
+  "rgb4_checkpoint_upload_status": "Uploaded: both PT checkpoint fingerprints verified against the completed training artifacts.",
+  "test_results": "results/rgb4/test_20261117/comparison.json",
+  "hef_files_in_repository": false,
+  "hef_compiled_locally": true,
+  "hef_compilation_evidence": "results/rgb4/hailo8_compilation_20261114/fingerprints.json",
+  "recorded_video_pi_runtime_verified": true,
+  "pi_runtime_scope": "300 matched recorded frames per model; operational comparison only",
+  "pi_runtime_evidence": "results/rgb4/pi_recorded_video_20261114/summary.json",
+  "hef_labelled_test_evaluation": false,
+  "live_camera_pan_tilt_validated": false
 }

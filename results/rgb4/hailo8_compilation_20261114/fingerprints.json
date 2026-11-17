@@ -1,0 +1,14 @@
+[
+  {
+    "model": "HusAero-8n",
+    "checkpoint_sha256": "0dc1faf39636a8c76fb5b683215cc4fb204067459683aba77d646d684b5338be",
+    "onnx_sha256": "ded22be5c1bad73e43fc9bc483245bfb0b9c5271cdcb5c2ca19e93c43f6974fc",
+    "hef_sha256": "fd52806ec65eb3d3214233f296d089d45390357115233eb60b10ea3a11695e3b"
+  },
+  {
+    "model": "HusAero-11n",
+    "checkpoint_sha256": "0842611d2295fd9ab0405889841e6f15d6b92e61a206baf750deebf686a6c861",
+    "onnx_sha256": "bbf8f52cde3dce52595d9e8af4435623ac51906ada0c20d012465f98b8f23877",
+    "hef_sha256": "706ea72bb7ae84e40a574795eba50e41540cba72f2029f1b881019921827c361"
+  }
+]

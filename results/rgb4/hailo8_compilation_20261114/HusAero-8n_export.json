@@ -1,0 +1,21 @@
+{
+  "source": "<SOURCE_REPOSITORY>/results/RGB4_Training_20261114_170545_703729/HusAero-8n/weights/best.pt",
+  "checkpoint_sha256": "0dc1faf39636a8c76fb5b683215cc4fb204067459683aba77d646d684b5338be",
+  "onnx": "<LOCAL_PATH>/model.onnx",
+  "onnx_sha256": "ded22be5c1bad73e43fc9bc483245bfb0b9c5271cdcb5c2ca19e93c43f6974fc",
+  "names": {
+    "0": "drone",
+    "1": "bird",
+    "2": "airplane",
+    "3": "helicopter"
+  },
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "opset": 11,
+  "onnx_checker": "PASS",
+  "nms": false
+}

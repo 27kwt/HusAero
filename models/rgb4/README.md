@@ -4,7 +4,7 @@ This folder documents the completed 100-epoch checkpoints from 14 November 2026:
 
 The model paths, byte counts and SHA-256 fingerprints are in [the registry](../registry.json). [Training and validation evidence](../../results/rgb4/) includes all 100 CSV rows per model, curves, recorded arguments and the preflight report. Compatible tensors were transferred from each earlier RGB5 checkpoint into a new four-class head; the two models have different prior training histories.
 
-Held-out RGB4 Test evaluation, RGB4 ONNX/HEF compilation, and Raspberry Pi 5 + Hailo-8 (26 TOPS) verification are still pending. The HEFs in `models/rgb5_v2` are older five-output models and cannot be substituted for these checkpoints.
+The [RGB4 PC Test evaluation](../../results/rgb4/test_20261117/), [ONNX/HEF compilation](../../results/rgb4/hailo8_compilation_20261114/) and [recorded-video Raspberry Pi 5 + Hailo-8 (26 TOPS) comparison](../../results/rgb4/pi_recorded_video_20261114/) are complete. HEF files remain in the local deployment bundle. Labelled HEF Test accuracy and live-camera/pan-tilt validation remain pending. The HEFs in `models/rgb5_v2` are older five-output models and cannot be substituted for these checkpoints.
 
 ## Download the checkpoints
 

@@ -7,7 +7,7 @@ Both models completed **100 epochs** using 13,954 training images and 3,423 vali
 | HusAero-8n | 94.70% | 91.14% | 94.77% | 67.82% |
 | HusAero-11n | 94.48% | 90.74% | 94.67% | 67.82% |
 
-These are the recorded best-checkpoint **validation** metrics. They are not Test results, live-camera accuracy, tracking performance or Raspberry Pi throughput. The small difference does not establish an architecture winner; both candidates still need the same held-out Test and hardware evaluation.
+These are the recorded best-checkpoint **validation** metrics. They are not Test results, live-camera accuracy, tracking performance or Raspberry Pi throughput. The small difference does not establish an architecture winner; the separate [Test evaluation](test_20261117/) and [recorded-video Pi evidence](pi_recorded_video_20261114/) are now available.
 
 ## Curves
 
@@ -27,4 +27,4 @@ The `provenance` folder preserves sanitized run state, preflight details and sou
 
 The split and image/label bytes are unchanged by the 15 November folder cleanup. Source groups and exact duplicates were checked, but complete independence of all original recording sessions is not established. These source limitations apply when interpreting the scores.
 
-Next steps: evaluate the two selected RGB4 checkpoints on the reserved 2,159 Test images, export and compile for Hailo-8, then measure performance on the Raspberry Pi 5 and camera/pan-tilt setup. None of those RGB4 results is claimed here.
+Completed evidence: [2,159-image PC Test and curves](test_20261117/), [Hailo-8 compilation](hailo8_compilation_20261114/) and [300-frame-per-model recorded-video Pi comparison](pi_recorded_video_20261114/). Remaining: labelled HEF accuracy evaluation and live-camera/pan-tilt system validation. Training/validation figures above remain unchanged.

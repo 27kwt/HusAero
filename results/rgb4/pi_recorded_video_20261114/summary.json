@@ -1,0 +1,50 @@
+{
+  "scope": "Matched recorded RGB frames on Hailo-8. Operational counts, not accuracy, recall or mAP. No training. Flow-only boxes are not fresh detections.",
+  "source": "<RECORDED_RGB_SOURCE>/visible.mp4",
+  "source_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+  "runs": [
+    {
+      "model": "HusAero-8n",
+      "frames": 300,
+      "source_fps": 20.0,
+      "states": {
+        "CONFIRMING": 6,
+        "DETECTION_CONFIRMED": 179,
+        "FLOW_ASSISTED": 79,
+        "LOST": 2,
+        "SEARCHING": 34
+      },
+      "visible_id_sequence": [
+        1,
+        2,
+        3
+      ],
+      "new_visible_ids": 2,
+      "hef_sha256": "fd52806ec65eb3d3214233f296d089d45390357115233eb60b10ea3a11695e3b",
+      "source_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "inference_ms_mean": 10.189492856669252,
+      "processing_fps": 47.683276038190364
+    },
+    {
+      "model": "HusAero-11n",
+      "frames": 300,
+      "source_fps": 20.0,
+      "states": {
+        "CONFIRMING": 5,
+        "SEARCHING": 119,
+        "DETECTION_CONFIRMED": 92,
+        "FLOW_ASSISTED": 83,
+        "LOST": 1
+      },
+      "visible_id_sequence": [
+        1,
+        2
+      ],
+      "new_visible_ids": 1,
+      "hef_sha256": "706ea72bb7ae84e40a574795eba50e41540cba72f2029f1b881019921827c361",
+      "source_sha256": "460504eb104d5ab83885c14484b92a4e535306835883d809b4f223089a865c07",
+      "inference_ms_mean": 15.102322316665777,
+      "processing_fps": 39.81797085612972
+    }
+  ]
+}

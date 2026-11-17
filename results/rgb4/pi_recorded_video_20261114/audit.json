@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "model": "HusAero-8n",
+      "sequential_frames": 300,
+      "video_frames": 300,
+      "hef_hash_matches": true,
+      "raw_detection_frames": 185
+    },
+    {
+      "model": "HusAero-11n",
+      "sequential_frames": 300,
+      "video_frames": 300,
+      "hef_hash_matches": true,
+      "raw_detection_frames": 97
+    }
+  ],
+  "limits": "No annotated localization evaluation; operational comparison only."
+}

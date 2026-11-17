@@ -1,0 +1,35 @@
+{
+  "images": 2159,
+  "labels": 2159,
+  "instances": {
+    "drone": 975,
+    "helicopter": 598,
+    "bird": 820,
+    "airplane": 530
+  },
+  "class_images": {
+    "drone": 958,
+    "helicopter": 396,
+    "bird": 414,
+    "airplane": 413
+  },
+  "source_manifest_sha256": "eeb014f8078b24fb3e1f39122a6dd31e706ef02745bb18d7e0732f03bea8ae4f",
+  "test_manifest_sha256": "fde927e034cfc64c84e6b9eff1e90421279665a214b6166581f11c67de694a43",
+  "all_test_images_and_labels_match_manifest": true,
+  "isolated_copies_match": true,
+  "manifest_cross_split_overlap_counts": {
+    "image_sha256": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "group": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    }
+  },
+  "scope": "Test files rehashed; train/val overlap checked against manifest. Full source-session independence is not established.",
+  "published_inventory_sha256": "fba707d3847b35ed552723fd506d65a003f2549dd338eac27cef02657ee85bcc",
+  "published_inventory_note": "Reduced inventory omits machine-specific original source paths. Original manifest fingerprints above refer to the original full manifests."
+}
